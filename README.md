@@ -41,3 +41,14 @@ Access the health check at: `http://localhost:8000/health`
 ```bash
 streamlit run frontend/streamlit_app.py
 ```
+
+## Project Status
+
+- [x] **Phase 0: Project Foundation**
+- [x] **Phase 1: Database Foundation** 
+- [x] **Phase 2: Baseline Text-to-SQL** (Current)
+- [ ] Phase 3: Schema Linking
+- [ ] Phase 4: SQL Probe Engine
+- [ ] Phase 5: Two-Stage Generation Exploration
+- [ ] Phase 6: SQL Validation and Execution
+- [ ] Phase 7: Refinement Engine
