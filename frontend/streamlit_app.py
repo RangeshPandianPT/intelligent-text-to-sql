@@ -35,5 +35,32 @@ st.sidebar.markdown("**About**")
 st.sidebar.markdown("This is a prototype implementation inspired by the SDE-SQL research paper.")
 
 st.markdown("---")
-st.write("Welcome to the SDE-SQL frontend. The system is currently in Phase 0 (Foundation) setup.")
-st.info("Full UI capabilities will be integrated in Phase 10 as per the implementation plan.")
+st.write("Welcome to the SDE-SQL frontend.")
+st.info("Currently running Phase 2: Baseline Text-to-SQL.")
+
+question = st.text_input("Ask a question about the college database (e.g., 'Which students are from CSE?'):")
+if st.button("Run Baseline Pipeline"):
+    if not question:
+        st.warning("Please enter a question.")
+    else:
+        with st.spinner("Generating and executing SQL via LLM..."):
+            try:
+                res = requests.post(f"{API_HOST}/query/baseline", json={"question": question}, timeout=60)
+                if res.status_code == 200:
+                    data = res.json()
+                    if data.get("status") in ("success_with_rows", "success_truncated", "success_empty"):
+                        st.success(f"Execution Status: {data.get('status')}")
+                        st.code(data.get("sql", ""), language="sql")
+                        if "rows" in data and data["rows"]:
+                            st.table(data["rows"])
+                        else:
+                            st.write("0 rows returned.")
+                    else:
+                        st.error(f"Pipeline Error: {data.get('status')}")
+                        st.code(data.get("sql", ""), language="sql")
+                        st.write(data.get("error", ""))
+                        st.json(data)
+                else:
+                    st.error(f"Error {res.status_code}: {res.text}")
+            except requests.exceptions.RequestException as e:
+                st.error(f"Request failed: {e}")
