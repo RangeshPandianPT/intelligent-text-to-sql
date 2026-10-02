@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from app.pipeline.orchestrator import run_baseline_pipeline
+from app.pipeline.orchestrator import run_baseline_pipeline, run_phase3_pipeline
 
 router = APIRouter()
 
@@ -14,6 +14,17 @@ async def baseline_query(request: QueryRequest):
     """
     try:
         result = run_baseline_pipeline(request.question)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/query/phase3", tags=["Query"])
+async def phase3_query(request: QueryRequest):
+    """
+    Runs the Phase 3 (Schema Linking) Text-to-SQL pipeline for the given question.
+    """
+    try:
+        result = run_phase3_pipeline(request.question)
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
