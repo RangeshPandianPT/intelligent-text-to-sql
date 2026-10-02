@@ -8,7 +8,7 @@ from app.config import settings
 
 logger = logging.getLogger(__name__)
 
-def execute_query(sql: str) -> Dict[str, Any]:
+def execute_query(sql: str, params: tuple = ()) -> Dict[str, Any]:
     """
     Executes a SQL query safely and returns the results with metadata.
     """
@@ -37,7 +37,7 @@ def execute_query(sql: str) -> Dict[str, Any]:
             cursor = conn.cursor()
             
             # Optionally wrap with a row limit if not present, but for now we just fetch up to MAX_ROWS.
-            cursor.execute(sql)
+            cursor.execute(sql, params)
             
             columns = [description[0] for description in cursor.description] if cursor.description else []
             result["columns"] = columns
