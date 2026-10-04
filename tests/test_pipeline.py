@@ -1,3 +1,6 @@
+"""
+Tests for the Text-to-SQL pipeline orchestrator.
+"""
 import pytest
 import json
 from app.pipeline.orchestrator import run_baseline_pipeline
