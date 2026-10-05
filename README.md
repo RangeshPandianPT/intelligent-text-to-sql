@@ -49,6 +49,6 @@ streamlit run frontend/streamlit_app.py
 - [x] **Phase 2: Baseline Text-to-SQL**
 - [x] **Phase 3: Schema Linking**
 - [x] **Phase 4: SQL Probe Engine**
-- [x] **Phase 5: Two-Stage Generation Exploration** (Current)
-- [ ] Phase 6: SQL Validation and Execution
-- [ ] Phase 7: Refinement Engine
+- [x] **Phase 5: Two-Stage Generation Exploration**
+- [x] **Phase 6: SQL Validation and Execution**
+- [ ] Phase 7: Refinement Engine (Current)
