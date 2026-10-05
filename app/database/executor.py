@@ -3,7 +3,7 @@ import sqlite3
 import logging
 from typing import Dict, Any
 from app.database.connection import get_connection
-from app.database.safety import validate_sql_safety, SQLSafetyError
+from app.database.validator import validate_sql, SQLSafetyError, SQLSchemaError, SQLSyntaxError
 from app.config import settings
 
 logger = logging.getLogger(__name__)
@@ -16,7 +16,7 @@ def execute_query(sql: str, params: tuple = ()) -> Dict[str, Any]:
     
     result = {
         "sql": sql,
-        "status": "error",
+        "status": "EXECUTION_ERROR",
         "rows": [],
         "columns": [],
         "row_count": 0,
@@ -25,18 +25,13 @@ def execute_query(sql: str, params: tuple = ()) -> Dict[str, Any]:
     }
     
     try:
-        # Step 1: Safety validation
-        validate_sql_safety(sql)
+        # Step 1: Validation (Syntax, Safety, Schema)
+        validate_sql(sql)
         
         # Step 2: Execution (read-only)
         with get_connection(read_only=True) as conn:
-            # We can't strictly timeout sqlite3 queries in Python easily without
-            # interrupt() or threads, but we can set a progress handler.
-            # For simplicity, we just rely on standard execution and limit rows.
-            
             cursor = conn.cursor()
             
-            # Optionally wrap with a row limit if not present, but for now we just fetch up to MAX_ROWS.
             cursor.execute(sql, params)
             
             columns = [description[0] for description in cursor.description] if cursor.description else []
@@ -46,23 +41,27 @@ def execute_query(sql: str, params: tuple = ()) -> Dict[str, Any]:
             result["rows"] = [dict(row) for row in rows]
             result["row_count"] = len(result["rows"])
             
-            # Check if there are more rows we didn't fetch
-            if len(rows) == settings.max_rows and cursor.fetchone() is not None:
-                result["status"] = "success_truncated"
-            elif result["row_count"] == 0:
-                result["status"] = "success_empty"
+            # The spec specifies SUCCESS_WITH_ROWS and SUCCESS_EMPTY, 
+            # we can merge success_truncated into SUCCESS_WITH_ROWS for the spec's sake.
+            if result["row_count"] == 0:
+                result["status"] = "SUCCESS_EMPTY"
             else:
-                result["status"] = "success_with_rows"
+                result["status"] = "SUCCESS_WITH_ROWS"
 
+    except SQLSyntaxError as e:
+        result["status"] = "SYNTAX_ERROR"
+        result["error"] = str(e)
+    except SQLSchemaError as e:
+        result["status"] = "SCHEMA_ERROR"
+        result["error"] = str(e)
     except SQLSafetyError as e:
-        result["status"] = "safety_rejection"
+        result["status"] = "SAFETY_REJECTION"
         result["error"] = str(e)
     except sqlite3.Error as e:
-        # Usually a schema or execution error
-        result["status"] = "execution_error"
+        result["status"] = "EXECUTION_ERROR"
         result["error"] = str(e)
     except Exception as e:
-        result["status"] = "system_error"
+        result["status"] = "EXECUTION_ERROR"
         result["error"] = str(e)
     finally:
         end_time = time.perf_counter()
