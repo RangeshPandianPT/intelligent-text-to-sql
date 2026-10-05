@@ -3,7 +3,6 @@ from app.llm.generator import SQLGenerator
 from app.schema_linking.linker import SchemaLinker
 from app.exploration.exploration_manager import ExplorationManager
 from app.database.executor import execute_query
-from app.database.safety import validate_sql_safety, SQLSafetyError
 
 def run_baseline_pipeline(question: str, llm_client=None) -> dict:
     """
@@ -25,19 +24,9 @@ def run_baseline_pipeline(question: str, llm_client=None) -> dict:
             "error": str(e)
         }
     
-    # 2. Validate Safety
-    try:
-        validate_sql_safety(sql)
-    except SQLSafetyError as e:
-        return {
-            "status": "safety_rejection",
-            "sql": sql,
-            "error": str(e)
-        }
-        
-    # 3. Execute
+    # 2. Execute
     result = execute_query(sql)
-    result["sql"] = sql  # Include generated SQL in the result
+    # The generated SQL is already included in result by execute_query
     return result
 
 def run_phase3_pipeline(question: str, llm_client=None) -> dict:
@@ -71,20 +60,8 @@ def run_phase3_pipeline(question: str, llm_client=None) -> dict:
             "linked_schema": linked_schema.dict()
         }
     
-    # 3. Validate Safety
-    try:
-        validate_sql_safety(sql)
-    except SQLSafetyError as e:
-        return {
-            "status": "safety_rejection",
-            "sql": sql,
-            "error": str(e),
-            "linked_schema": linked_schema.dict()
-        }
-        
-    # 4. Execute
+    # 3. Execute
     result = execute_query(sql)
-    result["sql"] = sql
     result["linked_schema"] = linked_schema.dict()
     return result
 
@@ -135,21 +112,8 @@ def run_phase5_pipeline(question: str, llm_client=None) -> dict:
             "exploration": exploration_data
         }
     
-    # 4. Validate Safety
-    try:
-        validate_sql_safety(sql)
-    except SQLSafetyError as e:
-        return {
-            "status": "safety_rejection",
-            "sql": sql,
-            "error": str(e),
-            "linked_schema": linked_schema.dict(),
-            "exploration": exploration_data
-        }
-        
-    # 5. Execute
+    # 4. Execute
     result = execute_query(sql)
-    result["sql"] = sql
     result["linked_schema"] = linked_schema.dict()
     # Serialize exploration data for JSON (ProbeResult models -> dict)
     result["exploration"] = {
