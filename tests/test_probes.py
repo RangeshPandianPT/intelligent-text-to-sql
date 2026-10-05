@@ -8,7 +8,7 @@ def test_probe_executor_valid_sql():
     results = executor.execute_probes([probe])
     
     assert len(results) == 1
-    assert results[0].status == "success_with_rows"
+    assert results[0].status == "SUCCESS_WITH_ROWS"
     assert results[0].rows == [{"num": 1}]
 
 def test_probe_executor_invalid_sql():
@@ -17,4 +17,4 @@ def test_probe_executor_invalid_sql():
     results = executor.execute_probes([probe])
     
     assert len(results) == 1
-    assert "error" in results[0].status
+    assert "ERROR" in results[0].status
