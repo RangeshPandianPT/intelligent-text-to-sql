@@ -22,6 +22,8 @@ class Settings(BaseSettings):
 
     # Exploration constraints
     max_probes: int = 5
+    max_refinement_attempts: int = 3  # Phase 7: total SQL attempts (initial + refinements)
+
 
     # Application metadata
     app_name: str = "SDE-SQL"
