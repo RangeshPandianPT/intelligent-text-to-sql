@@ -3,6 +3,7 @@ from app.llm.generator import SQLGenerator
 from app.schema_linking.linker import SchemaLinker
 from app.exploration.exploration_manager import ExplorationManager
 from app.database.executor import execute_query
+from app.refinement.engine import RefinementEngine
 
 def run_baseline_pipeline(question: str, llm_client=None) -> dict:
     """
@@ -123,3 +124,94 @@ def run_phase5_pipeline(question: str, llm_client=None) -> dict:
         "rejected_combinations": [r.dict() for r in exploration_data["rejected_combinations"]]
     }
     return result
+
+
+def run_phase7_pipeline(question: str, llm_client=None) -> dict:
+    """
+    Runs the full SDE-SQL pipeline with the Phase 7 Refinement Engine.
+
+    Flow:
+        Question
+          → Schema Linking  (Phase 3)
+          → Two-Stage Exploration  (Phase 5)
+          → Initial SQL Generation
+          → Refinement Loop  (Phase 7)  ← iteratively corrects errors / empty results
+          → Final Result
+    """
+    if llm_client is None:
+        llm_client = OllamaClient()
+
+    linker = SchemaLinker(llm_client)
+    generator = SQLGenerator(llm_client)
+    explorer = ExplorationManager()
+    refiner = RefinementEngine(sql_generator=generator)
+
+    # 1. Schema Linking
+    try:
+        linked_schema = linker.link(question)
+    except Exception as e:
+        return {
+            "status": "schema_linking_error",
+            "error": str(e)
+        }
+
+    # 2. Two-Stage Exploration
+    try:
+        exploration_data = explorer.two_stage_explore(question, linked_schema.dict())
+    except Exception as e:
+        return {
+            "status": "exploration_error",
+            "error": str(e),
+            "linked_schema": linked_schema.dict()
+        }
+
+    # 3. Initial SQL Generation (same as Phase 5)
+    try:
+        response = generator.generate_explored_sql(
+            question,
+            linked_schema,
+            exploration_data["successful_combinations"],
+            exploration_data["rejected_combinations"]
+        )
+        initial_sql = response.sql
+    except Exception as e:
+        return {
+            "status": "generation_error",
+            "error": str(e),
+            "linked_schema": linked_schema.dict(),
+            "exploration": {
+                "stage_a_results": [r.dict() for r in exploration_data["stage_a_results"]],
+                "stage_b_results": [r.dict() for r in exploration_data["stage_b_results"]],
+                "successful_combinations": [r.dict() for r in exploration_data["successful_combinations"]],
+                "rejected_combinations": [r.dict() for r in exploration_data["rejected_combinations"]]
+            }
+        }
+
+    # 4. Refinement Loop
+    refinement_result = refiner.refine(
+        initial_sql=initial_sql,
+        question=question,
+        linked_schema=linked_schema.dict(),
+        exploration_data=exploration_data,
+    )
+
+    # 5. Assemble response
+    return {
+        "sql": refinement_result.final_sql,
+        "status": refinement_result.final_status,
+        "rows": refinement_result.final_rows,
+        "columns": refinement_result.final_columns,
+        "row_count": refinement_result.final_row_count,
+        "execution_time_ms": refinement_result.final_execution_time_ms,
+        "error": refinement_result.error,
+        "refined": refinement_result.refined,
+        "total_attempts": refinement_result.total_attempts,
+        "refinement_attempts": [a.dict() for a in refinement_result.refinement_attempts],
+        "linked_schema": linked_schema.dict(),
+        "exploration": {
+            "stage_a_results": [r.dict() for r in exploration_data["stage_a_results"]],
+            "stage_b_results": [r.dict() for r in exploration_data["stage_b_results"]],
+            "successful_combinations": [r.dict() for r in exploration_data["successful_combinations"]],
+            "rejected_combinations": [r.dict() for r in exploration_data["rejected_combinations"]]
+        }
+    }
