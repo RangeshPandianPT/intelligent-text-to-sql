@@ -1,7 +1,12 @@
 import json
 from pydantic import ValidationError
 from app.llm.client import LLMClient
-from app.llm.prompts import build_sql_generation_prompt, build_linked_sql_generation_prompt, build_explored_sql_generation_prompt
+from app.llm.prompts import (
+    build_sql_generation_prompt,
+    build_linked_sql_generation_prompt,
+    build_explored_sql_generation_prompt,
+    build_refinement_prompt,
+)
 from app.llm.schemas import SQLGenerationResponse
 from app.database.schema import get_database_schema
 
@@ -57,3 +62,33 @@ class SQLGenerator:
             return SQLGenerationResponse(**data)
         except (json.JSONDecodeError, ValidationError) as e:
             raise ValueError(f"Failed to parse LLM response into SQL: {e}. Raw response: {response_text}")
+
+    def generate_refined_sql(
+        self,
+        question: str,
+        linked_schema: dict,
+        prior_attempts: list,
+        probe_hints: list = None,
+    ) -> SQLGenerationResponse:
+        """
+        Generates a corrected SQL query using the Phase 7 refinement approach.
+        The LLM receives the full history of prior failed attempts together with
+        any concrete database value hints from the exploration phase.
+        """
+        prompt = build_refinement_prompt(
+            question=question,
+            linked_schema=linked_schema if isinstance(linked_schema, dict) else linked_schema.dict(),
+            prior_attempts=prior_attempts,
+            probe_hints=probe_hints or [],
+        )
+
+        response_text = self.llm.generate(prompt, require_json=True)
+
+        try:
+            data = json.loads(response_text)
+            return SQLGenerationResponse(**data)
+        except (json.JSONDecodeError, ValidationError) as e:
+            raise ValueError(
+                f"Failed to parse LLM refinement response into SQL: {e}. "
+                f"Raw response: {response_text}"
+            )
