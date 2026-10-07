@@ -177,3 +177,29 @@ FAILED ATTEMPTS (analyse these to avoid repeating the same mistakes):
 QUESTION:
 {question}
 """
+
+def build_target_checking_prompt(question: str, generated_sql: str) -> str:
+    """
+    Builds the prompt for Phase 8 Target Checking.
+    """
+    return f"""You are an expert SQLite SQL developer.
+Your task is to perform "Target Checking" on a generated SQL query.
+The SQL SELECT target must correspond exactly to what the user requested. If the query returns extra columns that the user did not ask for, you must remove them from the SELECT clause.
+
+RULES:
+1. If the query SELECTs columns not requested by the user, remove them.
+2. If the query is already correct, return it as is.
+3. Do not modify the WHERE, JOIN, or FROM clauses.
+4. Return a valid JSON object matching this schema exactly:
+{{
+  "sql": "SELECT ...",
+  "confidence": 0.9
+}}
+5. Do not include markdown formatting like ```json or anything else. Just the raw JSON object.
+
+USER QUESTION:
+{question}
+
+GENERATED SQL:
+{generated_sql}
+"""
