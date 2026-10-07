@@ -6,6 +6,7 @@ from app.llm.prompts import (
     build_linked_sql_generation_prompt,
     build_explored_sql_generation_prompt,
     build_refinement_prompt,
+    build_target_checking_prompt,
 )
 from app.llm.schemas import SQLGenerationResponse
 from app.database.schema import get_database_schema
@@ -92,3 +93,17 @@ class SQLGenerator:
                 f"Failed to parse LLM refinement response into SQL: {e}. "
                 f"Raw response: {response_text}"
             )
+
+    def generate_target_checked_sql(self, question: str, generated_sql: str) -> SQLGenerationResponse:
+        """
+        Generates a SQL query with a pruned SELECT target based on the Phase 8 Target Checking.
+        """
+        prompt = build_target_checking_prompt(question, generated_sql)
+        
+        response_text = self.llm.generate(prompt, require_json=True)
+        
+        try:
+            data = json.loads(response_text)
+            return SQLGenerationResponse(**data)
+        except (json.JSONDecodeError, ValidationError) as e:
+            raise ValueError(f"Failed to parse LLM target checking response into SQL: {e}. Raw response: {response_text}")
