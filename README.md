@@ -52,4 +52,5 @@ streamlit run frontend/streamlit_app.py
 - [x] **Phase 5: Two-Stage Generation Exploration**
 - [x] **Phase 6: SQL Validation and Execution**
 - [x] **Phase 7: Refinement Engine**
+- [x] **Phase 8: Target Checking**
 
