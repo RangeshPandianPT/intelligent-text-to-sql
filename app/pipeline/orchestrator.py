@@ -4,6 +4,7 @@ from app.schema_linking.linker import SchemaLinker
 from app.exploration.exploration_manager import ExplorationManager
 from app.database.executor import execute_query
 from app.refinement.engine import RefinementEngine
+from app.refinement.target_checker import TargetChecker
 
 def run_baseline_pipeline(question: str, llm_client=None) -> dict:
     """
@@ -215,3 +216,101 @@ def run_phase7_pipeline(question: str, llm_client=None) -> dict:
             "rejected_combinations": [r.dict() for r in exploration_data["rejected_combinations"]]
         }
     }
+
+
+def run_pipeline(question: str, llm_client=None) -> dict:
+    """
+    Runs the full SDE-SQL pipeline (Phase 9 Orchestrator).
+    Includes Schema Linking, Two-Stage Exploration, Refinement, and Target Checking.
+    Returns the final structured result object with trace.
+    """
+    if llm_client is None:
+        llm_client = OllamaClient()
+
+    linker = SchemaLinker(llm_client)
+    generator = SQLGenerator(llm_client)
+    explorer = ExplorationManager()
+    refiner = RefinementEngine(sql_generator=generator)
+    target_checker = TargetChecker(sql_generator=generator)
+
+    # 1. Schema Linking
+    try:
+        linked_schema = linker.link(question)
+    except Exception as e:
+        return {
+            "question": question,
+            "status": "schema_linking_error",
+            "sql": "",
+            "rows": [],
+            "row_count": 0,
+            "execution_time_ms": 0,
+            "trace": {}
+        }
+
+    # 2. Two-Stage Exploration
+    try:
+        exploration_data = explorer.two_stage_explore(question, linked_schema.dict())
+    except Exception as e:
+        return {
+            "question": question,
+            "status": "exploration_error",
+            "sql": "",
+            "rows": [],
+            "row_count": 0,
+            "execution_time_ms": 0,
+            "trace": {
+                "schema_linking": linked_schema.dict()
+            }
+        }
+
+    # 3. Initial SQL Generation
+    try:
+        response = generator.generate_explored_sql(
+            question,
+            linked_schema,
+            exploration_data["successful_combinations"],
+            exploration_data["rejected_combinations"]
+        )
+        initial_sql = response.sql
+    except Exception as e:
+        return {
+            "question": question,
+            "status": "generation_error",
+            "sql": "",
+            "rows": [],
+            "row_count": 0,
+            "execution_time_ms": 0,
+            "trace": {
+                "schema_linking": linked_schema.dict(),
+                "probes": [r.dict() for r in exploration_data["stage_a_results"]] + [r.dict() for r in exploration_data["stage_b_results"]]
+            }
+        }
+
+    # 4. Refinement Loop
+    refinement_result = refiner.refine(
+        initial_sql=initial_sql,
+        question=question,
+        linked_schema=linked_schema.dict(),
+        exploration_data=exploration_data,
+    )
+    
+    # 5. Target Checking
+    target_checked_result = target_checker.check_and_refine_target(question, refinement_result.final_sql)
+
+    # 6. Assemble Final Response
+    trace = {
+        "schema_linking": linked_schema.dict(),
+        "probes": [r.dict() for r in exploration_data["stage_a_results"]] + [r.dict() for r in exploration_data["stage_b_results"]],
+        "refinement": [a.dict() for a in refinement_result.refinement_attempts]
+    }
+
+    return {
+        "question": question,
+        "status": target_checked_result.get("status", "error"),
+        "sql": target_checked_result.get("sql", ""),
+        "rows": target_checked_result.get("rows", []),
+        "row_count": target_checked_result.get("row_count", 0),
+        "execution_time_ms": target_checked_result.get("execution_time_ms", 0),
+        "trace": trace
+    }
+
