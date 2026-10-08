@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import os
+import pandas as pd
 
 # Read configuration securely from env or defaults
 API_HOST = os.getenv("API_HOST", "http://localhost:8000")
@@ -11,8 +12,8 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("SDE-SQL: Self-Driven Database Exploration")
-st.markdown("### Accurate Text-to-SQL via LLM Database Exploration")
+st.title("SDE-SQL")
+st.markdown("### Self-Driven Database Exploration for Text-to-SQL")
 
 # Sidebar
 st.sidebar.header("System Settings")
@@ -35,109 +36,72 @@ st.sidebar.markdown("**About**")
 st.sidebar.markdown("This is a prototype implementation inspired by the SDE-SQL research paper.")
 
 st.markdown("---")
-st.write("Welcome to the SDE-SQL frontend.")
-st.info("Currently supporting Baseline (Phase 2), Schema Linking (Phase 3), and Two-Stage Exploration (Phase 5).")
 
-question = st.text_input("Ask a question about the college database (e.g., 'Which students are from CSE?'):")
-col1, col2, col3 = st.columns(3)
-run_baseline = col1.button("Run Baseline Pipeline")
-run_phase3 = col2.button("Run Phase 3 Pipeline")
-run_phase5 = col3.button("Run Phase 5 Pipeline")
+question = st.text_input("Ask a question about the database (e.g., 'Find students from the computer science department with CGPA above 8.5.'):")
 
-if run_baseline:
+if st.button("Generate SQL"):
     if not question:
         st.warning("Please enter a question.")
     else:
-        with st.spinner("Generating and executing SQL via LLM..."):
+        with st.spinner("Running Full SDE-SQL Pipeline..."):
             try:
-                res = requests.post(f"{API_HOST}/query/baseline", json={"question": question}, timeout=60)
+                res = requests.post(f"{API_HOST}/api/query", json={"question": question}, timeout=180)
                 if res.status_code == 200:
                     data = res.json()
-                    if data.get("status") in ("success_with_rows", "success_truncated", "success_empty"):
-                        st.success(f"Execution Status: {data.get('status')}")
-                        st.code(data.get("sql", ""), language="sql")
-                        if "rows" in data and data["rows"]:
-                            st.table(data["rows"])
-                        else:
-                            st.write("0 rows returned.")
-                    else:
-                        st.error(f"Pipeline Error: {data.get('status')}")
-                        st.code(data.get("sql", ""), language="sql")
-                        st.write(data.get("error", ""))
-                        st.json(data)
-                else:
-                    st.error(f"Error {res.status_code}: {res.text}")
-            except requests.exceptions.RequestException as e:
-                st.error(f"Request failed: {e}")
-
-if run_phase3:
-    if not question:
-        st.warning("Please enter a question.")
-    else:
-        with st.spinner("Linking Schema and Generating SQL via LLM..."):
-            try:
-                res = requests.post(f"{API_HOST}/query/phase3", json={"question": question}, timeout=120)
-                if res.status_code == 200:
-                    data = res.json()
+                    trace = data.get("trace", {})
                     
-                    if "linked_schema" in data:
-                        with st.expander("View Linked Schema"):
-                            st.json(data["linked_schema"])
-                            
-                    if data.get("status") in ("success_with_rows", "success_truncated", "success_empty"):
-                        st.success(f"Execution Status: {data.get('status')}")
-                        st.code(data.get("sql", ""), language="sql")
-                        if "rows" in data and data["rows"]:
-                            st.table(data["rows"])
-                        else:
-                            st.write("0 rows returned.")
+                    st.header("Section 1: Schema")
+                    linked_schema = trace.get("schema_linking", {})
+                    if linked_schema:
+                        st.json(linked_schema)
                     else:
-                        st.error(f"Pipeline Error: {data.get('status')}")
-                        st.code(data.get("sql", ""), language="sql")
-                        st.write(data.get("error", ""))
-                        st.json(data)
-                else:
-                    st.error(f"Error {res.status_code}: {res.text}")
-            except requests.exceptions.RequestException as e:
-                st.error(f"Request failed: {e}")
+                        st.write("No schema linking data found.")
+                        
+                    st.header("Section 2: Exploration")
+                    probes = trace.get("probes", [])
+                    if probes:
+                        for idx, p in enumerate(probes):
+                            with st.expander(f"Probe {idx+1}: {p.get('purpose', 'Exploration')}"):
+                                st.code(p.get("sql", ""), language="sql")
+                                st.write("Execution Success:", p.get("execution_success", True))
+                                if p.get("rows"):
+                                    st.dataframe(pd.DataFrame(p["rows"]))
+                                else:
+                                    st.write(p.get("error", "0 rows returned."))
+                    else:
+                        st.write("No probes were executed.")
 
-if run_phase5:
-    if not question:
-        st.warning("Please enter a question.")
-    else:
-        with st.spinner("Running Phase 5: Linking Schema, Exploring DB, and Generating SQL..."):
-            try:
-                res = requests.post(f"{API_HOST}/query/phase5", json={"question": question}, timeout=180)
-                if res.status_code == 200:
-                    data = res.json()
-                    
-                    if "linked_schema" in data:
-                        with st.expander("View Linked Schema"):
-                            st.json(data["linked_schema"])
-                            
-                    if "exploration" in data:
-                        exp = data["exploration"]
-                        with st.expander("View Exploration Probes & Results"):
-                            st.markdown("**Stage A: Base Probes**")
-                            st.json(exp.get("stage_a_results", []))
-                            st.markdown("**Stage B: Condition Probes**")
-                            st.json(exp.get("stage_b_results", []))
-                            st.markdown("**Rejected Combinations**")
-                            st.json(exp.get("rejected_combinations", []))
-                            
-                    if data.get("status") in ("success_with_rows", "success_truncated", "success_empty"):
-                        st.success(f"Execution Status: {data.get('status')}")
-                        st.code(data.get("sql", ""), language="sql")
-                        if "rows" in data and data["rows"]:
-                            st.table(data["rows"])
-                        else:
-                            st.write("0 rows returned.")
+                    st.header("Section 3: Generated SQL")
+                    st.code(data.get("sql", ""), language="sql")
+                    status = data.get("status", "Unknown")
+                    if status in ("SUCCESS_WITH_ROWS", "SUCCESS_EMPTY"):
+                        st.success(f"Status: {status}")
                     else:
-                        st.error(f"Pipeline Error: {data.get('status')}")
-                        st.code(data.get("sql", ""), language="sql")
-                        st.write(data.get("error", ""))
-                        st.json(data)
+                        st.error(f"Status: {status}")
+                        
+                    refinements = trace.get("refinement", [])
+                    if refinements:
+                        st.header("Section 4: Refinement")
+                        for idx, r in enumerate(refinements):
+                            with st.expander(f"Refinement Iteration {idx+1}"):
+                                st.write("**Diagnostics:**")
+                                for d in r.get("diagnostic_results", []):
+                                    st.code(d.get("sql", ""), language="sql")
+                                    st.write(f"Row Count: {d.get('row_count', 0)}")
+                                st.write("**Refined SQL:**")
+                                st.code(r.get("refined_sql", ""), language="sql")
+                                st.write(f"Execution Status: {r.get('execution_status', 'Unknown')}")
+                                
+                    st.header("Section 5: Final Results")
+                    st.write(f"**Row Count:** {data.get('row_count', 0)}")
+                    st.write(f"**Execution Time:** {data.get('execution_time_ms', 0)} ms")
+                    
+                    if data.get("rows"):
+                        st.dataframe(pd.DataFrame(data["rows"]))
+                    else:
+                        st.write("No rows to display.")
+
                 else:
-                    st.error(f"Error {res.status_code}: {res.text}")
+                    st.error(f"API Error {res.status_code}: {res.text}")
             except requests.exceptions.RequestException as e:
                 st.error(f"Request failed: {e}")
