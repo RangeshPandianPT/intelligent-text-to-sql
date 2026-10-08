@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from app.pipeline.orchestrator import run_baseline_pipeline, run_phase3_pipeline, run_phase5_pipeline, run_phase7_pipeline
+from app.pipeline.orchestrator import run_baseline_pipeline, run_phase3_pipeline, run_phase5_pipeline, run_phase7_pipeline, run_pipeline
+from app.database.schema import get_database_schema
 
 router = APIRouter()
 
@@ -52,3 +53,25 @@ async def phase7_query(request: QueryRequest):
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/api/query", tags=["Query"])
+async def full_query(request: QueryRequest):
+    """
+    Runs the full SDE-SQL pipeline for the given question (Phase 9 & 11).
+    """
+    try:
+        result = run_pipeline(request.question)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/api/schema", tags=["Schema"])
+async def get_schema():
+    """
+    Returns the full database schema (Phase 11).
+    """
+    try:
+        return get_database_schema()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
