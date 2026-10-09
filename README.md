@@ -57,4 +57,5 @@ streamlit run frontend/streamlit_app.py
 - [x] **Phase 10: Streamlit UI**
 - [x] **Phase 11: FastAPI API**
 - [x] **Phase 12: Testing**
+- [x] **Phase 13: Evaluation Dataset**
 
