@@ -1,0 +1,188 @@
+[
+  {
+    "question": "Which students are from CSE?",
+    "gold_sql": "SELECT name FROM students WHERE department = 'CSE';",
+    "category": "filtering",
+    "difficulty": "simple"
+  },
+  {
+    "question": "Give me the names and CGPAs of all students.",
+    "gold_sql": "SELECT name, cgpa FROM students;",
+    "category": "projection",
+    "difficulty": "simple"
+  },
+  {
+    "question": "List all courses in the ECE department.",
+    "gold_sql": "SELECT course_name FROM courses WHERE department = 'ECE';",
+    "category": "filtering",
+    "difficulty": "simple"
+  },
+  {
+    "question": "Which students have a CGPA greater than 8.0?",
+    "gold_sql": "SELECT name FROM students WHERE cgpa > 8.0;",
+    "category": "filtering",
+    "difficulty": "simple"
+  },
+  {
+    "question": "Show me all students ordered by their year of study, descending.",
+    "gold_sql": "SELECT name FROM students ORDER BY year DESC;",
+    "category": "ordering",
+    "difficulty": "simple"
+  },
+  {
+    "question": "What are the names of students in their 4th year?",
+    "gold_sql": "SELECT name FROM students WHERE year = 4;",
+    "category": "filtering",
+    "difficulty": "simple"
+  },
+  {
+    "question": "Which courses offer 4 credits?",
+    "gold_sql": "SELECT course_name FROM courses WHERE credits = 4;",
+    "category": "filtering",
+    "difficulty": "simple"
+  },
+  {
+    "question": "List all departments in the college.",
+    "gold_sql": "SELECT DISTINCT department FROM students;",
+    "category": "projection",
+    "difficulty": "simple"
+  },
+  {
+    "question": "Find the names of students whose CGPA is exactly 8.7.",
+    "gold_sql": "SELECT name FROM students WHERE cgpa = 8.7;",
+    "category": "filtering",
+    "difficulty": "simple"
+  },
+  {
+    "question": "What is the highest CGPA among all students?",
+    "gold_sql": "SELECT MAX(cgpa) FROM students;",
+    "category": "aggregation",
+    "difficulty": "moderate"
+  },
+  {
+    "question": "Find the average CGPA of students in the CSE department.",
+    "gold_sql": "SELECT AVG(cgpa) FROM students WHERE department = 'CSE';",
+    "category": "aggregation",
+    "difficulty": "moderate"
+  },
+  {
+    "question": "How many students are there in each department?",
+    "gold_sql": "SELECT department, COUNT(student_id) FROM students GROUP BY department;",
+    "category": "GROUP BY",
+    "difficulty": "moderate"
+  },
+  {
+    "question": "Which departments have more than 2 students?",
+    "gold_sql": "SELECT department FROM students GROUP BY department HAVING COUNT(student_id) > 2;",
+    "category": "HAVING",
+    "difficulty": "moderate"
+  },
+  {
+    "question": "What are the names of students and the courses they are enrolled in?",
+    "gold_sql": "SELECT s.name, c.course_name FROM students s JOIN enrollments e ON s.student_id = e.student_id JOIN courses c ON e.course_id = c.course_id;",
+    "category": "joins",
+    "difficulty": "moderate"
+  },
+  {
+    "question": "Find the total number of credits for courses in the CSE department.",
+    "gold_sql": "SELECT SUM(credits) FROM courses WHERE department = 'CSE';",
+    "category": "aggregation",
+    "difficulty": "moderate"
+  },
+  {
+    "question": "List the names of students who scored more than 90 marks in any course.",
+    "gold_sql": "SELECT DISTINCT s.name FROM students s JOIN enrollments e ON s.student_id = e.student_id WHERE e.marks > 90;",
+    "category": "joins",
+    "difficulty": "moderate"
+  },
+  {
+    "question": "What is the average marks obtained in the course CS101?",
+    "gold_sql": "SELECT AVG(marks) FROM enrollments WHERE course_id = 'CS101';",
+    "category": "aggregation",
+    "difficulty": "moderate"
+  },
+  {
+    "question": "How many courses are offered by each department?",
+    "gold_sql": "SELECT department, COUNT(course_id) FROM courses GROUP BY department;",
+    "category": "GROUP BY",
+    "difficulty": "moderate"
+  },
+  {
+    "question": "Find the names of students who have enrolled in 'Fall2023'.",
+    "gold_sql": "SELECT DISTINCT s.name FROM students s JOIN enrollments e ON s.student_id = e.student_id WHERE e.semester = 'Fall2023';",
+    "category": "joins",
+    "difficulty": "moderate"
+  },
+  {
+    "question": "Which students from the CSE department have a CGPA above 8.5 and are in their 4th year?",
+    "gold_sql": "SELECT name FROM students WHERE department = 'CSE' AND cgpa > 8.5 AND year = 4;",
+    "category": "multiple conditions",
+    "difficulty": "difficult"
+  },
+  {
+    "question": "Find the names of students who are taking 'Data Structures'.",
+    "gold_sql": "SELECT s.name FROM students s JOIN enrollments e ON s.student_id = e.student_id JOIN courses c ON e.course_id = c.course_id WHERE c.course_name = 'Data Structures';",
+    "category": "joins",
+    "difficulty": "difficult"
+  },
+  {
+    "question": "Which students are from the 'Computer Science' department?",
+    "gold_sql": "SELECT name FROM students WHERE department = 'CSE';",
+    "category": "ambiguous values",
+    "difficulty": "difficult"
+  },
+  {
+    "question": "List the names of students who have enrolled in courses offered by a department other than their own.",
+    "gold_sql": "SELECT DISTINCT s.name FROM students s JOIN enrollments e ON s.student_id = e.student_id JOIN courses c ON e.course_id = c.course_id WHERE s.department != c.department;",
+    "category": "joins",
+    "difficulty": "difficult"
+  },
+  {
+    "question": "Find the student who has the highest CGPA in the college.",
+    "gold_sql": "SELECT name FROM students WHERE cgpa = (SELECT MAX(cgpa) FROM students);",
+    "category": "nested queries",
+    "difficulty": "difficult"
+  },
+  {
+    "question": "Which students have not enrolled in any courses?",
+    "gold_sql": "SELECT name FROM students WHERE student_id NOT IN (SELECT student_id FROM enrollments);",
+    "category": "nested queries",
+    "difficulty": "difficult"
+  },
+  {
+    "question": "What is the average marks of Alice Smith?",
+    "gold_sql": "SELECT AVG(e.marks) FROM enrollments e JOIN students s ON e.student_id = s.student_id WHERE s.name = 'Alice Smith';",
+    "category": "joins",
+    "difficulty": "difficult"
+  },
+  {
+    "question": "Which course has the highest average marks?",
+    "gold_sql": "SELECT c.course_name FROM courses c JOIN enrollments e ON c.course_id = e.course_id GROUP BY c.course_id ORDER BY AVG(e.marks) DESC LIMIT 1;",
+    "category": "nested queries",
+    "difficulty": "difficult"
+  },
+  {
+    "question": "Find the names of students from the Civil department.",
+    "gold_sql": "SELECT name FROM students WHERE department = 'Civil';",
+    "category": "empty-result cases",
+    "difficulty": "difficult"
+  },
+  {
+    "question": "List the courses that no student has enrolled in.",
+    "gold_sql": "SELECT course_name FROM courses WHERE course_id NOT IN (SELECT course_id FROM enrollments);",
+    "category": "nested queries",
+    "difficulty": "difficult"
+  },
+  {
+    "question": "How many students are taking a course with 4 credits?",
+    "gold_sql": "SELECT COUNT(DISTINCT s.student_id) FROM students s JOIN enrollments e ON s.student_id = e.student_id JOIN courses c ON e.course_id = c.course_id WHERE c.credits = 4;",
+    "category": "joins",
+    "difficulty": "difficult"
+  },
+  {
+    "question": "What is the name of the department with the highest total credits offered?",
+    "gold_sql": "SELECT department FROM courses GROUP BY department ORDER BY SUM(credits) DESC LIMIT 1;",
+    "category": "nested queries",
+    "difficulty": "difficult"
+  }
+]
