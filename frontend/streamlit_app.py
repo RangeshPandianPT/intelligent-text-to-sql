@@ -32,6 +32,14 @@ except requests.exceptions.RequestException:
     st.sidebar.info("Ensure the FastAPI backend is running on port 8000.")
 
 st.sidebar.markdown("---")
+st.sidebar.header("Ablation Configuration (Phase 14)")
+enable_schema_linking = st.sidebar.checkbox("Enable Schema Linking", value=True)
+enable_generation_exploration = st.sidebar.checkbox("Enable Generation Exploration", value=True)
+enable_refinement = st.sidebar.checkbox("Enable Refinement", value=True)
+enable_refinement_exploration = st.sidebar.checkbox("Enable Refinement Exploration", value=True)
+enable_target_checking = st.sidebar.checkbox("Enable Target Checking", value=True)
+
+st.sidebar.markdown("---")
 st.sidebar.markdown("**About**")
 st.sidebar.markdown("This is a prototype implementation inspired by the SDE-SQL research paper.")
 
@@ -43,9 +51,17 @@ if st.button("Generate SQL"):
     if not question:
         st.warning("Please enter a question.")
     else:
-        with st.spinner("Running Full SDE-SQL Pipeline..."):
+        with st.spinner("Running SDE-SQL Pipeline..."):
             try:
-                res = requests.post(f"{API_HOST}/api/query", json={"question": question}, timeout=180)
+                payload = {
+                    "question": question,
+                    "enable_schema_linking": enable_schema_linking,
+                    "enable_generation_exploration": enable_generation_exploration,
+                    "enable_refinement": enable_refinement,
+                    "enable_refinement_exploration": enable_refinement_exploration,
+                    "enable_target_checking": enable_target_checking,
+                }
+                res = requests.post(f"{API_HOST}/api/query", json=payload, timeout=180)
                 if res.status_code == 200:
                     data = res.json()
                     trace = data.get("trace", {})
