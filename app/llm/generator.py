@@ -35,7 +35,8 @@ class SQLGenerator:
         """
         Generates SQL for a question using the Phase 3 approach (LinkedSchema + Question -> SQL).
         """
-        prompt = build_linked_sql_generation_prompt(question, linked_schema.dict())
+        schema_dict = linked_schema.model_dump() if hasattr(linked_schema, "model_dump") else linked_schema.dict()
+        prompt = build_linked_sql_generation_prompt(question, schema_dict)
         
         response_text = self.llm.generate(prompt, require_json=True)
         
@@ -49,9 +50,10 @@ class SQLGenerator:
         """
         Generates SQL for a question using the Phase 5 approach (LinkedSchema + Exploration + Question -> SQL).
         """
+        schema_dict = linked_schema.model_dump() if hasattr(linked_schema, "model_dump") else (linked_schema.dict() if hasattr(linked_schema, "dict") else linked_schema)
         prompt = build_explored_sql_generation_prompt(
             question, 
-            linked_schema.dict() if hasattr(linked_schema, "dict") else linked_schema, 
+            schema_dict, 
             successful_combinations, 
             rejected_combinations
         )
