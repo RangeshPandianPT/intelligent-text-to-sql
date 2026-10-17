@@ -7,6 +7,11 @@ router = APIRouter()
 
 class QueryRequest(BaseModel):
     question: str
+    enable_schema_linking: bool = True
+    enable_generation_exploration: bool = True
+    enable_refinement: bool = True
+    enable_refinement_exploration: bool = True
+    enable_target_checking: bool = True
 
 @router.post("/query/baseline", tags=["Query"])
 async def baseline_query(request: QueryRequest):
@@ -57,10 +62,17 @@ async def phase7_query(request: QueryRequest):
 @router.post("/api/query", tags=["Query"])
 async def full_query(request: QueryRequest):
     """
-    Runs the full SDE-SQL pipeline for the given question (Phase 9 & 11).
+    Runs the full SDE-SQL pipeline for the given question with optional ablation flags (Phase 9, 11 & 14).
     """
     try:
-        result = run_pipeline(request.question)
+        result = run_pipeline(
+            question=request.question,
+            enable_schema_linking=request.enable_schema_linking,
+            enable_generation_exploration=request.enable_generation_exploration,
+            enable_refinement=request.enable_refinement,
+            enable_refinement_exploration=request.enable_refinement_exploration,
+            enable_target_checking=request.enable_target_checking,
+        )
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
