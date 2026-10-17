@@ -2,7 +2,9 @@ from app.llm.client import OllamaClient
 from app.llm.generator import SQLGenerator
 from app.schema_linking.linker import SchemaLinker
 from app.exploration.exploration_manager import ExplorationManager
+from app.exploration.probe_generator import ProbeGenerator
 from app.database.executor import execute_query
+from app.database.schema import get_database_schema
 from app.refinement.engine import RefinementEngine
 from app.refinement.target_checker import TargetChecker
 
@@ -218,59 +220,110 @@ def run_phase7_pipeline(question: str, llm_client=None) -> dict:
     }
 
 
-def run_pipeline(question: str, llm_client=None) -> dict:
+def run_pipeline(
+    question: str,
+    llm_client=None,
+    enable_schema_linking: bool = True,
+    enable_generation_exploration: bool = True,
+    enable_refinement: bool = True,
+    enable_refinement_exploration: bool = True,
+    enable_target_checking: bool = True,
+) -> dict:
     """
-    Runs the full SDE-SQL pipeline (Phase 9 Orchestrator).
-    Includes Schema Linking, Two-Stage Exploration, Refinement, and Target Checking.
-    Returns the final structured result object with trace.
+    Runs the SDE-SQL pipeline with configurable ablation flags (Phase 9 & Phase 14).
+
+    Parameters
+    ----------
+    question: str
+        The natural language query.
+    llm_client: LLMClient, optional
+        LLM client to use. Defaults to OllamaClient().
+    enable_schema_linking: bool
+        Whether to perform schema linking before SQL generation.
+    enable_generation_exploration: bool
+        Whether to run two-stage SQL exploration probes before generation.
+    enable_refinement: bool
+        Whether to iteratively refine failed/empty SQL results.
+    enable_refinement_exploration: bool
+        Whether to pass exploration probe hints during refinement.
+    enable_target_checking: bool
+        Whether to verify and prune SELECT target columns.
     """
     if llm_client is None:
         llm_client = OllamaClient()
 
     linker = SchemaLinker(llm_client)
     generator = SQLGenerator(llm_client)
-    explorer = ExplorationManager()
+    probe_generator = ProbeGenerator(llm_client=llm_client)
+    explorer = ExplorationManager(generator=probe_generator)
     refiner = RefinementEngine(sql_generator=generator)
     target_checker = TargetChecker(sql_generator=generator)
 
-    # 1. Schema Linking
-    try:
-        linked_schema = linker.link(question)
-    except Exception as e:
-        return {
-            "question": question,
-            "status": "schema_linking_error",
-            "sql": "",
-            "rows": [],
-            "row_count": 0,
-            "execution_time_ms": 0,
-            "trace": {}
-        }
+    def _to_dict(obj):
+        if obj is None:
+            return None
+        if hasattr(obj, "model_dump"):
+            return obj.model_dump()
+        if hasattr(obj, "dict"):
+            return obj.dict()
+        return obj
 
-    # 2. Two-Stage Exploration
-    try:
-        exploration_data = explorer.two_stage_explore(question, linked_schema.dict())
-    except Exception as e:
-        return {
-            "question": question,
-            "status": "exploration_error",
-            "sql": "",
-            "rows": [],
-            "row_count": 0,
-            "execution_time_ms": 0,
-            "trace": {
-                "schema_linking": linked_schema.dict()
+    linked_schema = None
+    linked_schema_dict = {}
+    exploration_data = None
+    probes_list = []
+
+    # 1. Schema Linking
+    if enable_schema_linking:
+        try:
+            linked_schema = linker.link(question)
+            linked_schema_dict = _to_dict(linked_schema) or {}
+        except Exception as e:
+            return {
+                "question": question,
+                "status": "schema_linking_error",
+                "sql": "",
+                "rows": [],
+                "row_count": 0,
+                "execution_time_ms": 0,
+                "trace": {}
             }
-        }
+
+    # 2. Generation Exploration
+    if enable_generation_exploration:
+        schema_for_exploration = linked_schema_dict if enable_schema_linking else get_database_schema()
+        try:
+            exploration_data = explorer.two_stage_explore(question, schema_for_exploration)
+            stage_a = [_to_dict(r) for r in exploration_data.get("stage_a_results", [])]
+            stage_b = [_to_dict(r) for r in exploration_data.get("stage_b_results", [])]
+            probes_list = stage_a + stage_b
+        except Exception as e:
+            return {
+                "question": question,
+                "status": "exploration_error",
+                "sql": "",
+                "rows": [],
+                "row_count": 0,
+                "execution_time_ms": 0,
+                "trace": {
+                    "schema_linking": linked_schema_dict if enable_schema_linking else None
+                }
+            }
 
     # 3. Initial SQL Generation
     try:
-        response = generator.generate_explored_sql(
-            question,
-            linked_schema,
-            exploration_data["successful_combinations"],
-            exploration_data["rejected_combinations"]
-        )
+        if enable_generation_exploration and exploration_data:
+            schema_to_pass = linked_schema if enable_schema_linking else linked_schema_dict
+            response = generator.generate_explored_sql(
+                question,
+                schema_to_pass,
+                exploration_data["successful_combinations"],
+                exploration_data["rejected_combinations"]
+            )
+        elif enable_schema_linking and linked_schema:
+            response = generator.generate_linked_sql(question, linked_schema)
+        else:
+            response = generator.generate_baseline_sql(question)
         initial_sql = response.sql
     except Exception as e:
         return {
@@ -281,36 +334,56 @@ def run_pipeline(question: str, llm_client=None) -> dict:
             "row_count": 0,
             "execution_time_ms": 0,
             "trace": {
-                "schema_linking": linked_schema.dict(),
-                "probes": [r.dict() for r in exploration_data["stage_a_results"]] + [r.dict() for r in exploration_data["stage_b_results"]]
+                "schema_linking": linked_schema_dict if enable_schema_linking else None,
+                "probes": probes_list
             }
         }
 
-    # 4. Refinement Loop
-    refinement_result = refiner.refine(
-        initial_sql=initial_sql,
-        question=question,
-        linked_schema=linked_schema.dict(),
-        exploration_data=exploration_data,
-    )
-    
+    # 4. Refinement Loop or Direct Execution
+    refinement_attempts = []
+    if enable_refinement:
+        schema_for_refinement = linked_schema_dict if enable_schema_linking else get_database_schema()
+        refinement_result = refiner.refine(
+            initial_sql=initial_sql,
+            question=question,
+            linked_schema=schema_for_refinement,
+            exploration_data=exploration_data,
+            enable_refinement_exploration=enable_refinement_exploration,
+        )
+        current_sql = refinement_result.final_sql
+        candidate_result = {
+            "sql": current_sql,
+            "status": refinement_result.final_status,
+            "rows": refinement_result.final_rows,
+            "row_count": refinement_result.final_row_count,
+            "execution_time_ms": refinement_result.final_execution_time_ms,
+            "error": refinement_result.error,
+        }
+        refinement_attempts = [_to_dict(a) for a in refinement_result.refinement_attempts]
+    else:
+        candidate_result = execute_query(initial_sql)
+        current_sql = candidate_result.get("sql", initial_sql)
+
     # 5. Target Checking
-    target_checked_result = target_checker.check_and_refine_target(question, refinement_result.final_sql)
+    if enable_target_checking:
+        final_result = target_checker.check_and_refine_target(question, current_sql)
+    else:
+        final_result = candidate_result
 
     # 6. Assemble Final Response
     trace = {
-        "schema_linking": linked_schema.dict(),
-        "probes": [r.dict() for r in exploration_data["stage_a_results"]] + [r.dict() for r in exploration_data["stage_b_results"]],
-        "refinement": [a.dict() for a in refinement_result.refinement_attempts]
+        "schema_linking": linked_schema_dict if enable_schema_linking else None,
+        "probes": probes_list,
+        "refinement": refinement_attempts
     }
 
     return {
         "question": question,
-        "status": target_checked_result.get("status", "error"),
-        "sql": target_checked_result.get("sql", ""),
-        "rows": target_checked_result.get("rows", []),
-        "row_count": target_checked_result.get("row_count", 0),
-        "execution_time_ms": target_checked_result.get("execution_time_ms", 0),
+        "status": final_result.get("status", "error"),
+        "sql": final_result.get("sql", ""),
+        "rows": final_result.get("rows", []),
+        "row_count": final_result.get("row_count", 0),
+        "execution_time_ms": final_result.get("execution_time_ms", 0),
         "trace": trace
     }
 
