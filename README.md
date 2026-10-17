@@ -42,6 +42,15 @@ Access the health check at: `http://localhost:8000/health`
 streamlit run frontend/streamlit_app.py
 ```
 
+### Running Ablation Study (Phase 14)
+```bash
+# Run against the evaluation dataset with Ollama:
+python run_ablation.py
+
+# Run with mock LLM for testing:
+python run_ablation.py --mock --limit 5
+```
+
 ## Project Status
 
 - [x] **Phase 0: Project Foundation**
@@ -58,4 +67,5 @@ streamlit run frontend/streamlit_app.py
 - [x] **Phase 11: FastAPI API**
 - [x] **Phase 12: Testing**
 - [x] **Phase 13: Evaluation Dataset**
+- [x] **Phase 14: Ablation Study**
 

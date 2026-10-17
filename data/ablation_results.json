@@ -1,0 +1,378 @@
+{
+  "configurations": {
+    "Baseline": {
+      "config_name": "Baseline",
+      "flags": {
+        "enable_schema_linking": false,
+        "enable_generation_exploration": false,
+        "enable_refinement": false,
+        "enable_refinement_exploration": false,
+        "enable_target_checking": false
+      },
+      "execution_accuracy": "0.00%",
+      "valid_sql_rate": "100.00%",
+      "avg_probes": "0.00",
+      "avg_latency_ms": "2.65",
+      "metrics_raw": {
+        "execution_accuracy_pct": 0.0,
+        "valid_sql_rate_pct": 100.0,
+        "avg_probes": 0.0,
+        "avg_latency_ms": 2.653333333333333,
+        "total_items": 3,
+        "correct_items": 0,
+        "valid_items": 3
+      },
+      "item_results": [
+        {
+          "question": "Which students are from CSE?",
+          "gold_sql": "SELECT name FROM students WHERE department = 'CSE';",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 0,
+          "latency_ms": 3.3
+        },
+        {
+          "question": "Give me the names and CGPAs of all students.",
+          "gold_sql": "SELECT name, cgpa FROM students;",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 0,
+          "latency_ms": 1.76
+        },
+        {
+          "question": "List all courses in the ECE department.",
+          "gold_sql": "SELECT course_name FROM courses WHERE department = 'ECE';",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 0,
+          "latency_ms": 2.9
+        }
+      ]
+    },
+    "+ Schema Linking": {
+      "config_name": "+ Schema Linking",
+      "flags": {
+        "enable_schema_linking": true,
+        "enable_generation_exploration": false,
+        "enable_refinement": false,
+        "enable_refinement_exploration": false,
+        "enable_target_checking": false
+      },
+      "execution_accuracy": "0.00%",
+      "valid_sql_rate": "100.00%",
+      "avg_probes": "0.00",
+      "avg_latency_ms": "1.96",
+      "metrics_raw": {
+        "execution_accuracy_pct": 0.0,
+        "valid_sql_rate_pct": 100.0,
+        "avg_probes": 0.0,
+        "avg_latency_ms": 1.9566666666666668,
+        "total_items": 3,
+        "correct_items": 0,
+        "valid_items": 3
+      },
+      "item_results": [
+        {
+          "question": "Which students are from CSE?",
+          "gold_sql": "SELECT name FROM students WHERE department = 'CSE';",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 0,
+          "latency_ms": 2.54
+        },
+        {
+          "question": "Give me the names and CGPAs of all students.",
+          "gold_sql": "SELECT name, cgpa FROM students;",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 0,
+          "latency_ms": 1.63
+        },
+        {
+          "question": "List all courses in the ECE department.",
+          "gold_sql": "SELECT course_name FROM courses WHERE department = 'ECE';",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 0,
+          "latency_ms": 1.7
+        }
+      ]
+    },
+    "+ Generation Exploration": {
+      "config_name": "+ Generation Exploration",
+      "flags": {
+        "enable_schema_linking": true,
+        "enable_generation_exploration": true,
+        "enable_refinement": false,
+        "enable_refinement_exploration": false,
+        "enable_target_checking": false
+      },
+      "execution_accuracy": "0.00%",
+      "valid_sql_rate": "100.00%",
+      "avg_probes": "2.00",
+      "avg_latency_ms": "1.83",
+      "metrics_raw": {
+        "execution_accuracy_pct": 0.0,
+        "valid_sql_rate_pct": 100.0,
+        "avg_probes": 2.0,
+        "avg_latency_ms": 1.8333333333333333,
+        "total_items": 3,
+        "correct_items": 0,
+        "valid_items": 3
+      },
+      "item_results": [
+        {
+          "question": "Which students are from CSE?",
+          "gold_sql": "SELECT name FROM students WHERE department = 'CSE';",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 2,
+          "latency_ms": 1.81
+        },
+        {
+          "question": "Give me the names and CGPAs of all students.",
+          "gold_sql": "SELECT name, cgpa FROM students;",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 2,
+          "latency_ms": 2.15
+        },
+        {
+          "question": "List all courses in the ECE department.",
+          "gold_sql": "SELECT course_name FROM courses WHERE department = 'ECE';",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 2,
+          "latency_ms": 1.54
+        }
+      ]
+    },
+    "+ Refinement": {
+      "config_name": "+ Refinement",
+      "flags": {
+        "enable_schema_linking": true,
+        "enable_generation_exploration": false,
+        "enable_refinement": true,
+        "enable_refinement_exploration": false,
+        "enable_target_checking": false
+      },
+      "execution_accuracy": "0.00%",
+      "valid_sql_rate": "100.00%",
+      "avg_probes": "0.00",
+      "avg_latency_ms": "1.55",
+      "metrics_raw": {
+        "execution_accuracy_pct": 0.0,
+        "valid_sql_rate_pct": 100.0,
+        "avg_probes": 0.0,
+        "avg_latency_ms": 1.55,
+        "total_items": 3,
+        "correct_items": 0,
+        "valid_items": 3
+      },
+      "item_results": [
+        {
+          "question": "Which students are from CSE?",
+          "gold_sql": "SELECT name FROM students WHERE department = 'CSE';",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 0,
+          "latency_ms": 1.63
+        },
+        {
+          "question": "Give me the names and CGPAs of all students.",
+          "gold_sql": "SELECT name, cgpa FROM students;",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 0,
+          "latency_ms": 1.5
+        },
+        {
+          "question": "List all courses in the ECE department.",
+          "gold_sql": "SELECT course_name FROM courses WHERE department = 'ECE';",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 0,
+          "latency_ms": 1.52
+        }
+      ]
+    },
+    "+ Gen & Refine Exploration": {
+      "config_name": "+ Gen & Refine Exploration",
+      "flags": {
+        "enable_schema_linking": true,
+        "enable_generation_exploration": true,
+        "enable_refinement": true,
+        "enable_refinement_exploration": true,
+        "enable_target_checking": false
+      },
+      "execution_accuracy": "0.00%",
+      "valid_sql_rate": "100.00%",
+      "avg_probes": "2.00",
+      "avg_latency_ms": "1.50",
+      "metrics_raw": {
+        "execution_accuracy_pct": 0.0,
+        "valid_sql_rate_pct": 100.0,
+        "avg_probes": 2.0,
+        "avg_latency_ms": 1.4966666666666668,
+        "total_items": 3,
+        "correct_items": 0,
+        "valid_items": 3
+      },
+      "item_results": [
+        {
+          "question": "Which students are from CSE?",
+          "gold_sql": "SELECT name FROM students WHERE department = 'CSE';",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 2,
+          "latency_ms": 1.48
+        },
+        {
+          "question": "Give me the names and CGPAs of all students.",
+          "gold_sql": "SELECT name, cgpa FROM students;",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 2,
+          "latency_ms": 1.48
+        },
+        {
+          "question": "List all courses in the ECE department.",
+          "gold_sql": "SELECT course_name FROM courses WHERE department = 'ECE';",
+          "predicted_sql": "SELECT * FROM students WHERE department = 'CSE'",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 2,
+          "latency_ms": 1.53
+        }
+      ]
+    },
+    "Full SDE-SQL": {
+      "config_name": "Full SDE-SQL",
+      "flags": {
+        "enable_schema_linking": true,
+        "enable_generation_exploration": true,
+        "enable_refinement": true,
+        "enable_refinement_exploration": true,
+        "enable_target_checking": true
+      },
+      "execution_accuracy": "33.33%",
+      "valid_sql_rate": "100.00%",
+      "avg_probes": "2.00",
+      "avg_latency_ms": "1.45",
+      "metrics_raw": {
+        "execution_accuracy_pct": 33.33333333333333,
+        "valid_sql_rate_pct": 100.0,
+        "avg_probes": 2.0,
+        "avg_latency_ms": 1.45,
+        "total_items": 3,
+        "correct_items": 1,
+        "valid_items": 3
+      },
+      "item_results": [
+        {
+          "question": "Which students are from CSE?",
+          "gold_sql": "SELECT name FROM students WHERE department = 'CSE';",
+          "predicted_sql": "SELECT name FROM students WHERE department = 'CSE';",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": true,
+          "is_valid_sql": true,
+          "probes_count": 2,
+          "latency_ms": 1.66
+        },
+        {
+          "question": "Give me the names and CGPAs of all students.",
+          "gold_sql": "SELECT name, cgpa FROM students;",
+          "predicted_sql": "SELECT name FROM students WHERE department = 'CSE';",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 2,
+          "latency_ms": 1.36
+        },
+        {
+          "question": "List all courses in the ECE department.",
+          "gold_sql": "SELECT course_name FROM courses WHERE department = 'ECE';",
+          "predicted_sql": "SELECT name FROM students WHERE department = 'CSE';",
+          "status": "SUCCESS_WITH_ROWS",
+          "is_correct": false,
+          "is_valid_sql": true,
+          "probes_count": 2,
+          "latency_ms": 1.33
+        }
+      ]
+    }
+  },
+  "table": [
+    {
+      "Configuration": "Baseline",
+      "Execution Accuracy": "0.00%",
+      "Valid SQL": "100.00%",
+      "Avg Probes": "0.00",
+      "Avg Latency (ms)": "2.65"
+    },
+    {
+      "Configuration": "+ Schema Linking",
+      "Execution Accuracy": "0.00%",
+      "Valid SQL": "100.00%",
+      "Avg Probes": "0.00",
+      "Avg Latency (ms)": "1.96"
+    },
+    {
+      "Configuration": "+ Generation Exploration",
+      "Execution Accuracy": "0.00%",
+      "Valid SQL": "100.00%",
+      "Avg Probes": "2.00",
+      "Avg Latency (ms)": "1.83"
+    },
+    {
+      "Configuration": "+ Refinement",
+      "Execution Accuracy": "0.00%",
+      "Valid SQL": "100.00%",
+      "Avg Probes": "0.00",
+      "Avg Latency (ms)": "1.55"
+    },
+    {
+      "Configuration": "+ Gen & Refine Exploration",
+      "Execution Accuracy": "0.00%",
+      "Valid SQL": "100.00%",
+      "Avg Probes": "2.00",
+      "Avg Latency (ms)": "1.50"
+    },
+    {
+      "Configuration": "Full SDE-SQL",
+      "Execution Accuracy": "33.33%",
+      "Valid SQL": "100.00%",
+      "Avg Probes": "2.00",
+      "Avg Latency (ms)": "1.45"
+    }
+  ]
+}
