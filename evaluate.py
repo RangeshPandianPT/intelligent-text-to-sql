@@ -1,7 +1,12 @@
 import json
 import logging
 from pathlib import Path
-from tqdm import tqdm
+
+try:
+    from tqdm import tqdm
+except ImportError:
+    def tqdm(iterable, *args, **kwargs):
+        return iterable
 from app.pipeline.orchestrator import run_pipeline, run_baseline_pipeline
 from app.database.executor import execute_query
 
