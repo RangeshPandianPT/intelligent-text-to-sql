@@ -70,6 +70,7 @@ class RefinementEngine:
         question: str,
         linked_schema: Dict[str, Any],
         exploration_data: Optional[Dict[str, Any]] = None,
+        enable_refinement_exploration: bool = True,
     ) -> RefinementResult:
         """
         Runs the refinement loop starting from `initial_sql`.
@@ -82,6 +83,8 @@ class RefinementEngine:
         exploration_data: Optional exploration results from Phase 5, used to
                           supply the LLM with concrete value hints during
                           refinement.
+        enable_refinement_exploration: Whether to include exploration probe hints
+                          in refinement prompts.
 
         Returns
         -------
@@ -92,7 +95,7 @@ class RefinementEngine:
 
         # Gather probe hints once (successful combinations from Phase 5)
         probe_hints: List[Any] = []
-        if exploration_data:
+        if exploration_data and enable_refinement_exploration:
             probe_hints = exploration_data.get("successful_combinations", [])
 
         best_result: Dict[str, Any] = {}
