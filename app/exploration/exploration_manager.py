@@ -1,12 +1,26 @@
 from typing import List, Dict, Any
 from app.exploration.probe_generator import ProbeGenerator
+from app.exploration.fast_probe_generator import FastProbeGenerator
 from app.exploration.probe_executor import ProbeExecutor
 from app.exploration.schemas import ProbeResult
 from app.config import settings
 
 class ExplorationManager:
-    def __init__(self, generator: ProbeGenerator = None, executor: ProbeExecutor = None):
-        self.generator = generator or ProbeGenerator()
+    def __init__(self, generator=None, executor: ProbeExecutor = None, use_fast: bool = True):
+        """
+        Parameters
+        ----------
+        generator : ProbeGenerator or FastProbeGenerator, optional
+            Probe generator to use. Defaults to FastProbeGenerator (no LLM).
+        use_fast : bool
+            When True and no generator supplied, uses rule-based FastProbeGenerator.
+        """
+        if generator is not None:
+            self.generator = generator
+        elif use_fast:
+            self.generator = FastProbeGenerator()
+        else:
+            self.generator = ProbeGenerator()
         self.executor = executor or ProbeExecutor()
         
     def explore(self, question: str, linked_schema: Dict[str, Any]) -> List[ProbeResult]:

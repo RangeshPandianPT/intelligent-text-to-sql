@@ -11,7 +11,7 @@ class Settings(BaseSettings):
 
     # Ollama LLM settings
     ollama_host: str = "http://localhost:11434"
-    ollama_model: str = "qwen2.5:7b"
+    ollama_model: str = "llama3.2:1b"  # Fast local model; switch to qwen2.5:7b for higher accuracy
 
     # Database settings
     database_path: str = "data/college.db"
@@ -21,8 +21,12 @@ class Settings(BaseSettings):
     query_timeout_seconds: int = 5
 
     # Exploration constraints
-    max_probes: int = 5
-    max_refinement_attempts: int = 3  # Phase 7: total SQL attempts (initial + refinements)
+    max_probes: int = 2              # Reduced from 5 → fewer LLM calls, much faster
+    max_refinement_attempts: int = 2  # Reduced from 3 → fewer retry calls
+
+    # LLM generation speed controls
+    llm_num_predict: int = 256       # Max tokens per LLM response (caps verbosity)
+    llm_num_ctx: int = 2048          # Context window size (smaller = faster prefill)
 
 
     # Application metadata

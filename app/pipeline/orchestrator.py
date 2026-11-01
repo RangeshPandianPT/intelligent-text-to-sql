@@ -1,6 +1,7 @@
 from app.llm.client import OllamaClient
 from app.llm.generator import SQLGenerator
 from app.schema_linking.linker import SchemaLinker
+from app.schema_linking.fast_linker import fast_link  # Rule-based, zero LLM calls
 from app.exploration.exploration_manager import ExplorationManager
 from app.exploration.probe_generator import ProbeGenerator
 from app.database.executor import execute_query
@@ -273,10 +274,10 @@ def run_pipeline(
     exploration_data = None
     probes_list = []
 
-    # 1. Schema Linking
+    # 1. Schema Linking (uses fast rule-based linker — zero LLM calls)
     if enable_schema_linking:
         try:
-            linked_schema = linker.link(question)
+            linked_schema = fast_link(question)  # No LLM needed
             linked_schema_dict = _to_dict(linked_schema) or {}
         except Exception as e:
             return {

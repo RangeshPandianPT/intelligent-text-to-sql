@@ -6,40 +6,18 @@ from app.exploration.schemas import Probe, ProbeResult
 
 logger = logging.getLogger(__name__)
 
-STAGE_A_PROMPT = """
-You are an expert SQL database explorer. Your task is Stage A: Candidate Exploration.
+STAGE_A_PROMPT = """SQL explorer. Stage A: Candidate Exploration.
 Question: {question}
+Schema: {schema}
+Generate up to {max_probes} simple probes (SELECT DISTINCT col FROM table LIMIT 20) to find target columns and filter values. Always include LIMIT. Do NOT write the final query.
+Return ONLY: {{\"probes\": [{{\"purpose\": \"...\", \"sql\": \"...\"}}]}}"""
 
-Linked Database Schema:
-{schema}
-
-Generate up to {max_probes} Base SQL Probes to determine candidates for:
-1. Target columns (what the user is asking for).
-2. Condition columns (columns used for filtering).
-3. Condition values (possible values for filtering).
-
-Do NOT generate the final SQL. Generate simple queries like `SELECT DISTINCT col FROM table LIMIT 50` or `SELECT col FROM table WHERE condition LIMIT 50`.
-Always include a LIMIT clause (e.g., LIMIT 50) to prevent large result sets.
-
-Return the result strictly as a JSON object with a 'probes' array. Each object must have 'purpose' and 'sql'.
-"""
-
-STAGE_B_PROMPT = """
-You are an expert SQL database explorer. Your task is Stage B: Combination Exploration.
+STAGE_B_PROMPT = """SQL explorer. Stage B: Combination Exploration.
 Question: {question}
-
-Linked Database Schema:
-{schema}
-
-Stage A Exploration Results:
-{stage_a_results}
-
-Generate up to {max_probes} Condition SQL Probes to combine candidate conditions identified in Stage A.
-If a combination returns no rows, we will mark it as unsuitable. Try combining filtering conditions to see if data exists.
-Generate queries like `SELECT * FROM table WHERE condition1 AND condition2 LIMIT 1`.
-
-Return the result strictly as a JSON object with a 'probes' array. Each object must have 'purpose' and 'sql'.
-"""
+Schema: {schema}
+Stage A Results: {stage_a_results}
+Generate up to {max_probes} probes combining conditions (SELECT * FROM t WHERE c1 AND c2 LIMIT 1).
+Return ONLY: {{\"probes\": [{{\"purpose\": \"...\", \"sql\": \"...\"}}]}}"""
 
 PROBE_GENERATION_PROMPT = """
 You are an expert SQL database explorer. Your task is to generate SQL probe queries to help understand the database schema and values before writing a final query.
