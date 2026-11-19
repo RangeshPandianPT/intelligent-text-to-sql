@@ -1,0 +1,1722 @@
+student_id,name,student_department,year,cgpa,course_id,course_name,course_department,credits,semester,marks
+1,Alice Smith,CSE,3,8.7,CS101,Intro to Programming,CSE,4,Fall2023,85
+1,Alice Smith,CSE,3,8.7,CS201,Data Structures,CSE,4,Spring2024,88
+1,Alice Smith,CSE,3,8.7,HU101,Communication Skills,HUM,2,Fall2023,80
+2,Bob Johnson,CSE,4,9.2,CS201,Data Structures,CSE,4,Spring2024,92
+2,Bob Johnson,CSE,4,9.2,CS301,Databases,CSE,4,Fall2024,95
+3,Charlie Brown,ECE,2,7.5,EC101,Digital Logic,ECE,3,Fall2023,78
+3,Charlie Brown,ECE,2,7.5,HU101,Communication Skills,HUM,2,Fall2023,85
+4,Diana Prince,MECH,4,8.1,ME101,Thermodynamics,MECH,3,Spring2024,82
+5,Evan Davis,CSE,3,6.8,CS101,Intro to Programming,CSE,4,Fall2023,65
+6,Fiona Clark,EEE,2,8.9,EE101,Circuit Analysis,EEE,4,Fall2023,90
+7,George Wright,ECE,4,7.2,EC101,Digital Logic,ECE,3,Fall2023,75
+8,Hannah Martin,CSE,1,9.5,CS101,Intro to Programming,CSE,4,Fall2024,96
+9,Ian Thompson,MECH,3,7.9,,,,,,
+10,Julia White,EEE,4,8.4,EE101,Circuit Analysis,EEE,4,Fall2023,86
+11,William Iyer,CIVIL,1,8.1,HU102,Professional Ethics,HUM,2,Fall2023,83
+11,William Iyer,CIVIL,1,8.1,HU101,Communication Skills,HUM,2,Fall2023,85
+12,Varsha Iyer,MECH,3,8.1,MA102,Probability & Statistics,MATH,4,Fall2024,80
+12,Varsha Iyer,MECH,3,8.1,HU101,Communication Skills,HUM,2,Spring2024,79
+13,Anushka Perez,CSE,1,7.8,CS402,Software Engineering,CSE,3,Fall2024,75
+14,Divya Foster,ECE,1,8.1,HU102,Professional Ethics,HUM,2,Spring2024,78
+14,Divya Foster,ECE,1,8.1,HU101,Communication Skills,HUM,2,Fall2023,86
+15,Luke Kumar,IT,4,8.0,MA102,Probability & Statistics,MATH,4,Spring2024,75
+15,Luke Kumar,IT,4,8.0,IT301,Cybersecurity,IT,3,Fall2024,84
+16,Michael Bennett,EEE,3,7.8,EE401,Electrical Machines,EEE,4,Fall2023,90
+16,Michael Bennett,EEE,3,7.8,HU102,Professional Ethics,HUM,2,Spring2024,87
+16,Michael Bennett,EEE,3,7.8,EE301,Control Systems,EEE,3,Spring2025,65
+17,Wyatt Singh,CSE,4,8.3,HU102,Professional Ethics,HUM,2,Spring2024,74
+18,Grace Brown,CSE,3,7.7,CS302,Operating Systems,CSE,4,Spring2024,91
+19,Farhan Cooper,CSE,1,8.7,CS201,Data Structures,CSE,4,Spring2025,88
+19,Farhan Cooper,CSE,1,8.7,HU101,Communication Skills,HUM,2,Spring2025,56
+20,Rohan Patterson,CIVIL,3,7.4,MA101,Linear Algebra,MATH,4,Fall2024,87
+21,Gayatri Sharma,AI-DS,4,8.4,DS201,Deep Learning,AI-DS,4,Fall2023,85
+21,Gayatri Sharma,AI-DS,4,8.4,HU102,Professional Ethics,HUM,2,Spring2024,74
+22,Harper Campbell,CIVIL,3,8.0,,,,,,
+23,Theodore Rivera,CSE,4,6.8,CS401,Computer Networks,CSE,3,Fall2023,80
+23,Theodore Rivera,CSE,4,6.8,CS302,Operating Systems,CSE,4,Fall2023,91
+24,Jessica Foster,MECH,1,7.9,ME301,Heat Transfer,MECH,3,Spring2025,64
+24,Jessica Foster,MECH,1,7.9,MA102,Probability & Statistics,MATH,4,Spring2024,93
+25,Aiden Butler,ECE,4,7.2,MA102,Probability & Statistics,MATH,4,Spring2024,81
+25,Aiden Butler,ECE,4,7.2,EC101,Digital Logic,ECE,3,Spring2024,88
+26,Madhav Lee,CSE,3,8.1,MA101,Linear Algebra,MATH,4,Spring2024,81
+27,Penelope Powell,MECH,3,7.5,MA102,Probability & Statistics,MATH,4,Spring2025,61
+28,Mila Joshi,CSE,2,7.0,CS201,Data Structures,CSE,4,Spring2025,84
+28,Mila Joshi,CSE,2,7.0,CS101,Intro to Programming,CSE,4,Fall2024,81
+29,Jack Taylor,MECH,1,7.4,ME201,Fluid Mechanics,MECH,4,Fall2023,98
+29,Jack Taylor,MECH,1,7.4,ME401,Machine Design,MECH,4,Fall2023,90
+30,Sophia Mukherjee,IT,1,7.2,HU101,Communication Skills,HUM,2,Fall2023,80
+31,Siddharth Young,AI-DS,4,7.5,MA101,Linear Algebra,MATH,4,Spring2025,93
+31,Siddharth Young,AI-DS,4,7.5,MA102,Probability & Statistics,MATH,4,Spring2024,82
+32,Amit Kelly,CIVIL,1,8.4,HU101,Communication Skills,HUM,2,Spring2024,90
+33,Sebastian Singh,MECH,3,8.2,ME401,Machine Design,MECH,4,Fall2023,73
+34,Kiran Watson,MECH,4,7.2,ME401,Machine Design,MECH,4,Spring2025,88
+34,Kiran Watson,MECH,4,7.2,ME301,Heat Transfer,MECH,3,Spring2025,89
+35,Jayden Mukherjee,AI-DS,1,7.0,HU102,Professional Ethics,HUM,2,Spring2024,72
+35,Jayden Mukherjee,AI-DS,1,7.0,DS301,Big Data Analytics,AI-DS,4,Fall2024,93
+36,Stella Scott,CSE,4,6.6,MA101,Linear Algebra,MATH,4,Fall2024,83
+36,Stella Scott,CSE,4,6.6,CS101,Intro to Programming,CSE,4,Spring2024,78
+37,Grace Smith,IT,3,8.2,MA101,Linear Algebra,MATH,4,Fall2024,86
+38,Eshwar Rivera,CSE,4,8.9,CS402,Software Engineering,CSE,3,Spring2024,84
+39,Grace Miller,CIVIL,3,7.7,CE201,Surveying,CIVIL,3,Fall2024,80
+39,Grace Miller,CIVIL,3,7.7,HU102,Professional Ethics,HUM,2,Spring2024,77
+39,Grace Miller,CIVIL,3,7.7,CE101,Structural Analysis,CIVIL,4,Fall2024,81
+40,Karthik Turner,CSE,1,9.0,MA102,Probability & Statistics,MATH,4,Spring2024,89
+40,Karthik Turner,CSE,1,9.0,CS301,Databases,CSE,4,Spring2024,96
+41,Deepak Iyer,CSE,4,7.6,CS302,Operating Systems,CSE,4,Spring2024,81
+41,Deepak Iyer,CSE,4,7.6,CS401,Computer Networks,CSE,3,Fall2023,75
+42,Vidya Lee,CSE,4,6.9,CS302,Operating Systems,CSE,4,Spring2025,93
+43,Gabriel Wright,IT,4,7.6,HU102,Professional Ethics,HUM,2,Fall2023,92
+43,Gabriel Wright,IT,4,7.6,IT301,Cybersecurity,IT,3,Fall2024,90
+43,Gabriel Wright,IT,4,7.6,IT101,Web Development,IT,3,Fall2024,98
+44,Sneha Menon,MECH,2,8.0,ME401,Machine Design,MECH,4,Fall2024,70
+45,Divya Washington,ECE,3,8.3,EC401,VLSI Design,ECE,4,Spring2025,67
+45,Divya Washington,ECE,3,8.3,EC301,Microprocessors,ECE,4,Fall2023,98
+46,Jayden Perry,IT,3,7.2,HU101,Communication Skills,HUM,2,Fall2024,73
+47,Alexander Taylor,ECE,4,8.2,HU101,Communication Skills,HUM,2,Fall2023,77
+47,Alexander Taylor,ECE,4,8.2,EC401,VLSI Design,ECE,4,Fall2024,85
+47,Alexander Taylor,ECE,4,8.2,MA102,Probability & Statistics,MATH,4,Spring2025,67
+48,Farhan Murphy,CIVIL,4,8.3,CE301,Geotechnical Engineering,CIVIL,4,Fall2024,98
+48,Farhan Murphy,CIVIL,4,8.3,HU102,Professional Ethics,HUM,2,Spring2024,92
+49,Nora Lee,IT,1,9.9,HU101,Communication Skills,HUM,2,Spring2024,87
+49,Nora Lee,IT,1,9.9,MA102,Probability & Statistics,MATH,4,Spring2025,73
+50,Aditi Mukherjee,IT,4,7.8,MA102,Probability & Statistics,MATH,4,Spring2025,86
+51,Mia Morgan,CSE,2,8.0,CS402,Software Engineering,CSE,3,Spring2025,85
+51,Mia Morgan,CSE,2,8.0,HU102,Professional Ethics,HUM,2,Spring2024,70
+52,Alok Cook,CSE,1,6.9,CS401,Computer Networks,CSE,3,Fall2023,68
+52,Alok Cook,CSE,1,6.9,HU102,Professional Ethics,HUM,2,Fall2024,80
+53,Nisha Kumar,CSE,1,8.6,CS201,Data Structures,CSE,4,Spring2025,75
+53,Nisha Kumar,CSE,1,8.6,HU101,Communication Skills,HUM,2,Fall2023,88
+54,Avery Venkataraman,ECE,4,6.7,MA101,Linear Algebra,MATH,4,Fall2023,73
+54,Avery Venkataraman,ECE,4,6.7,EC401,VLSI Design,ECE,4,Fall2024,77
+55,Gaurav Torres,CIVIL,3,8.6,CE201,Surveying,CIVIL,3,Fall2024,77
+56,Lillian Powell,EEE,2,7.9,EE301,Control Systems,EEE,3,Fall2023,90
+56,Lillian Powell,EEE,2,7.9,HU101,Communication Skills,HUM,2,Fall2023,73
+57,Jessica Coleman,ECE,4,8.1,HU102,Professional Ethics,HUM,2,Spring2025,86
+57,Jessica Coleman,ECE,4,8.1,MA101,Linear Algebra,MATH,4,Fall2024,80
+58,Madison Venkataraman,CSE,1,6.2,CS402,Software Engineering,CSE,3,Fall2023,80
+58,Madison Venkataraman,CSE,1,6.2,CS302,Operating Systems,CSE,4,Spring2024,58
+58,Madison Venkataraman,CSE,1,6.2,CS201,Data Structures,CSE,4,Fall2023,75
+59,Alok Powell,CSE,4,7.4,CS402,Software Engineering,CSE,3,Spring2024,61
+60,Ava Malhotra,IT,4,6.4,IT301,Cybersecurity,IT,3,Spring2025,68
+61,Emily Sanders,EEE,3,8.6,EE201,Power Systems,EEE,4,Fall2023,74
+61,Emily Sanders,EEE,3,8.6,MA101,Linear Algebra,MATH,4,Fall2024,87
+62,Sarah Richardson,EEE,1,6.9,MA102,Probability & Statistics,MATH,4,Spring2024,85
+63,Suresh Wilson,CIVIL,4,7.6,HU101,Communication Skills,HUM,2,Fall2024,96
+63,Suresh Wilson,CIVIL,4,7.6,MA101,Linear Algebra,MATH,4,Fall2024,90
+64,James Wright,IT,1,6.5,HU101,Communication Skills,HUM,2,Fall2023,72
+64,James Wright,IT,1,6.5,IT301,Cybersecurity,IT,3,Spring2025,80
+65,Sofia Turner,CIVIL,2,8.8,CE201,Surveying,CIVIL,3,Fall2023,70
+66,Levi Simmons,ECE,3,7.9,EC101,Digital Logic,ECE,3,Fall2024,90
+66,Levi Simmons,ECE,3,7.9,MA102,Probability & Statistics,MATH,4,Spring2024,74
+67,Hemant Campbell,MECH,3,8.2,HU102,Professional Ethics,HUM,2,Spring2025,79
+67,Hemant Campbell,MECH,3,8.2,ME301,Heat Transfer,MECH,3,Fall2023,86
+68,Jack Nelson,CSE,3,7.8,MA102,Probability & Statistics,MATH,4,Fall2024,74
+68,Jack Nelson,CSE,3,7.8,MA101,Linear Algebra,MATH,4,Fall2023,83
+69,Ellie Wilson,ECE,3,7.2,EC101,Digital Logic,ECE,3,Fall2024,78
+70,Akash Menon,IT,3,7.4,IT201,Cloud Computing,IT,4,Fall2024,89
+70,Akash Menon,IT,3,7.4,IT101,Web Development,IT,3,Fall2023,76
+71,Swati Rivera,CSE,3,8.3,CS302,Operating Systems,CSE,4,Fall2023,81
+72,Sachin Banerjee,ECE,3,6.7,HU101,Communication Skills,HUM,2,Spring2025,69
+72,Sachin Banerjee,ECE,3,6.7,MA101,Linear Algebra,MATH,4,Fall2024,77
+72,Sachin Banerjee,ECE,3,6.7,MA102,Probability & Statistics,MATH,4,Fall2023,78
+73,Owen Ross,CSE,3,8.1,HU102,Professional Ethics,HUM,2,Spring2025,84
+74,Luke Rao,CSE,3,7.5,MA102,Probability & Statistics,MATH,4,Fall2023,70
+74,Luke Rao,CSE,3,7.5,CS302,Operating Systems,CSE,4,Spring2024,68
+74,Luke Rao,CSE,3,7.5,HU101,Communication Skills,HUM,2,Spring2024,64
+75,Michael Nair,CSE,2,7.8,CS401,Computer Networks,CSE,3,Spring2025,68
+76,Chloe Richardson,MECH,2,6.3,ME101,Thermodynamics,MECH,3,Spring2024,69
+76,Chloe Richardson,MECH,2,6.3,MA102,Probability & Statistics,MATH,4,Fall2023,93
+77,Wyatt Brooks,CSE,4,7.8,CS401,Computer Networks,CSE,3,Spring2025,73
+77,Wyatt Brooks,CSE,4,7.8,CS301,Databases,CSE,4,Fall2023,72
+78,Vidya Roberts,ECE,2,8.2,MA101,Linear Algebra,MATH,4,Fall2023,83
+78,Vidya Roberts,ECE,2,8.2,MA102,Probability & Statistics,MATH,4,Spring2025,85
+79,Ava Chopra,ECE,3,8.1,MA102,Probability & Statistics,MATH,4,Fall2023,83
+79,Ava Chopra,ECE,3,8.1,EC401,VLSI Design,ECE,4,Spring2025,87
+80,Rajesh Banerjee,CSE,2,8.3,CS101,Intro to Programming,CSE,4,Spring2024,85
+80,Rajesh Banerjee,CSE,2,8.3,CS302,Operating Systems,CSE,4,Fall2024,69
+81,Sophia Lee,AI-DS,4,7.5,MA102,Probability & Statistics,MATH,4,Spring2024,65
+82,Farhan Washington,CSE,4,7.8,MA101,Linear Algebra,MATH,4,Spring2024,64
+83,Farhan Bose,IT,4,9.1,HU101,Communication Skills,HUM,2,Fall2024,83
+83,Farhan Bose,IT,4,9.1,IT301,Cybersecurity,IT,3,Fall2024,73
+84,Madhav Kelly,AI-DS,2,8.4,HU102,Professional Ethics,HUM,2,Spring2025,88
+84,Madhav Kelly,AI-DS,2,8.4,HU101,Communication Skills,HUM,2,Fall2024,97
+85,Levi Brooks,ECE,4,6.1,MA102,Probability & Statistics,MATH,4,Spring2025,69
+86,Elijah Cooper,AI-DS,1,8.6,DS101,Machine Learning,AI-DS,4,Spring2025,96
+87,Priya Simmons,CSE,4,8.9,CS401,Computer Networks,CSE,3,Fall2024,73
+88,Daniel Krishnan,ECE,3,7.2,MA102,Probability & Statistics,MATH,4,Fall2023,75
+88,Daniel Krishnan,ECE,3,7.2,MA101,Linear Algebra,MATH,4,Fall2024,75
+88,Daniel Krishnan,ECE,3,7.2,HU101,Communication Skills,HUM,2,Spring2024,79
+89,Olivia Banerjee,EEE,4,6.9,EE101,Circuit Analysis,EEE,4,Fall2024,82
+89,Olivia Banerjee,EEE,4,6.9,MA102,Probability & Statistics,MATH,4,Fall2024,72
+90,Preeti Jones,CSE,2,7.6,HU101,Communication Skills,HUM,2,Spring2025,74
+90,Preeti Jones,CSE,2,7.6,CS302,Operating Systems,CSE,4,Spring2024,81
+91,Prashant Allen,EEE,4,9.0,EE301,Control Systems,EEE,3,Fall2023,72
+92,Madhav Baker,EEE,2,8.1,EE401,Electrical Machines,EEE,4,Spring2025,86
+92,Madhav Baker,EEE,2,8.1,MA102,Probability & Statistics,MATH,4,Fall2024,85
+93,Dinesh Green,AI-DS,2,9.0,MA101,Linear Algebra,MATH,4,Fall2023,78
+93,Dinesh Green,AI-DS,2,9.0,MA102,Probability & Statistics,MATH,4,Spring2025,89
+94,Aria Bennett,IT,1,6.2,MA102,Probability & Statistics,MATH,4,Spring2024,66
+95,Karthik Adams,CIVIL,1,6.5,CE301,Geotechnical Engineering,CIVIL,4,Fall2024,79
+96,Isabella Bhatia,MECH,4,7.3,ME301,Heat Transfer,MECH,3,Fall2024,79
+96,Isabella Bhatia,MECH,4,7.3,MA102,Probability & Statistics,MATH,4,Fall2023,71
+96,Isabella Bhatia,MECH,4,7.3,ME401,Machine Design,MECH,4,Spring2025,84
+97,Matthew Pillai,EEE,3,7.7,HU102,Professional Ethics,HUM,2,Spring2025,91
+97,Matthew Pillai,EEE,3,7.7,EE101,Circuit Analysis,EEE,4,Spring2025,80
+98,Stella Long,CIVIL,2,6.9,HU101,Communication Skills,HUM,2,Fall2024,88
+98,Stella Long,CIVIL,2,6.9,CE101,Structural Analysis,CIVIL,4,Spring2024,72
+99,Radha Flores,ECE,2,6.8,HU101,Communication Skills,HUM,2,Fall2023,81
+99,Radha Flores,ECE,2,6.8,EC401,VLSI Design,ECE,4,Spring2025,91
+99,Radha Flores,ECE,2,6.8,EC101,Digital Logic,ECE,3,Spring2025,64
+100,Nisha Sanchez,MECH,3,9.3,MA102,Probability & Statistics,MATH,4,Spring2025,86
+100,Nisha Sanchez,MECH,3,9.3,HU101,Communication Skills,HUM,2,Fall2024,77
+101,Samuel Reed,ECE,1,6.2,HU102,Professional Ethics,HUM,2,Fall2024,98
+101,Samuel Reed,ECE,1,6.2,EC101,Digital Logic,ECE,3,Spring2024,98
+101,Samuel Reed,ECE,1,6.2,EC401,VLSI Design,ECE,4,Spring2025,75
+102,Sophia Perry,CSE,3,8.1,MA102,Probability & Statistics,MATH,4,Spring2024,79
+102,Sophia Perry,CSE,3,8.1,CS302,Operating Systems,CSE,4,Spring2024,82
+102,Sophia Perry,CSE,3,8.1,CS201,Data Structures,CSE,4,Spring2024,73
+103,Ramesh Sharma,CSE,4,8.9,CS101,Intro to Programming,CSE,4,Spring2024,79
+104,Priya Turner,CIVIL,1,7.6,HU102,Professional Ethics,HUM,2,Fall2023,84
+104,Priya Turner,CIVIL,1,7.6,CE101,Structural Analysis,CIVIL,4,Spring2025,71
+105,Pankaj Menon,ECE,1,8.1,HU101,Communication Skills,HUM,2,Fall2023,89
+105,Pankaj Menon,ECE,1,8.1,EC401,VLSI Design,ECE,4,Spring2025,83
+106,Harish Patterson,CSE,3,6.1,CS301,Databases,CSE,4,Fall2024,86
+107,Kiran Gray,EEE,2,7.2,EE201,Power Systems,EEE,4,Spring2024,75
+107,Kiran Gray,EEE,2,7.2,MA101,Linear Algebra,MATH,4,Spring2025,73
+108,Lillian Narayanan,ECE,2,8.0,HU101,Communication Skills,HUM,2,Spring2024,76
+108,Lillian Narayanan,ECE,2,8.0,EC301,Microprocessors,ECE,4,Fall2023,70
+109,Jessica Chatterjee,ECE,3,7.5,HU102,Professional Ethics,HUM,2,Spring2025,83
+109,Jessica Chatterjee,ECE,3,7.5,MA102,Probability & Statistics,MATH,4,Fall2024,95
+109,Jessica Chatterjee,ECE,3,7.5,EC101,Digital Logic,ECE,3,Spring2025,64
+110,Pooja Scott,EEE,2,7.3,EE201,Power Systems,EEE,4,Fall2024,77
+111,Sachin Campbell,CSE,2,7.9,MA102,Probability & Statistics,MATH,4,Fall2023,89
+111,Sachin Campbell,CSE,2,7.9,MA101,Linear Algebra,MATH,4,Fall2024,87
+112,Nora Perez,ECE,1,7.9,EC201,Signals and Systems,ECE,4,Fall2023,89
+112,Nora Perez,ECE,1,7.9,MA102,Probability & Statistics,MATH,4,Spring2025,86
+113,Gaurav Morgan,ECE,2,7.5,EC101,Digital Logic,ECE,3,Spring2024,64
+114,Oliver Mukherjee,EEE,3,7.6,HU101,Communication Skills,HUM,2,Fall2023,93
+114,Oliver Mukherjee,EEE,3,7.6,EE201,Power Systems,EEE,4,Fall2024,73
+115,Pankaj Rivera,MECH,2,8.1,ME101,Thermodynamics,MECH,3,Fall2024,94
+115,Pankaj Rivera,MECH,2,8.1,MA102,Probability & Statistics,MATH,4,Fall2024,74
+115,Pankaj Rivera,MECH,2,8.1,ME201,Fluid Mechanics,MECH,4,Fall2024,79
+116,Preeti Wilson,CSE,3,7.9,CS402,Software Engineering,CSE,3,Spring2025,81
+116,Preeti Wilson,CSE,3,7.9,CS201,Data Structures,CSE,4,Fall2023,77
+117,Prashant Das,IT,3,6.6,IT101,Web Development,IT,3,Fall2024,73
+118,Abigail Kapoor,AI-DS,2,7.5,HU101,Communication Skills,HUM,2,Spring2025,72
+119,Jitendra Kumar,ECE,2,7.4,EC201,Signals and Systems,ECE,4,Spring2024,86
+119,Jitendra Kumar,ECE,2,7.4,HU101,Communication Skills,HUM,2,Fall2024,66
+120,Amelia Clark,CSE,2,9.5,CS201,Data Structures,CSE,4,Spring2024,92
+121,Radha Mukherjee,MECH,3,7.4,HU102,Professional Ethics,HUM,2,Fall2024,81
+121,Radha Mukherjee,MECH,3,7.4,MA101,Linear Algebra,MATH,4,Spring2025,82
+121,Radha Mukherjee,MECH,3,7.4,MA102,Probability & Statistics,MATH,4,Fall2024,83
+122,Aubrey Richardson,CSE,2,6.7,CS401,Computer Networks,CSE,3,Fall2023,64
+123,Sophia Wood,MECH,2,6.0,ME101,Thermodynamics,MECH,3,Spring2024,75
+123,Sophia Wood,MECH,2,6.0,ME401,Machine Design,MECH,4,Spring2024,89
+123,Sophia Wood,MECH,2,6.0,HU101,Communication Skills,HUM,2,Fall2023,64
+124,Dylan Butler,CSE,3,8.3,HU102,Professional Ethics,HUM,2,Spring2024,66
+124,Dylan Butler,CSE,3,8.3,MA101,Linear Algebra,MATH,4,Spring2025,95
+125,Shreya Malhotra,ECE,3,8.1,MA101,Linear Algebra,MATH,4,Fall2024,67
+126,Madison Simmons,IT,4,7.4,IT301,Cybersecurity,IT,3,Spring2025,76
+126,Madison Simmons,IT,4,7.4,MA102,Probability & Statistics,MATH,4,Spring2024,62
+127,Nora Ramirez,ECE,4,6.7,EC201,Signals and Systems,ECE,4,Spring2025,78
+127,Nora Ramirez,ECE,4,6.7,HU102,Professional Ethics,HUM,2,Fall2024,79
+128,Elizabeth Martin,ECE,4,9.2,EC201,Signals and Systems,ECE,4,Fall2023,98
+129,Lillian Bhatt,CIVIL,1,7.4,MA102,Probability & Statistics,MATH,4,Spring2025,83
+129,Lillian Bhatt,CIVIL,1,7.4,CE201,Surveying,CIVIL,3,Fall2023,68
+130,Scarlett Reed,EEE,4,8.5,EE401,Electrical Machines,EEE,4,Fall2024,95
+131,Jack Campbell,EEE,3,7.5,MA101,Linear Algebra,MATH,4,Spring2025,96
+131,Jack Campbell,EEE,3,7.5,HU101,Communication Skills,HUM,2,Spring2024,76
+132,Madison Reddy,EEE,4,7.4,HU101,Communication Skills,HUM,2,Fall2024,78
+132,Madison Reddy,EEE,4,7.4,EE101,Circuit Analysis,EEE,4,Spring2025,84
+132,Madison Reddy,EEE,4,7.4,EE201,Power Systems,EEE,4,Spring2025,77
+133,Venkatesh Roberts,AI-DS,2,7.1,DS201,Deep Learning,AI-DS,4,Fall2023,85
+134,Lily Joshi,IT,3,7.9,MA101,Linear Algebra,MATH,4,Spring2025,75
+134,Lily Joshi,IT,3,7.9,IT201,Cloud Computing,IT,4,Spring2025,65
+135,Vikram Allen,CSE,1,6.6,HU101,Communication Skills,HUM,2,Fall2024,80
+135,Vikram Allen,CSE,1,6.6,CS201,Data Structures,CSE,4,Spring2024,84
+136,Gaurav Henderson,CIVIL,2,9.2,HU102,Professional Ethics,HUM,2,Spring2024,92
+137,Benjamin Green,ECE,3,7.9,HU102,Professional Ethics,HUM,2,Fall2023,89
+138,Jitendra Peterson,MECH,4,7.0,HU102,Professional Ethics,HUM,2,Fall2023,77
+138,Jitendra Peterson,MECH,4,7.0,ME301,Heat Transfer,MECH,3,Fall2024,81
+139,Liam Chopra,MECH,4,7.0,HU102,Professional Ethics,HUM,2,Spring2024,86
+140,Madhuri Ross,CSE,1,6.7,CS101,Intro to Programming,CSE,4,Fall2023,84
+140,Madhuri Ross,CSE,1,6.7,CS401,Computer Networks,CSE,3,Fall2024,61
+140,Madhuri Ross,CSE,1,6.7,CS302,Operating Systems,CSE,4,Fall2024,55
+141,Omkar Murphy,CSE,4,7.6,CS101,Intro to Programming,CSE,4,Fall2024,77
+142,Suresh Collins,CIVIL,4,9.3,HU101,Communication Skills,HUM,2,Fall2024,89
+142,Suresh Collins,CIVIL,4,9.3,MA101,Linear Algebra,MATH,4,Fall2023,75
+142,Suresh Collins,CIVIL,4,9.3,MA102,Probability & Statistics,MATH,4,Spring2025,90
+143,Elizabeth Peterson,ECE,1,8.3,MA102,Probability & Statistics,MATH,4,Spring2025,84
+144,Sunita Gupta,CIVIL,4,8.6,MA101,Linear Algebra,MATH,4,Fall2023,75
+144,Sunita Gupta,CIVIL,4,8.6,CE101,Structural Analysis,CIVIL,4,Spring2024,71
+145,Neha Jones,IT,3,7.4,IT301,Cybersecurity,IT,3,Fall2023,81
+145,Neha Jones,IT,3,7.4,HU101,Communication Skills,HUM,2,Spring2024,70
+146,Naveen Reed,CIVIL,3,6.0,MA101,Linear Algebra,MATH,4,Fall2024,80
+147,Sebastian Cooper,MECH,4,8.2,MA102,Probability & Statistics,MATH,4,Fall2024,68
+147,Sebastian Cooper,MECH,4,8.2,ME201,Fluid Mechanics,MECH,4,Spring2024,55
+148,Mia Brown,IT,2,8.5,MA102,Probability & Statistics,MATH,4,Fall2024,74
+148,Mia Brown,IT,2,8.5,IT301,Cybersecurity,IT,3,Fall2023,72
+149,Grayson Swaminathan,CSE,3,7.6,CS402,Software Engineering,CSE,3,Spring2024,84
+150,Charlotte Clark,CIVIL,1,8.2,MA102,Probability & Statistics,MATH,4,Spring2024,77
+151,Nora Edwards,AI-DS,3,7.6,MA102,Probability & Statistics,MATH,4,Fall2023,85
+151,Nora Edwards,AI-DS,3,7.6,HU102,Professional Ethics,HUM,2,Fall2023,85
+152,Venkatesh Bell,EEE,2,8.9,EE301,Control Systems,EEE,3,Spring2025,69
+153,Disha Acharya,CSE,1,8.1,CS402,Software Engineering,CSE,3,Fall2024,84
+153,Disha Acharya,CSE,1,8.1,MA101,Linear Algebra,MATH,4,Fall2023,79
+154,Rashmi Wright,CSE,2,9.0,CS301,Databases,CSE,4,Spring2024,72
+154,Rashmi Wright,CSE,2,9.0,MA102,Probability & Statistics,MATH,4,Fall2024,67
+155,Umesh Gupta,IT,1,9.0,MA102,Probability & Statistics,MATH,4,Spring2025,83
+155,Umesh Gupta,IT,1,9.0,HU102,Professional Ethics,HUM,2,Fall2023,67
+156,Luke Coleman,AI-DS,2,7.8,DS301,Big Data Analytics,AI-DS,4,Fall2023,78
+156,Luke Coleman,AI-DS,2,7.8,HU101,Communication Skills,HUM,2,Spring2025,75
+157,Tarun Bell,CSE,3,7.3,HU101,Communication Skills,HUM,2,Fall2023,93
+157,Tarun Bell,CSE,3,7.3,CS301,Databases,CSE,4,Fall2024,80
+157,Tarun Bell,CSE,3,7.3,CS402,Software Engineering,CSE,3,Spring2025,84
+158,Mateo Jones,CSE,2,6.9,CS301,Databases,CSE,4,Spring2024,88
+158,Mateo Jones,CSE,2,6.9,CS402,Software Engineering,CSE,3,Spring2024,69
+158,Mateo Jones,CSE,2,6.9,MA101,Linear Algebra,MATH,4,Spring2025,80
+159,Isaac Cooper,CSE,4,6.0,CS101,Intro to Programming,CSE,4,Fall2024,79
+160,Bhavna Price,IT,3,6.8,IT301,Cybersecurity,IT,3,Fall2024,82
+160,Bhavna Price,IT,3,6.8,MA101,Linear Algebra,MATH,4,Spring2025,73
+161,Bala Ramirez,CSE,3,8.4,MA101,Linear Algebra,MATH,4,Fall2023,82
+161,Bala Ramirez,CSE,3,8.4,CS401,Computer Networks,CSE,3,Fall2024,82
+162,Lillian Ramirez,AI-DS,4,8.1,DS201,Deep Learning,AI-DS,4,Fall2024,90
+163,Alok Howard,ECE,3,7.0,HU101,Communication Skills,HUM,2,Fall2024,79
+164,Eshwar Venkataraman,MECH,2,6.9,,,,,,
+165,Gabriel Long,CSE,2,7.4,CS101,Intro to Programming,CSE,4,Spring2024,77
+165,Gabriel Long,CSE,2,7.4,HU102,Professional Ethics,HUM,2,Spring2024,68
+165,Gabriel Long,CSE,2,7.4,CS401,Computer Networks,CSE,3,Spring2025,88
+166,Arjun Brooks,AI-DS,1,8.8,,,,,,
+167,Jayden Sanchez,CSE,3,6.6,CS101,Intro to Programming,CSE,4,Fall2024,88
+167,Jayden Sanchez,CSE,3,6.6,CS301,Databases,CSE,4,Spring2025,72
+167,Jayden Sanchez,CSE,3,6.6,CS302,Operating Systems,CSE,4,Spring2024,78
+168,Prashant Torres,ECE,2,8.0,MA102,Probability & Statistics,MATH,4,Spring2024,65
+168,Prashant Torres,ECE,2,8.0,EC201,Signals and Systems,ECE,4,Fall2024,73
+169,Grayson Chopra,ECE,1,7.6,HU102,Professional Ethics,HUM,2,Fall2024,77
+170,Omkar Parker,IT,2,8.9,IT201,Cloud Computing,IT,4,Fall2023,76
+170,Omkar Parker,IT,2,8.9,IT301,Cybersecurity,IT,3,Fall2024,93
+171,Rajesh Jenkins,CSE,2,8.1,CS301,Databases,CSE,4,Spring2024,90
+171,Rajesh Jenkins,CSE,2,8.1,CS201,Data Structures,CSE,4,Spring2024,98
+172,Matthew Henderson,CSE,1,8.4,CS301,Databases,CSE,4,Spring2024,62
+172,Matthew Henderson,CSE,1,8.4,CS101,Intro to Programming,CSE,4,Spring2025,91
+173,Madhuri Jenkins,CSE,4,7.3,MA102,Probability & Statistics,MATH,4,Spring2024,91
+174,Lalit Gonzales,CIVIL,4,8.3,CE101,Structural Analysis,CIVIL,4,Spring2025,77
+175,Bhavna Anderson,AI-DS,4,9.4,,,,,,
+176,Bala Bennett,CSE,4,7.0,MA101,Linear Algebra,MATH,4,Spring2024,85
+176,Bala Bennett,CSE,4,7.0,MA102,Probability & Statistics,MATH,4,Spring2024,71
+176,Bala Bennett,CSE,4,7.0,HU102,Professional Ethics,HUM,2,Fall2023,72
+177,Luna Butler,CSE,3,9.0,CS302,Operating Systems,CSE,4,Spring2025,85
+177,Luna Butler,CSE,3,9.0,CS301,Databases,CSE,4,Fall2023,70
+178,Swati Powell,CSE,4,6.0,,,,,,
+179,Kavya Clark,ECE,2,8.1,EC101,Digital Logic,ECE,3,Fall2024,78
+179,Kavya Clark,ECE,2,8.1,EC301,Microprocessors,ECE,4,Fall2023,76
+180,Sunil Adams,CSE,3,9.4,CS401,Computer Networks,CSE,3,Spring2024,71
+180,Sunil Adams,CSE,3,9.4,CS402,Software Engineering,CSE,3,Spring2024,89
+181,Gayatri Bose,AI-DS,2,7.5,MA102,Probability & Statistics,MATH,4,Spring2024,74
+181,Gayatri Bose,AI-DS,2,7.5,HU102,Professional Ethics,HUM,2,Fall2023,69
+181,Gayatri Bose,AI-DS,2,7.5,DS201,Deep Learning,AI-DS,4,Spring2025,71
+182,Umesh Smith,CSE,3,7.7,CS301,Databases,CSE,4,Fall2024,85
+182,Umesh Smith,CSE,3,7.7,MA102,Probability & Statistics,MATH,4,Spring2024,72
+183,Kiran Rivera,CSE,3,8.1,CS101,Intro to Programming,CSE,4,Spring2025,70
+183,Kiran Rivera,CSE,3,8.1,MA101,Linear Algebra,MATH,4,Fall2024,78
+184,Aarav Bose,CSE,1,7.0,MA101,Linear Algebra,MATH,4,Fall2023,90
+184,Aarav Bose,CSE,1,7.0,CS101,Intro to Programming,CSE,4,Fall2024,79
+185,Shreya Anderson,CIVIL,4,9.0,HU101,Communication Skills,HUM,2,Spring2025,78
+185,Shreya Anderson,CIVIL,4,9.0,MA102,Probability & Statistics,MATH,4,Fall2023,74
+185,Shreya Anderson,CIVIL,4,9.0,MA101,Linear Algebra,MATH,4,Spring2024,67
+186,Leo Johnson,CSE,3,6.5,CS101,Intro to Programming,CSE,4,Fall2024,77
+187,Radha Long,EEE,2,7.4,EE401,Electrical Machines,EEE,4,Fall2023,84
+188,Arjun Khanna,EEE,3,9.4,EE101,Circuit Analysis,EEE,4,Spring2025,72
+189,Shalini Long,EEE,1,7.7,EE101,Circuit Analysis,EEE,4,Spring2024,70
+190,Disha Green,CSE,4,6.8,CS302,Operating Systems,CSE,4,Spring2024,74
+190,Disha Green,CSE,4,6.8,CS401,Computer Networks,CSE,3,Spring2024,73
+191,Sachin Sanders,IT,4,8.2,HU101,Communication Skills,HUM,2,Fall2024,92
+191,Sachin Sanders,IT,4,8.2,IT101,Web Development,IT,3,Fall2024,75
+192,Nandini Stewart,CSE,2,7.8,CS301,Databases,CSE,4,Spring2025,69
+193,Amit Ramirez,ECE,2,7.0,EC201,Signals and Systems,ECE,4,Spring2025,78
+194,Stella Chatterjee,MECH,4,8.6,ME201,Fluid Mechanics,MECH,4,Spring2024,82
+195,Madhav Simmons,EEE,1,8.3,EE401,Electrical Machines,EEE,4,Fall2023,98
+195,Madhav Simmons,EEE,1,8.3,EE201,Power Systems,EEE,4,Spring2025,91
+195,Madhav Simmons,EEE,1,8.3,HU102,Professional Ethics,HUM,2,Spring2024,72
+196,Abhishek Clark,MECH,4,7.0,MA102,Probability & Statistics,MATH,4,Spring2025,87
+197,Olivia Kapoor,AI-DS,2,8.8,HU102,Professional Ethics,HUM,2,Spring2024,63
+197,Olivia Kapoor,AI-DS,2,8.8,DS201,Deep Learning,AI-DS,4,Fall2023,78
+198,Hemant Simmons,ECE,1,9.8,EC401,VLSI Design,ECE,4,Spring2025,59
+199,Lillian Allen,CIVIL,2,7.2,HU101,Communication Skills,HUM,2,Fall2024,86
+199,Lillian Allen,CIVIL,2,7.2,CE201,Surveying,CIVIL,3,Spring2025,92
+200,Sebastian Peterson,AI-DS,4,6.2,DS101,Machine Learning,AI-DS,4,Spring2025,77
+200,Sebastian Peterson,AI-DS,4,6.2,MA102,Probability & Statistics,MATH,4,Spring2024,83
+201,Elijah Patel,CSE,2,7.3,MA102,Probability & Statistics,MATH,4,Spring2025,91
+201,Elijah Patel,CSE,2,7.3,HU102,Professional Ethics,HUM,2,Spring2025,81
+202,Priya Verma,MECH,2,8.0,ME301,Heat Transfer,MECH,3,Fall2023,79
+202,Priya Verma,MECH,2,8.0,ME101,Thermodynamics,MECH,3,Spring2024,80
+203,Madison Trivedi,ECE,4,9.0,MA102,Probability & Statistics,MATH,4,Spring2024,74
+203,Madison Trivedi,ECE,4,9.0,HU101,Communication Skills,HUM,2,Fall2023,96
+203,Madison Trivedi,ECE,4,9.0,EC201,Signals and Systems,ECE,4,Fall2023,87
+204,Rashmi Murphy,CSE,1,8.3,HU101,Communication Skills,HUM,2,Fall2023,95
+204,Rashmi Murphy,CSE,1,8.3,CS402,Software Engineering,CSE,3,Spring2024,67
+205,Sofia Acharya,EEE,3,7.5,EE101,Circuit Analysis,EEE,4,Spring2024,98
+206,Jayden Verma,AI-DS,3,7.8,DS201,Deep Learning,AI-DS,4,Spring2024,65
+207,Bala Venkataraman,IT,3,7.0,MA101,Linear Algebra,MATH,4,Fall2023,77
+207,Bala Venkataraman,IT,3,7.0,MA102,Probability & Statistics,MATH,4,Fall2024,89
+208,Emily Perez,EEE,3,8.1,HU102,Professional Ethics,HUM,2,Fall2024,82
+208,Emily Perez,EEE,3,8.1,EE101,Circuit Analysis,EEE,4,Spring2024,70
+208,Emily Perez,EEE,3,8.1,MA102,Probability & Statistics,MATH,4,Fall2024,71
+209,Sebastian Patterson,MECH,2,7.5,ME401,Machine Design,MECH,4,Fall2023,84
+210,Harper Gonzales,ECE,2,8.0,MA102,Probability & Statistics,MATH,4,Fall2023,83
+210,Harper Gonzales,ECE,2,8.0,EC301,Microprocessors,ECE,4,Spring2025,84
+210,Harper Gonzales,ECE,2,8.0,MA101,Linear Algebra,MATH,4,Spring2025,83
+211,Rashmi Chatterjee,MECH,4,8.0,MA101,Linear Algebra,MATH,4,Spring2025,82
+212,Tanya Hall,MECH,1,6.5,HU101,Communication Skills,HUM,2,Fall2024,76
+213,Suresh Wright,ECE,2,7.8,EC401,VLSI Design,ECE,4,Spring2025,75
+214,Emma Brown,ECE,4,7.5,HU102,Professional Ethics,HUM,2,Fall2024,64
+214,Emma Brown,ECE,4,7.5,EC401,VLSI Design,ECE,4,Spring2024,87
+215,Grayson Carter,EEE,3,7.3,MA102,Probability & Statistics,MATH,4,Spring2024,80
+216,Eleanor Parker,ECE,4,6.5,EC301,Microprocessors,ECE,4,Fall2023,95
+216,Eleanor Parker,ECE,4,6.5,HU102,Professional Ethics,HUM,2,Spring2025,85
+216,Eleanor Parker,ECE,4,6.5,HU101,Communication Skills,HUM,2,Fall2024,77
+217,Sarah Trivedi,IT,4,7.6,IT201,Cloud Computing,IT,4,Spring2025,75
+218,Meera Das,ECE,3,6.9,MA101,Linear Algebra,MATH,4,Fall2024,74
+218,Meera Das,ECE,3,6.9,HU101,Communication Skills,HUM,2,Fall2023,85
+218,Meera Das,ECE,3,6.9,EC101,Digital Logic,ECE,3,Fall2024,84
+219,Jacob Coleman,EEE,3,7.0,MA101,Linear Algebra,MATH,4,Fall2023,69
+220,Rohan Joshi,CSE,3,6.7,HU101,Communication Skills,HUM,2,Spring2024,78
+220,Rohan Joshi,CSE,3,6.7,HU102,Professional Ethics,HUM,2,Fall2024,90
+221,Riley Sanchez,AI-DS,1,7.8,DS301,Big Data Analytics,AI-DS,4,Fall2024,74
+221,Riley Sanchez,AI-DS,1,7.8,MA102,Probability & Statistics,MATH,4,Spring2025,81
+222,Leo Murphy,CSE,3,7.5,CS101,Intro to Programming,CSE,4,Fall2023,80
+222,Leo Murphy,CSE,3,7.5,CS402,Software Engineering,CSE,3,Spring2024,93
+223,Himanshu Wilson,MECH,2,7.2,MA101,Linear Algebra,MATH,4,Spring2024,85
+223,Himanshu Wilson,MECH,2,7.2,HU102,Professional Ethics,HUM,2,Spring2025,92
+224,Neha Gonzales,EEE,1,7.1,EE201,Power Systems,EEE,4,Fall2023,75
+225,Manoj Anderson,ECE,1,8.8,HU102,Professional Ethics,HUM,2,Spring2025,88
+225,Manoj Anderson,ECE,1,8.8,HU101,Communication Skills,HUM,2,Fall2023,69
+225,Manoj Anderson,ECE,1,8.8,EC401,VLSI Design,ECE,4,Spring2024,94
+226,Grayson Wood,MECH,3,7.6,ME301,Heat Transfer,MECH,3,Spring2025,86
+227,Gaurav Price,CSE,2,8.3,CS301,Databases,CSE,4,Spring2024,91
+227,Gaurav Price,CSE,2,8.3,MA101,Linear Algebra,MATH,4,Spring2025,78
+228,Venkatesh Barnes,CSE,2,8.3,,,,,,
+229,Noah Taylor,IT,4,6.8,MA102,Probability & Statistics,MATH,4,Spring2025,79
+229,Noah Taylor,IT,4,6.8,HU101,Communication Skills,HUM,2,Spring2024,81
+230,Camila Green,CSE,1,7.9,MA102,Probability & Statistics,MATH,4,Fall2023,73
+230,Camila Green,CSE,1,7.9,HU102,Professional Ethics,HUM,2,Fall2024,76
+231,Nisha Narayanan,CIVIL,4,7.2,MA101,Linear Algebra,MATH,4,Fall2024,82
+231,Nisha Narayanan,CIVIL,4,7.2,CE201,Surveying,CIVIL,3,Fall2023,72
+232,James Reed,IT,1,8.0,MA101,Linear Algebra,MATH,4,Fall2024,87
+233,Harish Davis,EEE,4,6.9,HU102,Professional Ethics,HUM,2,Fall2024,75
+233,Harish Davis,EEE,4,6.9,HU101,Communication Skills,HUM,2,Fall2024,76
+234,Luke Brooks,CSE,4,9.1,HU101,Communication Skills,HUM,2,Spring2024,78
+234,Luke Brooks,CSE,4,9.1,CS101,Intro to Programming,CSE,4,Spring2024,80
+234,Luke Brooks,CSE,4,9.1,CS401,Computer Networks,CSE,3,Spring2024,94
+235,Tanvi Rivera,CSE,3,7.2,CS201,Data Structures,CSE,4,Fall2024,73
+235,Tanvi Rivera,CSE,3,7.2,HU101,Communication Skills,HUM,2,Fall2024,70
+236,Hemant Sharma,IT,4,8.1,MA101,Linear Algebra,MATH,4,Fall2023,82
+236,Hemant Sharma,IT,4,8.1,MA102,Probability & Statistics,MATH,4,Spring2025,71
+236,Hemant Sharma,IT,4,8.1,IT301,Cybersecurity,IT,3,Spring2024,72
+237,Julian Perez,MECH,1,7.8,ME101,Thermodynamics,MECH,3,Fall2023,67
+237,Julian Perez,MECH,1,7.8,MA102,Probability & Statistics,MATH,4,Fall2023,67
+238,Mia Krishnan,CSE,2,8.7,CS401,Computer Networks,CSE,3,Fall2023,79
+238,Mia Krishnan,CSE,2,8.7,CS301,Databases,CSE,4,Fall2024,79
+238,Mia Krishnan,CSE,2,8.7,MA102,Probability & Statistics,MATH,4,Spring2024,88
+239,Pooja Edwards,EEE,3,7.8,EE401,Electrical Machines,EEE,4,Spring2025,70
+240,Emily Williams,MECH,3,7.7,MA101,Linear Algebra,MATH,4,Spring2024,80
+241,Madhuri Das,CSE,1,7.9,HU101,Communication Skills,HUM,2,Spring2024,76
+242,Benjamin Singh,MECH,1,7.3,ME301,Heat Transfer,MECH,3,Spring2025,72
+242,Benjamin Singh,MECH,1,7.3,ME401,Machine Design,MECH,4,Spring2024,83
+243,Mia Sanders,CIVIL,2,8.0,CE201,Surveying,CIVIL,3,Fall2023,80
+243,Mia Sanders,CIVIL,2,8.0,CE301,Geotechnical Engineering,CIVIL,4,Fall2024,92
+244,Rahul Swaminathan,IT,4,8.1,MA101,Linear Algebra,MATH,4,Fall2023,91
+245,Levi Cooper,ECE,1,7.6,HU102,Professional Ethics,HUM,2,Fall2024,77
+246,Isabella Evans,IT,3,6.9,MA102,Probability & Statistics,MATH,4,Fall2023,90
+246,Isabella Evans,IT,3,6.9,IT101,Web Development,IT,3,Fall2023,79
+246,Isabella Evans,IT,3,6.9,MA101,Linear Algebra,MATH,4,Fall2023,82
+247,Abhishek Richardson,ECE,3,7.9,EC301,Microprocessors,ECE,4,Fall2023,70
+247,Abhishek Richardson,ECE,3,7.9,MA102,Probability & Statistics,MATH,4,Fall2024,97
+248,Harper Torres,ECE,3,8.7,EC201,Signals and Systems,ECE,4,Spring2025,77
+248,Harper Torres,ECE,3,8.7,EC301,Microprocessors,ECE,4,Fall2023,62
+249,Victoria Chatterjee,AI-DS,1,7.6,DS201,Deep Learning,AI-DS,4,Fall2023,78
+249,Victoria Chatterjee,AI-DS,1,7.6,DS101,Machine Learning,AI-DS,4,Spring2024,78
+250,Addison Howard,MECH,4,7.3,HU101,Communication Skills,HUM,2,Fall2023,80
+251,Harish King,MECH,2,7.6,MA102,Probability & Statistics,MATH,4,Fall2024,96
+251,Harish King,MECH,2,7.6,ME401,Machine Design,MECH,4,Spring2024,86
+252,Stella Miller,CSE,1,6.6,CS101,Intro to Programming,CSE,4,Spring2024,73
+252,Stella Miller,CSE,1,6.6,MA102,Probability & Statistics,MATH,4,Fall2023,71
+253,Elijah Wilson,AI-DS,4,7.9,MA101,Linear Algebra,MATH,4,Spring2024,75
+253,Elijah Wilson,AI-DS,4,7.9,MA102,Probability & Statistics,MATH,4,Fall2024,88
+253,Elijah Wilson,AI-DS,4,7.9,HU101,Communication Skills,HUM,2,Fall2024,85
+254,Ethan Richardson,EEE,1,6.8,EE101,Circuit Analysis,EEE,4,Fall2023,92
+254,Ethan Richardson,EEE,1,6.8,EE401,Electrical Machines,EEE,4,Fall2024,67
+255,Eleanor Chatterjee,MECH,1,8.1,MA102,Probability & Statistics,MATH,4,Spring2025,91
+255,Eleanor Chatterjee,MECH,1,8.1,ME301,Heat Transfer,MECH,3,Spring2024,78
+256,Victoria Garcia,CSE,2,6.7,CS101,Intro to Programming,CSE,4,Fall2024,93
+257,Isaac Menon,CSE,4,7.8,CS301,Databases,CSE,4,Fall2023,96
+257,Isaac Menon,CSE,4,7.8,CS401,Computer Networks,CSE,3,Spring2025,70
+257,Isaac Menon,CSE,4,7.8,CS201,Data Structures,CSE,4,Fall2024,65
+258,Hemant Joshi,MECH,3,8.2,ME101,Thermodynamics,MECH,3,Spring2024,80
+258,Hemant Joshi,MECH,3,8.2,ME401,Machine Design,MECH,4,Fall2024,86
+259,Tanvi Flores,IT,2,7.2,MA102,Probability & Statistics,MATH,4,Fall2023,81
+260,Harper Menon,CSE,2,6.9,CS401,Computer Networks,CSE,3,Spring2025,86
+261,Grace Krishnan,CSE,1,7.2,CS402,Software Engineering,CSE,3,Spring2024,64
+262,Sophia Butler,CSE,2,6.5,CS101,Intro to Programming,CSE,4,Spring2024,78
+262,Sophia Butler,CSE,2,6.5,HU101,Communication Skills,HUM,2,Fall2023,64
+262,Sophia Butler,CSE,2,6.5,HU102,Professional Ethics,HUM,2,Spring2024,83
+263,Mia Patel,CSE,4,7.9,CS201,Data Structures,CSE,4,Fall2023,85
+263,Mia Patel,CSE,4,7.9,CS401,Computer Networks,CSE,3,Fall2023,85
+264,Rajesh Khanna,CSE,4,7.8,CS101,Intro to Programming,CSE,4,Spring2025,98
+265,Preeti Narayanan,CIVIL,2,8.4,CE301,Geotechnical Engineering,CIVIL,4,Spring2024,78
+265,Preeti Narayanan,CIVIL,2,8.4,CE201,Surveying,CIVIL,3,Spring2024,89
+266,Arjun Wood,EEE,1,7.6,HU101,Communication Skills,HUM,2,Spring2025,88
+267,Charlotte Sanchez,CSE,4,6.6,HU101,Communication Skills,HUM,2,Spring2025,77
+267,Charlotte Sanchez,CSE,4,6.6,CS402,Software Engineering,CSE,3,Spring2025,73
+268,Theodore Evans,CSE,1,8.7,CS401,Computer Networks,CSE,3,Fall2023,83
+269,Jaxon Chopra,MECH,1,6.9,ME401,Machine Design,MECH,4,Fall2024,64
+270,Amit Banerjee,AI-DS,1,7.5,DS301,Big Data Analytics,AI-DS,4,Spring2024,80
+270,Amit Banerjee,AI-DS,1,7.5,DS201,Deep Learning,AI-DS,4,Fall2024,87
+271,Pankaj Iyer,EEE,2,7.4,MA102,Probability & Statistics,MATH,4,Fall2024,77
+271,Pankaj Iyer,EEE,2,7.4,HU101,Communication Skills,HUM,2,Spring2024,76
+272,Joseph Bennett,CSE,3,7.8,,,,,,
+273,Aiden Khanna,CSE,3,9.2,MA102,Probability & Statistics,MATH,4,Spring2024,71
+274,William Swaminathan,MECH,2,9.0,HU102,Professional Ethics,HUM,2,Fall2024,86
+274,William Swaminathan,MECH,2,9.0,ME301,Heat Transfer,MECH,3,Spring2024,94
+275,Suresh Saxena,EEE,2,7.6,HU102,Professional Ethics,HUM,2,Spring2024,69
+275,Suresh Saxena,EEE,2,7.6,EE201,Power Systems,EEE,4,Fall2024,90
+276,Alexander Wilson,CIVIL,4,8.6,CE101,Structural Analysis,CIVIL,4,Fall2024,77
+276,Alexander Wilson,CIVIL,4,8.6,CE201,Surveying,CIVIL,3,Spring2024,77
+276,Alexander Wilson,CIVIL,4,8.6,HU102,Professional Ethics,HUM,2,Spring2025,76
+277,Benjamin Mitchell,CIVIL,1,8.3,MA101,Linear Algebra,MATH,4,Fall2024,79
+278,Sunita Patel,CSE,1,8.4,HU101,Communication Skills,HUM,2,Spring2025,82
+279,Gaurav Davis,IT,2,7.0,MA102,Probability & Statistics,MATH,4,Spring2024,87
+279,Gaurav Davis,IT,2,7.0,HU102,Professional Ethics,HUM,2,Spring2024,64
+280,Arjun Green,CSE,2,8.3,HU101,Communication Skills,HUM,2,Spring2024,78
+281,Sophia Perez,MECH,3,6.7,ME301,Heat Transfer,MECH,3,Spring2025,82
+282,Avery Taylor,ECE,3,8.1,HU101,Communication Skills,HUM,2,Spring2024,87
+282,Avery Taylor,ECE,3,8.1,EC301,Microprocessors,ECE,4,Spring2025,85
+283,Harper Reddy,ECE,2,7.5,EC101,Digital Logic,ECE,3,Spring2024,92
+284,Abigail Henderson,ECE,1,8.2,HU101,Communication Skills,HUM,2,Spring2025,73
+284,Abigail Henderson,ECE,1,8.2,EC101,Digital Logic,ECE,3,Spring2024,73
+285,Sebastian Cook,CSE,2,8.4,MA102,Probability & Statistics,MATH,4,Spring2024,80
+285,Sebastian Cook,CSE,2,8.4,CS101,Intro to Programming,CSE,4,Fall2023,66
+286,Addison Khanna,MECH,4,6.9,MA101,Linear Algebra,MATH,4,Spring2025,73
+286,Addison Khanna,MECH,4,6.9,HU101,Communication Skills,HUM,2,Spring2024,76
+287,Arjun Richardson,MECH,3,7.9,ME301,Heat Transfer,MECH,3,Spring2024,85
+287,Arjun Richardson,MECH,3,7.9,ME101,Thermodynamics,MECH,3,Spring2024,78
+287,Arjun Richardson,MECH,3,7.9,ME401,Machine Design,MECH,4,Spring2024,86
+288,Suresh Thomas,AI-DS,3,8.4,MA101,Linear Algebra,MATH,4,Fall2023,89
+289,Rashmi Carter,IT,3,8.4,MA101,Linear Algebra,MATH,4,Spring2025,83
+290,Bala Sanders,MECH,4,8.1,ME201,Fluid Mechanics,MECH,4,Fall2024,92
+291,Deepak Young,ECE,2,6.5,HU101,Communication Skills,HUM,2,Spring2025,87
+292,Swati Rao,ECE,4,8.7,MA102,Probability & Statistics,MATH,4,Fall2024,81
+293,Zoey Adams,ECE,2,7.7,EC401,VLSI Design,ECE,4,Spring2024,75
+294,Theodore King,CIVIL,3,9.1,MA102,Probability & Statistics,MATH,4,Spring2025,81
+294,Theodore King,CIVIL,3,9.1,HU101,Communication Skills,HUM,2,Fall2023,61
+295,Gita Saxena,CSE,2,7.3,CS101,Intro to Programming,CSE,4,Spring2024,79
+295,Gita Saxena,CSE,2,7.3,CS301,Databases,CSE,4,Fall2023,80
+295,Gita Saxena,CSE,2,7.3,CS302,Operating Systems,CSE,4,Fall2024,89
+296,Ella Wright,ECE,2,6.3,MA102,Probability & Statistics,MATH,4,Spring2025,92
+297,Jackson Acharya,MECH,3,6.9,ME201,Fluid Mechanics,MECH,4,Fall2023,94
+297,Jackson Acharya,MECH,3,6.9,ME301,Heat Transfer,MECH,3,Spring2025,96
+298,Sofia Krishnan,CSE,1,8.3,MA101,Linear Algebra,MATH,4,Fall2023,75
+298,Sofia Krishnan,CSE,1,8.3,CS101,Intro to Programming,CSE,4,Spring2024,80
+299,Shalini Kapoor,CSE,2,8.0,HU101,Communication Skills,HUM,2,Fall2024,72
+299,Shalini Kapoor,CSE,2,8.0,MA102,Probability & Statistics,MATH,4,Spring2025,79
+300,Isha Narayanan,EEE,3,8.8,,,,,,
+301,Naveen Ramirez,EEE,3,7.7,HU102,Professional Ethics,HUM,2,Fall2024,84
+301,Naveen Ramirez,EEE,3,7.7,MA101,Linear Algebra,MATH,4,Fall2024,84
+301,Naveen Ramirez,EEE,3,7.7,EE301,Control Systems,EEE,3,Spring2024,90
+302,Amit Khanna,IT,4,7.2,HU101,Communication Skills,HUM,2,Fall2024,84
+303,John Sanchez,ECE,3,6.0,EC401,VLSI Design,ECE,4,Spring2025,65
+304,Jaxon Richardson,ECE,1,7.2,HU101,Communication Skills,HUM,2,Spring2024,70
+304,Jaxon Richardson,ECE,1,7.2,HU102,Professional Ethics,HUM,2,Fall2024,76
+305,Matthew Bose,IT,2,7.3,HU102,Professional Ethics,HUM,2,Fall2024,75
+306,Pooja Pillai,EEE,3,7.9,EE401,Electrical Machines,EEE,4,Fall2023,85
+306,Pooja Pillai,EEE,3,7.9,HU101,Communication Skills,HUM,2,Fall2024,73
+307,Deepak Reddy,IT,1,8.6,HU101,Communication Skills,HUM,2,Spring2024,79
+307,Deepak Reddy,IT,1,8.6,IT201,Cloud Computing,IT,4,Fall2023,67
+307,Deepak Reddy,IT,1,8.6,IT301,Cybersecurity,IT,3,Spring2024,80
+308,Jayden Henderson,CSE,2,8.2,CS201,Data Structures,CSE,4,Spring2024,95
+309,Suresh Henderson,ECE,2,7.7,EC101,Digital Logic,ECE,3,Spring2024,80
+309,Suresh Henderson,ECE,2,7.7,EC301,Microprocessors,ECE,4,Fall2023,74
+310,Mateo Lee,EEE,2,6.7,HU101,Communication Skills,HUM,2,Spring2024,82
+311,Luke Morgan,CIVIL,3,7.9,CE201,Surveying,CIVIL,3,Fall2024,80
+311,Luke Morgan,CIVIL,3,7.9,CE301,Geotechnical Engineering,CIVIL,4,Spring2025,74
+311,Luke Morgan,CIVIL,3,7.9,HU101,Communication Skills,HUM,2,Fall2023,81
+312,Isabella Martin,CIVIL,3,9.2,MA101,Linear Algebra,MATH,4,Fall2023,70
+313,Lalit Barnes,CSE,4,8.7,CS101,Intro to Programming,CSE,4,Fall2023,72
+313,Lalit Barnes,CSE,4,8.7,MA102,Probability & Statistics,MATH,4,Fall2024,84
+314,Alok Flores,CSE,3,7.3,CS401,Computer Networks,CSE,3,Spring2025,74
+314,Alok Flores,CSE,3,7.3,CS301,Databases,CSE,4,Fall2023,67
+315,Julian Smith,CIVIL,2,7.7,MA102,Probability & Statistics,MATH,4,Spring2024,74
+315,Julian Smith,CIVIL,2,7.7,HU102,Professional Ethics,HUM,2,Spring2024,87
+316,Karthik Gray,MECH,1,8.5,,,,,,
+317,James Smith,IT,3,7.5,HU102,Professional Ethics,HUM,2,Fall2023,79
+318,Luna Coleman,CSE,4,7.4,CS201,Data Structures,CSE,4,Fall2023,85
+318,Luna Coleman,CSE,4,7.4,CS301,Databases,CSE,4,Fall2024,73
+319,Harish Gonzales,CSE,4,7.9,CS402,Software Engineering,CSE,3,Spring2025,79
+319,Harish Gonzales,CSE,4,7.9,MA102,Probability & Statistics,MATH,4,Fall2024,82
+320,Dylan Anderson,CSE,2,7.5,HU102,Professional Ethics,HUM,2,Spring2024,90
+320,Dylan Anderson,CSE,2,7.5,HU101,Communication Skills,HUM,2,Fall2023,89
+321,Oliver Menon,ECE,3,8.2,HU102,Professional Ethics,HUM,2,Fall2023,67
+322,Isabella Bailey,AI-DS,1,7.6,MA101,Linear Algebra,MATH,4,Spring2024,81
+323,Lillian Howard,MECH,3,8.8,MA101,Linear Algebra,MATH,4,Spring2024,87
+324,Sachin Wood,CSE,3,8.7,CS201,Data Structures,CSE,4,Spring2024,94
+324,Sachin Wood,CSE,3,8.7,HU102,Professional Ethics,HUM,2,Fall2024,82
+324,Sachin Wood,CSE,3,8.7,CS402,Software Engineering,CSE,3,Spring2024,79
+325,Pradeep Coleman,ECE,4,8.6,MA102,Probability & Statistics,MATH,4,Spring2025,84
+326,Jayden Johnson,AI-DS,3,8.7,MA102,Probability & Statistics,MATH,4,Fall2024,81
+326,Jayden Johnson,AI-DS,3,8.7,DS101,Machine Learning,AI-DS,4,Spring2024,74
+327,Dylan Phillips,IT,4,7.0,MA102,Probability & Statistics,MATH,4,Spring2025,78
+328,Venkatesh Smith,CSE,3,7.0,,,,,,
+329,Aubrey Venkataraman,EEE,4,7.0,MA102,Probability & Statistics,MATH,4,Spring2025,77
+329,Aubrey Venkataraman,EEE,4,7.0,EE201,Power Systems,EEE,4,Fall2023,79
+329,Aubrey Venkataraman,EEE,4,7.0,HU102,Professional Ethics,HUM,2,Fall2023,85
+330,Tanvi Martin,ECE,4,7.7,EC201,Signals and Systems,ECE,4,Spring2025,75
+330,Tanvi Martin,ECE,4,7.7,MA101,Linear Algebra,MATH,4,Spring2024,80
+330,Tanvi Martin,ECE,4,7.7,EC401,VLSI Design,ECE,4,Fall2023,79
+331,Rashmi Rogers,IT,2,6.0,MA101,Linear Algebra,MATH,4,Fall2023,78
+331,Rashmi Rogers,IT,2,6.0,IT201,Cloud Computing,IT,4,Spring2025,73
+332,Theodore Richardson,IT,2,6.8,IT201,Cloud Computing,IT,4,Spring2025,98
+332,Theodore Richardson,IT,2,6.8,IT301,Cybersecurity,IT,3,Spring2025,74
+333,Noah Brown,ECE,3,7.8,EC401,VLSI Design,ECE,4,Fall2024,72
+333,Noah Brown,ECE,3,7.8,EC201,Signals and Systems,ECE,4,Fall2024,84
+333,Noah Brown,ECE,3,7.8,MA101,Linear Algebra,MATH,4,Spring2024,77
+334,Disha Peterson,EEE,2,8.4,MA101,Linear Algebra,MATH,4,Fall2024,85
+334,Disha Peterson,EEE,2,8.4,HU102,Professional Ethics,HUM,2,Spring2025,83
+335,Rahul Parker,CSE,3,6.8,CS301,Databases,CSE,4,Fall2024,81
+335,Rahul Parker,CSE,3,6.8,CS401,Computer Networks,CSE,3,Fall2024,82
+336,Avery Mukherjee,MECH,2,6.7,ME401,Machine Design,MECH,4,Spring2025,83
+336,Avery Mukherjee,MECH,2,6.7,HU102,Professional Ethics,HUM,2,Spring2024,63
+337,Layla Hughes,EEE,4,7.7,HU102,Professional Ethics,HUM,2,Fall2023,79
+337,Layla Hughes,EEE,4,7.7,HU101,Communication Skills,HUM,2,Spring2025,73
+337,Layla Hughes,EEE,4,7.7,EE101,Circuit Analysis,EEE,4,Spring2024,91
+338,Stella Mukherjee,MECH,3,7.1,ME401,Machine Design,MECH,4,Spring2025,86
+338,Stella Mukherjee,MECH,3,7.1,ME301,Heat Transfer,MECH,3,Spring2024,92
+339,Logan Gonzales,MECH,2,6.8,HU101,Communication Skills,HUM,2,Fall2024,84
+339,Logan Gonzales,MECH,2,6.8,ME101,Thermodynamics,MECH,3,Spring2025,78
+340,Harper Carter,MECH,4,7.3,HU101,Communication Skills,HUM,2,Fall2024,92
+340,Harper Carter,MECH,4,7.3,ME401,Machine Design,MECH,4,Spring2024,86
+341,Sebastian Howard,CSE,3,6.9,CS302,Operating Systems,CSE,4,Fall2024,85
+342,Gabriel Phillips,ECE,4,7.1,EC101,Digital Logic,ECE,3,Fall2024,73
+342,Gabriel Phillips,ECE,4,7.1,MA102,Probability & Statistics,MATH,4,Spring2025,80
+343,Victoria Gupta,EEE,2,9.0,MA101,Linear Algebra,MATH,4,Fall2024,90
+343,Victoria Gupta,EEE,2,9.0,EE301,Control Systems,EEE,3,Fall2024,81
+343,Victoria Gupta,EEE,2,9.0,HU101,Communication Skills,HUM,2,Spring2025,72
+344,Jack Carter,MECH,4,7.9,ME101,Thermodynamics,MECH,3,Spring2024,72
+344,Jack Carter,MECH,4,7.9,HU102,Professional Ethics,HUM,2,Spring2025,66
+344,Jack Carter,MECH,4,7.9,MA102,Probability & Statistics,MATH,4,Fall2023,84
+345,Suresh Coleman,IT,1,9.3,MA101,Linear Algebra,MATH,4,Fall2024,83
+346,Jackson Saxena,CSE,1,7.9,HU101,Communication Skills,HUM,2,Spring2025,78
+346,Jackson Saxena,CSE,1,7.9,MA102,Probability & Statistics,MATH,4,Fall2023,80
+346,Jackson Saxena,CSE,1,7.9,HU102,Professional Ethics,HUM,2,Fall2023,72
+347,Kiran Gupta,EEE,1,6.9,HU101,Communication Skills,HUM,2,Fall2023,75
+348,Varun Edwards,IT,1,9.7,MA101,Linear Algebra,MATH,4,Spring2025,85
+349,Riley Henderson,CSE,3,6.2,CS402,Software Engineering,CSE,3,Spring2024,80
+349,Riley Henderson,CSE,3,6.2,CS101,Intro to Programming,CSE,4,Spring2025,80
+350,Manoj Gray,AI-DS,2,7.8,MA101,Linear Algebra,MATH,4,Spring2024,60
+350,Manoj Gray,AI-DS,2,7.8,HU102,Professional Ethics,HUM,2,Spring2024,85
+351,Madison Taylor,CSE,3,8.9,MA101,Linear Algebra,MATH,4,Spring2025,77
+352,Sarah Allen,CSE,3,7.5,CS301,Databases,CSE,4,Spring2024,90
+353,Pallavi Cook,ECE,3,8.5,HU102,Professional Ethics,HUM,2,Fall2024,85
+354,Jayden Hall,CIVIL,3,7.7,CE301,Geotechnical Engineering,CIVIL,4,Spring2024,76
+355,Madhuri Bell,ECE,4,7.1,EC201,Signals and Systems,ECE,4,Fall2024,83
+356,Manoj Thomas,CSE,4,7.4,CS101,Intro to Programming,CSE,4,Fall2023,84
+357,Pankaj Martin,AI-DS,3,6.8,HU101,Communication Skills,HUM,2,Fall2024,65
+357,Pankaj Martin,AI-DS,3,6.8,MA101,Linear Algebra,MATH,4,Fall2024,91
+357,Pankaj Martin,AI-DS,3,6.8,DS201,Deep Learning,AI-DS,4,Spring2024,69
+358,Abhishek Phillips,MECH,3,8.0,ME301,Heat Transfer,MECH,3,Spring2024,74
+358,Abhishek Phillips,MECH,3,8.0,MA101,Linear Algebra,MATH,4,Spring2024,81
+359,Tarun Turner,CSE,4,7.9,MA101,Linear Algebra,MATH,4,Spring2025,87
+359,Tarun Turner,CSE,4,7.9,CS402,Software Engineering,CSE,3,Spring2025,96
+360,Karthik Jenkins,ECE,3,6.9,HU101,Communication Skills,HUM,2,Spring2024,73
+360,Karthik Jenkins,ECE,3,6.9,MA102,Probability & Statistics,MATH,4,Fall2023,86
+361,Himanshu Allen,ECE,4,7.0,MA102,Probability & Statistics,MATH,4,Fall2023,79
+361,Himanshu Allen,ECE,4,7.0,HU101,Communication Skills,HUM,2,Spring2024,73
+362,Gita Coleman,ECE,1,8.0,EC201,Signals and Systems,ECE,4,Spring2024,73
+362,Gita Coleman,ECE,1,8.0,HU102,Professional Ethics,HUM,2,Fall2023,84
+363,Tarun Long,MECH,1,8.7,,,,,,
+364,Divya Williams,MECH,1,9.2,ME301,Heat Transfer,MECH,3,Fall2023,90
+365,Himanshu Collins,MECH,3,9.5,,,,,,
+366,Julian Kumar,CSE,3,6.8,CS301,Databases,CSE,4,Fall2024,81
+366,Julian Kumar,CSE,3,6.8,MA102,Probability & Statistics,MATH,4,Spring2024,78
+367,Gayatri Price,MECH,1,7.0,ME401,Machine Design,MECH,4,Spring2025,85
+368,Jackson Murphy,AI-DS,3,6.8,MA102,Probability & Statistics,MATH,4,Fall2023,75
+368,Jackson Murphy,AI-DS,3,6.8,DS101,Machine Learning,AI-DS,4,Fall2023,80
+369,Preeti Howard,ECE,4,7.5,MA101,Linear Algebra,MATH,4,Fall2023,70
+369,Preeti Howard,ECE,4,7.5,EC301,Microprocessors,ECE,4,Spring2025,86
+370,Joseph Krishnan,CSE,3,8.5,CS101,Intro to Programming,CSE,4,Fall2023,76
+371,Aditi Parker,EEE,3,7.6,EE301,Control Systems,EEE,3,Spring2025,76
+372,Manoj Morris,MECH,3,7.3,ME401,Machine Design,MECH,4,Spring2025,69
+373,Jackson Campbell,MECH,2,7.5,MA101,Linear Algebra,MATH,4,Spring2024,88
+373,Jackson Campbell,MECH,2,7.5,HU102,Professional Ethics,HUM,2,Spring2024,69
+374,Sunita Bhatia,EEE,1,8.0,EE101,Circuit Analysis,EEE,4,Spring2025,88
+374,Sunita Bhatia,EEE,1,8.0,EE201,Power Systems,EEE,4,Fall2023,85
+375,Vidya Price,ECE,1,6.3,EC101,Digital Logic,ECE,3,Spring2025,88
+376,Isha Scott,EEE,3,7.4,MA102,Probability & Statistics,MATH,4,Fall2023,83
+376,Isha Scott,EEE,3,7.4,EE401,Electrical Machines,EEE,4,Fall2024,92
+377,Jack Rao,CIVIL,3,7.4,MA101,Linear Algebra,MATH,4,Fall2023,68
+378,Oliver Chatterjee,AI-DS,4,7.3,MA101,Linear Algebra,MATH,4,Fall2023,87
+378,Oliver Chatterjee,AI-DS,4,7.3,MA102,Probability & Statistics,MATH,4,Fall2023,66
+379,Tanya Kelly,ECE,4,7.4,EC401,VLSI Design,ECE,4,Spring2025,73
+379,Tanya Kelly,ECE,4,7.4,MA102,Probability & Statistics,MATH,4,Spring2025,76
+380,Eshwar Menon,MECH,3,7.6,HU101,Communication Skills,HUM,2,Spring2025,83
+381,Meera Watson,MECH,1,7.0,ME101,Thermodynamics,MECH,3,Fall2024,93
+381,Meera Watson,MECH,1,7.0,ME401,Machine Design,MECH,4,Fall2023,68
+381,Meera Watson,MECH,1,7.0,MA102,Probability & Statistics,MATH,4,Spring2024,90
+382,Aria Kapoor,ECE,4,7.7,EC201,Signals and Systems,ECE,4,Spring2025,79
+383,Dylan Das,MECH,1,7.6,ME401,Machine Design,MECH,4,Spring2025,85
+384,Aiden Clark,CIVIL,4,8.0,CE201,Surveying,CIVIL,3,Fall2023,85
+384,Aiden Clark,CIVIL,4,8.0,CE101,Structural Analysis,CIVIL,4,Fall2023,74
+385,Aditi Banerjee,IT,4,6.7,IT301,Cybersecurity,IT,3,Spring2025,94
+386,Dinesh Acharya,CSE,1,6.8,HU101,Communication Skills,HUM,2,Spring2024,95
+386,Dinesh Acharya,CSE,1,6.8,CS302,Operating Systems,CSE,4,Spring2025,85
+387,Nisha Rao,MECH,2,7.6,MA102,Probability & Statistics,MATH,4,Fall2023,74
+387,Nisha Rao,MECH,2,7.6,ME301,Heat Transfer,MECH,3,Fall2023,75
+388,Olivia Carter,ECE,4,7.1,HU101,Communication Skills,HUM,2,Spring2025,87
+389,Anushka Moore,ECE,4,7.6,MA102,Probability & Statistics,MATH,4,Spring2024,93
+389,Anushka Moore,ECE,4,7.6,EC201,Signals and Systems,ECE,4,Fall2023,78
+390,Chloe Kapoor,CSE,2,7.5,CS101,Intro to Programming,CSE,4,Spring2024,83
+391,Gaurav Cooper,CSE,4,7.1,CS401,Computer Networks,CSE,3,Fall2023,71
+391,Gaurav Cooper,CSE,4,7.1,MA101,Linear Algebra,MATH,4,Spring2025,84
+392,Samuel Trivedi,CSE,4,8.1,CS401,Computer Networks,CSE,3,Fall2024,60
+392,Samuel Trivedi,CSE,4,8.1,CS402,Software Engineering,CSE,3,Fall2024,72
+393,Addison Verma,ECE,2,7.3,EC301,Microprocessors,ECE,4,Fall2024,68
+393,Addison Verma,ECE,2,7.3,MA101,Linear Algebra,MATH,4,Fall2024,75
+394,Sunita Kumar,ECE,2,8.7,EC301,Microprocessors,ECE,4,Fall2024,69
+395,Manish Swaminathan,AI-DS,1,8.4,MA101,Linear Algebra,MATH,4,Fall2024,76
+396,Abhishek King,IT,4,6.7,HU102,Professional Ethics,HUM,2,Spring2025,88
+396,Abhishek King,IT,4,6.7,HU101,Communication Skills,HUM,2,Spring2024,95
+397,Scarlett Perry,CSE,3,7.8,HU102,Professional Ethics,HUM,2,Fall2023,73
+398,Rahul Chopra,ECE,4,8.4,MA101,Linear Algebra,MATH,4,Spring2024,83
+398,Rahul Chopra,ECE,4,8.4,EC301,Microprocessors,ECE,4,Spring2024,79
+399,Alexander Williams,MECH,1,6.9,HU102,Professional Ethics,HUM,2,Spring2025,62
+400,Chloe Gray,ECE,4,8.2,MA102,Probability & Statistics,MATH,4,Spring2025,67
+401,Nora Roberts,MECH,1,7.6,MA101,Linear Algebra,MATH,4,Fall2024,80
+402,Isha Trivedi,CIVIL,1,7.9,MA101,Linear Algebra,MATH,4,Spring2025,75
+402,Isha Trivedi,CIVIL,1,7.9,HU101,Communication Skills,HUM,2,Fall2024,94
+403,Ramesh White,CIVIL,3,8.5,MA101,Linear Algebra,MATH,4,Spring2025,97
+404,Meera Lee,CSE,2,7.9,CS401,Computer Networks,CSE,3,Fall2024,95
+404,Meera Lee,CSE,2,7.9,MA102,Probability & Statistics,MATH,4,Spring2025,81
+405,Noah Green,CSE,2,8.1,HU102,Professional Ethics,HUM,2,Fall2024,82
+405,Noah Green,CSE,2,8.1,CS302,Operating Systems,CSE,4,Fall2023,80
+406,Sebastian Menon,ECE,1,7.7,EC401,VLSI Design,ECE,4,Fall2024,80
+407,Gaurav Adams,CIVIL,2,6.9,MA102,Probability & Statistics,MATH,4,Spring2024,90
+408,Amit King,CIVIL,1,7.3,MA102,Probability & Statistics,MATH,4,Fall2023,81
+408,Amit King,CIVIL,1,7.3,CE101,Structural Analysis,CIVIL,4,Spring2024,61
+409,Mateo Gonzales,AI-DS,1,9.3,MA101,Linear Algebra,MATH,4,Spring2024,66
+410,Nora Carter,CSE,3,8.0,CS201,Data Structures,CSE,4,Spring2025,76
+410,Nora Carter,CSE,3,8.0,CS401,Computer Networks,CSE,3,Fall2023,75
+411,Samuel Smith,CSE,2,9.3,CS302,Operating Systems,CSE,4,Fall2023,81
+412,Karthik Kelly,CIVIL,2,7.1,CE101,Structural Analysis,CIVIL,4,Fall2024,75
+413,Riya Nair,ECE,1,7.4,HU102,Professional Ethics,HUM,2,Spring2025,79
+414,Jack Verma,EEE,2,9.0,HU101,Communication Skills,HUM,2,Spring2025,94
+414,Jack Verma,EEE,2,9.0,MA102,Probability & Statistics,MATH,4,Spring2024,69
+415,Theodore Foster,MECH,4,7.4,ME301,Heat Transfer,MECH,3,Spring2024,64
+415,Theodore Foster,MECH,4,7.4,ME101,Thermodynamics,MECH,3,Fall2024,85
+415,Theodore Foster,MECH,4,7.4,HU101,Communication Skills,HUM,2,Spring2025,92
+416,Varun Foster,CSE,1,7.8,CS302,Operating Systems,CSE,4,Fall2023,73
+416,Varun Foster,CSE,1,7.8,CS402,Software Engineering,CSE,3,Spring2025,70
+417,Mila Ward,EEE,4,8.2,EE201,Power Systems,EEE,4,Fall2023,86
+418,Divya Venkataraman,AI-DS,1,8.2,MA101,Linear Algebra,MATH,4,Spring2025,80
+419,Akash Ward,EEE,3,8.4,EE401,Electrical Machines,EEE,4,Spring2025,81
+420,Daniel Bell,IT,1,6.0,MA101,Linear Algebra,MATH,4,Fall2023,72
+421,Wyatt Ward,CSE,1,7.1,CS302,Operating Systems,CSE,4,Spring2025,98
+422,Mila Taylor,MECH,1,7.4,ME201,Fluid Mechanics,MECH,4,Fall2024,75
+422,Mila Taylor,MECH,1,7.4,MA101,Linear Algebra,MATH,4,Spring2025,77
+423,Liam Davis,CIVIL,3,6.9,HU102,Professional Ethics,HUM,2,Spring2025,97
+423,Liam Davis,CIVIL,3,6.9,MA102,Probability & Statistics,MATH,4,Fall2024,72
+424,Naveen Stewart,CIVIL,2,7.6,MA102,Probability & Statistics,MATH,4,Fall2024,67
+425,Ellie Cook,ECE,2,7.4,HU101,Communication Skills,HUM,2,Fall2024,55
+425,Ellie Cook,ECE,2,7.4,EC101,Digital Logic,ECE,3,Spring2024,81
+426,Carter Gray,MECH,3,8.5,MA102,Probability & Statistics,MATH,4,Fall2024,83
+427,Kiran Hall,CSE,4,8.4,CS302,Operating Systems,CSE,4,Fall2023,77
+428,Logan Rivera,IT,3,6.3,HU102,Professional Ethics,HUM,2,Fall2023,78
+428,Logan Rivera,IT,3,6.3,MA101,Linear Algebra,MATH,4,Fall2023,68
+428,Logan Rivera,IT,3,6.3,IT301,Cybersecurity,IT,3,Fall2023,87
+429,Suresh Sanchez,AI-DS,1,7.4,MA102,Probability & Statistics,MATH,4,Fall2023,71
+429,Suresh Sanchez,AI-DS,1,7.4,HU102,Professional Ethics,HUM,2,Fall2023,70
+430,Isaac Ward,CSE,3,8.4,HU101,Communication Skills,HUM,2,Spring2025,88
+431,Ramesh Brooks,MECH,1,7.6,ME101,Thermodynamics,MECH,3,Spring2025,88
+432,Grace Kumar,ECE,2,7.3,MA101,Linear Algebra,MATH,4,Spring2024,65
+433,Tanya Wood,AI-DS,3,7.8,HU102,Professional Ethics,HUM,2,Fall2023,87
+433,Tanya Wood,AI-DS,3,7.8,DS101,Machine Learning,AI-DS,4,Spring2025,72
+434,Theodore Roberts,MECH,1,8.2,MA102,Probability & Statistics,MATH,4,Spring2025,95
+434,Theodore Roberts,MECH,1,8.2,HU101,Communication Skills,HUM,2,Spring2024,84
+434,Theodore Roberts,MECH,1,8.2,ME201,Fluid Mechanics,MECH,4,Fall2024,88
+435,Jessica Smith,CIVIL,1,8.9,MA102,Probability & Statistics,MATH,4,Fall2024,93
+436,William Adams,ECE,1,7.9,EC401,VLSI Design,ECE,4,Fall2024,68
+436,William Adams,ECE,1,7.9,HU101,Communication Skills,HUM,2,Spring2024,76
+437,Vikram Parker,MECH,3,8.3,HU101,Communication Skills,HUM,2,Spring2025,81
+437,Vikram Parker,MECH,3,8.3,ME101,Thermodynamics,MECH,3,Fall2023,92
+438,Ellie Pillai,CSE,2,8.3,HU101,Communication Skills,HUM,2,Fall2023,88
+439,Ramesh Torres,CSE,1,7.2,CS101,Intro to Programming,CSE,4,Spring2024,86
+439,Ramesh Torres,CSE,1,7.2,MA102,Probability & Statistics,MATH,4,Spring2025,76
+440,Tanvi Bose,CSE,2,7.1,MA101,Linear Algebra,MATH,4,Fall2024,90
+440,Tanvi Bose,CSE,2,7.1,CS401,Computer Networks,CSE,3,Spring2025,92
+440,Tanvi Bose,CSE,2,7.1,CS101,Intro to Programming,CSE,4,Fall2023,69
+441,Sachin Wright,CSE,2,7.4,MA102,Probability & Statistics,MATH,4,Spring2025,83
+441,Sachin Wright,CSE,2,7.4,CS302,Operating Systems,CSE,4,Spring2024,71
+442,Nora Bennett,ECE,3,7.4,EC401,VLSI Design,ECE,4,Spring2024,74
+443,Jitendra Brown,ECE,4,9.0,EC301,Microprocessors,ECE,4,Fall2023,59
+443,Jitendra Brown,ECE,4,9.0,MA102,Probability & Statistics,MATH,4,Fall2023,72
+444,Sebastian Nelson,IT,1,8.5,IT301,Cybersecurity,IT,3,Spring2024,81
+444,Sebastian Nelson,IT,1,8.5,HU101,Communication Skills,HUM,2,Spring2024,84
+444,Sebastian Nelson,IT,1,8.5,MA102,Probability & Statistics,MATH,4,Fall2024,83
+445,Bala Wood,CSE,1,7.5,MA101,Linear Algebra,MATH,4,Fall2024,72
+445,Bala Wood,CSE,1,7.5,HU102,Professional Ethics,HUM,2,Spring2024,86
+446,Charlotte Miller,CSE,1,7.0,CS401,Computer Networks,CSE,3,Spring2025,82
+447,Aiden Mukherjee,CSE,1,9.0,MA102,Probability & Statistics,MATH,4,Fall2024,92
+447,Aiden Mukherjee,CSE,1,9.0,HU102,Professional Ethics,HUM,2,Spring2025,66
+448,Manish Malhotra,CSE,3,7.3,MA102,Probability & Statistics,MATH,4,Fall2023,85
+448,Manish Malhotra,CSE,3,7.3,MA101,Linear Algebra,MATH,4,Fall2023,63
+449,Karthik Bhatt,AI-DS,3,8.3,HU102,Professional Ethics,HUM,2,Fall2023,83
+449,Karthik Bhatt,AI-DS,3,8.3,HU101,Communication Skills,HUM,2,Fall2024,89
+450,Layla Bell,CSE,2,8.9,HU102,Professional Ethics,HUM,2,Fall2023,73
+450,Layla Bell,CSE,2,8.9,CS201,Data Structures,CSE,4,Spring2024,83
+451,Omkar Brown,ECE,2,6.0,,,,,,
+452,Gayatri Sanders,IT,4,8.1,MA101,Linear Algebra,MATH,4,Fall2023,77
+452,Gayatri Sanders,IT,4,8.1,IT201,Cloud Computing,IT,4,Fall2023,87
+453,Ellie Kumar,MECH,2,8.4,ME301,Heat Transfer,MECH,3,Spring2025,85
+453,Ellie Kumar,MECH,2,8.4,ME401,Machine Design,MECH,4,Fall2024,81
+454,Umesh Acharya,EEE,1,8.2,HU101,Communication Skills,HUM,2,Spring2025,75
+454,Umesh Acharya,EEE,1,8.2,HU102,Professional Ethics,HUM,2,Fall2024,76
+455,Isabella Thomas,CSE,4,7.5,,,,,,
+456,Chetan Krishnan,MECH,4,7.0,MA102,Probability & Statistics,MATH,4,Spring2025,73
+456,Chetan Krishnan,MECH,4,7.0,ME401,Machine Design,MECH,4,Fall2023,79
+457,Pradeep Wright,EEE,3,7.7,EE301,Control Systems,EEE,3,Fall2023,78
+458,Arjun Powell,MECH,3,7.6,ME201,Fluid Mechanics,MECH,4,Spring2025,85
+459,Julian Wood,EEE,3,7.8,MA102,Probability & Statistics,MATH,4,Fall2024,83
+459,Julian Wood,EEE,3,7.8,HU102,Professional Ethics,HUM,2,Fall2024,78
+460,Theodore Campbell,IT,4,7.9,IT101,Web Development,IT,3,Fall2024,62
+460,Theodore Campbell,IT,4,7.9,MA101,Linear Algebra,MATH,4,Fall2024,69
+461,Owen Wood,CSE,3,7.6,CS201,Data Structures,CSE,4,Fall2024,64
+461,Owen Wood,CSE,3,7.6,HU102,Professional Ethics,HUM,2,Fall2024,87
+462,Jitendra Brooks,AI-DS,2,8.5,HU101,Communication Skills,HUM,2,Spring2024,88
+462,Jitendra Brooks,AI-DS,2,8.5,DS201,Deep Learning,AI-DS,4,Fall2024,80
+463,Rahul Bell,EEE,1,7.8,MA101,Linear Algebra,MATH,4,Fall2023,74
+463,Rahul Bell,EEE,1,7.8,EE401,Electrical Machines,EEE,4,Spring2024,89
+464,Rohan Henderson,CSE,2,8.0,CS101,Intro to Programming,CSE,4,Fall2023,72
+465,Anthony Perez,ECE,3,9.4,MA102,Probability & Statistics,MATH,4,Fall2023,75
+465,Anthony Perez,ECE,3,9.4,EC401,VLSI Design,ECE,4,Spring2024,67
+466,Manoj Mitchell,MECH,4,7.9,HU101,Communication Skills,HUM,2,Fall2024,78
+467,Dinesh Patterson,ECE,4,7.7,EC301,Microprocessors,ECE,4,Fall2024,84
+468,Meera Ross,MECH,1,7.1,ME201,Fluid Mechanics,MECH,4,Fall2024,77
+469,Arjun King,ECE,2,7.1,HU101,Communication Skills,HUM,2,Fall2024,83
+469,Arjun King,ECE,2,7.1,EC201,Signals and Systems,ECE,4,Fall2023,87
+470,Aiden Chatterjee,ECE,1,6.8,HU101,Communication Skills,HUM,2,Spring2024,81
+470,Aiden Chatterjee,ECE,1,6.8,MA101,Linear Algebra,MATH,4,Fall2023,89
+470,Aiden Chatterjee,ECE,1,6.8,EC301,Microprocessors,ECE,4,Spring2024,60
+471,Avery Simmons,CSE,2,8.1,MA102,Probability & Statistics,MATH,4,Fall2023,76
+472,Anthony Bell,IT,1,7.9,,,,,,
+473,Nora Henderson,IT,2,6.4,IT301,Cybersecurity,IT,3,Spring2025,76
+474,Oliver Wright,CSE,4,7.2,MA101,Linear Algebra,MATH,4,Fall2024,73
+475,Julian Brooks,CSE,1,7.6,HU102,Professional Ethics,HUM,2,Fall2023,86
+476,Sanjay Menon,ECE,1,8.5,MA102,Probability & Statistics,MATH,4,Fall2024,73
+476,Sanjay Menon,ECE,1,8.5,HU101,Communication Skills,HUM,2,Fall2023,95
+477,Sunil Watson,CSE,4,8.6,HU102,Professional Ethics,HUM,2,Spring2024,75
+477,Sunil Watson,CSE,4,8.6,MA102,Probability & Statistics,MATH,4,Spring2024,91
+478,John Phillips,ECE,3,9.2,HU102,Professional Ethics,HUM,2,Spring2025,90
+478,John Phillips,ECE,3,9.2,EC401,VLSI Design,ECE,4,Fall2024,81
+479,Abigail Scott,CIVIL,3,8.1,CE301,Geotechnical Engineering,CIVIL,4,Fall2023,83
+479,Abigail Scott,CIVIL,3,8.1,HU102,Professional Ethics,HUM,2,Fall2024,71
+480,Deepak Clark,EEE,3,7.6,HU102,Professional Ethics,HUM,2,Spring2024,84
+481,Suresh Watson,CIVIL,3,6.8,CE101,Structural Analysis,CIVIL,4,Spring2025,89
+481,Suresh Watson,CIVIL,3,6.8,MA101,Linear Algebra,MATH,4,Fall2024,87
+482,Sachin Joshi,IT,1,8.1,MA102,Probability & Statistics,MATH,4,Fall2024,79
+482,Sachin Joshi,IT,1,8.1,HU101,Communication Skills,HUM,2,Spring2025,78
+483,Charlotte Kelly,AI-DS,3,7.6,,,,,,
+484,Amelia Perry,CSE,3,6.9,CS402,Software Engineering,CSE,3,Fall2024,87
+484,Amelia Perry,CSE,3,6.9,CS401,Computer Networks,CSE,3,Spring2025,75
+485,James Kelly,CSE,4,6.0,CS401,Computer Networks,CSE,3,Fall2023,72
+486,Pooja Sharma,EEE,4,8.6,EE101,Circuit Analysis,EEE,4,Spring2025,69
+486,Pooja Sharma,EEE,4,8.6,EE201,Power Systems,EEE,4,Spring2025,69
+486,Pooja Sharma,EEE,4,8.6,EE401,Electrical Machines,EEE,4,Spring2025,74
+487,Logan Murphy,CSE,3,8.0,HU101,Communication Skills,HUM,2,Spring2024,75
+488,Alexander Brown,CSE,3,9.5,HU101,Communication Skills,HUM,2,Spring2024,74
+488,Alexander Brown,CSE,3,9.5,CS301,Databases,CSE,4,Spring2025,72
+488,Alexander Brown,CSE,3,9.5,CS201,Data Structures,CSE,4,Spring2025,72
+489,Anushka Gray,IT,2,7.1,IT101,Web Development,IT,3,Spring2025,83
+489,Anushka Gray,IT,2,7.1,HU102,Professional Ethics,HUM,2,Fall2024,74
+490,Deepak Peterson,MECH,1,8.7,ME201,Fluid Mechanics,MECH,4,Fall2024,82
+490,Deepak Peterson,MECH,1,8.7,MA102,Probability & Statistics,MATH,4,Spring2025,69
+491,James Hall,MECH,3,7.7,HU101,Communication Skills,HUM,2,Fall2023,89
+492,Rohan Murphy,ECE,4,7.2,HU102,Professional Ethics,HUM,2,Fall2024,79
+493,Ramesh Bose,ECE,4,8.0,EC301,Microprocessors,ECE,4,Fall2023,75
+493,Ramesh Bose,ECE,4,8.0,HU101,Communication Skills,HUM,2,Fall2023,73
+494,Layla Rivera,CSE,3,8.2,CS401,Computer Networks,CSE,3,Fall2023,74
+495,William Bennett,CSE,3,8.3,CS302,Operating Systems,CSE,4,Spring2025,87
+496,Elizabeth Kapoor,MECH,1,9.9,MA102,Probability & Statistics,MATH,4,Spring2025,77
+496,Elizabeth Kapoor,MECH,1,9.9,MA101,Linear Algebra,MATH,4,Spring2025,80
+497,Jacob Moore,MECH,4,8.7,ME201,Fluid Mechanics,MECH,4,Fall2023,84
+498,Zoey Murphy,CIVIL,4,8.5,MA101,Linear Algebra,MATH,4,Spring2025,75
+499,Suresh Patel,ECE,4,7.9,EC101,Digital Logic,ECE,3,Fall2023,91
+500,Preeti Wood,AI-DS,4,7.2,DS101,Machine Learning,AI-DS,4,Fall2024,74
+501,Levi Foster,EEE,4,7.1,EE301,Control Systems,EEE,3,Fall2023,72
+501,Levi Foster,EEE,4,7.1,MA102,Probability & Statistics,MATH,4,Fall2023,64
+502,Deepak Joshi,MECH,3,7.0,ME201,Fluid Mechanics,MECH,4,Fall2023,91
+503,Ramesh Perry,IT,1,7.4,HU102,Professional Ethics,HUM,2,Spring2024,77
+504,Meera Perry,CIVIL,3,8.0,CE301,Geotechnical Engineering,CIVIL,4,Spring2025,74
+505,Emily Henderson,ECE,4,8.0,HU101,Communication Skills,HUM,2,Fall2023,66
+505,Emily Henderson,ECE,4,8.0,EC201,Signals and Systems,ECE,4,Fall2024,81
+506,Anthony Nair,CSE,4,7.0,CS302,Operating Systems,CSE,4,Spring2025,84
+507,Benjamin Peterson,CIVIL,1,8.7,MA101,Linear Algebra,MATH,4,Fall2023,90
+507,Benjamin Peterson,CIVIL,1,8.7,CE301,Geotechnical Engineering,CIVIL,4,Fall2024,85
+507,Benjamin Peterson,CIVIL,1,8.7,CE101,Structural Analysis,CIVIL,4,Spring2025,90
+508,Aarav Rao,EEE,2,7.9,EE101,Circuit Analysis,EEE,4,Spring2025,70
+508,Aarav Rao,EEE,2,7.9,HU101,Communication Skills,HUM,2,Fall2023,81
+508,Aarav Rao,EEE,2,7.9,HU102,Professional Ethics,HUM,2,Spring2024,98
+509,Tarun Johnson,MECH,4,7.8,MA101,Linear Algebra,MATH,4,Fall2023,68
+509,Tarun Johnson,MECH,4,7.8,ME101,Thermodynamics,MECH,3,Fall2024,93
+510,Daniel Subramanian,ECE,4,7.5,EC401,VLSI Design,ECE,4,Fall2024,75
+511,Siddharth Menon,EEE,2,8.8,EE401,Electrical Machines,EEE,4,Fall2023,86
+512,Pankaj Clark,MECH,1,7.1,MA102,Probability & Statistics,MATH,4,Fall2023,78
+512,Pankaj Clark,MECH,1,7.1,ME101,Thermodynamics,MECH,3,Fall2024,94
+513,Karthik Collins,CSE,4,8.3,MA101,Linear Algebra,MATH,4,Spring2024,82
+513,Karthik Collins,CSE,4,8.3,CS301,Databases,CSE,4,Spring2024,78
+514,Akash Jenkins,CSE,4,7.3,CS101,Intro to Programming,CSE,4,Fall2024,75
+515,Lucas Morgan,EEE,4,9.2,EE401,Electrical Machines,EEE,4,Spring2024,86
+515,Lucas Morgan,EEE,4,9.2,EE101,Circuit Analysis,EEE,4,Spring2025,71
+516,Swati Carter,CSE,3,9.2,CS302,Operating Systems,CSE,4,Fall2023,73
+517,Ethan Wright,CSE,2,7.4,HU102,Professional Ethics,HUM,2,Fall2023,90
+517,Ethan Wright,CSE,2,7.4,CS302,Operating Systems,CSE,4,Spring2025,91
+518,Oliver Verma,IT,1,9.7,IT301,Cybersecurity,IT,3,Spring2025,80
+518,Oliver Verma,IT,1,9.7,HU101,Communication Skills,HUM,2,Spring2024,83
+519,Isha Cook,ECE,4,9.0,EC301,Microprocessors,ECE,4,Spring2025,77
+520,Zoey Roberts,ECE,3,7.6,EC201,Signals and Systems,ECE,4,Spring2024,67
+520,Zoey Roberts,ECE,3,7.6,HU101,Communication Skills,HUM,2,Spring2024,82
+520,Zoey Roberts,ECE,3,7.6,EC301,Microprocessors,ECE,4,Fall2024,84
+521,Elijah Patterson,IT,4,7.9,IT101,Web Development,IT,3,Fall2023,75
+522,Suresh Allen,ECE,4,7.3,EC101,Digital Logic,ECE,3,Spring2024,81
+523,Gita Smith,CSE,1,8.0,HU101,Communication Skills,HUM,2,Fall2024,80
+523,Gita Smith,CSE,1,8.0,CS302,Operating Systems,CSE,4,Spring2024,84
+524,Olivia Clark,CIVIL,4,7.4,HU101,Communication Skills,HUM,2,Spring2024,84
+524,Olivia Clark,CIVIL,4,7.4,CE201,Surveying,CIVIL,3,Spring2025,83
+525,Prashant Simmons,CSE,2,8.5,CS101,Intro to Programming,CSE,4,Fall2023,79
+526,Sunil Morgan,ECE,4,8.2,EC301,Microprocessors,ECE,4,Spring2024,69
+527,Aria Chatterjee,ECE,3,7.3,MA102,Probability & Statistics,MATH,4,Spring2025,77
+528,Mateo Hall,ECE,3,9.2,EC301,Microprocessors,ECE,4,Fall2023,77
+528,Mateo Hall,ECE,3,9.2,HU101,Communication Skills,HUM,2,Spring2025,81
+529,Eshwar Rao,ECE,2,8.3,EC201,Signals and Systems,ECE,4,Fall2023,67
+529,Eshwar Rao,ECE,2,8.3,HU101,Communication Skills,HUM,2,Spring2025,84
+530,Riley Clark,EEE,1,7.7,MA102,Probability & Statistics,MATH,4,Fall2023,89
+531,Charlotte Acharya,EEE,1,7.7,EE101,Circuit Analysis,EEE,4,Fall2023,69
+531,Charlotte Acharya,EEE,1,7.7,MA101,Linear Algebra,MATH,4,Fall2023,89
+532,Riley Morris,CIVIL,3,7.0,HU102,Professional Ethics,HUM,2,Fall2023,72
+532,Riley Morris,CIVIL,3,7.0,CE301,Geotechnical Engineering,CIVIL,4,Fall2024,83
+533,Lincoln Bell,EEE,2,7.5,EE201,Power Systems,EEE,4,Spring2024,85
+533,Lincoln Bell,EEE,2,7.5,HU101,Communication Skills,HUM,2,Fall2023,86
+534,Madhuri Gonzales,AI-DS,3,8.4,DS301,Big Data Analytics,AI-DS,4,Fall2024,78
+535,Disha Patterson,ECE,1,7.1,MA102,Probability & Statistics,MATH,4,Fall2024,87
+535,Disha Patterson,ECE,1,7.1,HU102,Professional Ethics,HUM,2,Spring2025,68
+536,David Taylor,IT,2,6.7,IT301,Cybersecurity,IT,3,Spring2024,77
+536,David Taylor,IT,2,6.7,IT101,Web Development,IT,3,Spring2025,93
+536,David Taylor,IT,2,6.7,MA101,Linear Algebra,MATH,4,Spring2024,87
+537,Ananya Green,ECE,3,7.1,MA101,Linear Algebra,MATH,4,Fall2023,79
+537,Ananya Green,ECE,3,7.1,EC401,VLSI Design,ECE,4,Spring2024,83
+538,Isha Coleman,ECE,3,7.0,MA102,Probability & Statistics,MATH,4,Fall2024,66
+538,Isha Coleman,ECE,3,7.0,EC401,VLSI Design,ECE,4,Spring2024,86
+539,John White,MECH,4,7.4,HU102,Professional Ethics,HUM,2,Fall2024,74
+540,Evelyn Butler,MECH,1,7.9,ME301,Heat Transfer,MECH,3,Spring2024,98
+540,Evelyn Butler,MECH,1,7.9,ME201,Fluid Mechanics,MECH,4,Spring2024,98
+541,Deepika Young,ECE,1,7.5,MA102,Probability & Statistics,MATH,4,Spring2024,67
+542,Lalit Baker,CSE,1,9.1,CS301,Databases,CSE,4,Fall2024,73
+542,Lalit Baker,CSE,1,9.1,CS101,Intro to Programming,CSE,4,Spring2025,98
+542,Lalit Baker,CSE,1,9.1,CS402,Software Engineering,CSE,3,Spring2024,65
+543,Umesh Foster,AI-DS,2,7.3,HU102,Professional Ethics,HUM,2,Fall2023,66
+544,Isaac Iyer,ECE,4,7.4,EC401,VLSI Design,ECE,4,Fall2024,81
+544,Isaac Iyer,ECE,4,7.4,MA101,Linear Algebra,MATH,4,Spring2024,91
+545,Sunita Long,EEE,1,7.9,HU102,Professional Ethics,HUM,2,Fall2023,87
+546,Amelia Butler,IT,2,7.4,IT301,Cybersecurity,IT,3,Fall2024,98
+547,James Martin,CIVIL,2,7.6,CE301,Geotechnical Engineering,CIVIL,4,Spring2025,78
+547,James Martin,CIVIL,2,7.6,CE201,Surveying,CIVIL,3,Fall2023,70
+548,Benjamin Moore,ECE,4,7.0,MA101,Linear Algebra,MATH,4,Fall2023,78
+548,Benjamin Moore,ECE,4,7.0,EC101,Digital Logic,ECE,3,Spring2025,75
+549,Logan Ramirez,MECH,3,7.3,MA101,Linear Algebra,MATH,4,Fall2024,77
+550,Zoey Venkataraman,MECH,2,7.7,ME101,Thermodynamics,MECH,3,Spring2024,78
+551,Vidya Johnson,EEE,4,9.9,EE401,Electrical Machines,EEE,4,Fall2023,80
+551,Vidya Johnson,EEE,4,9.9,EE101,Circuit Analysis,EEE,4,Fall2023,69
+552,Shalini Bose,ECE,2,7.2,EC201,Signals and Systems,ECE,4,Fall2023,82
+552,Shalini Bose,ECE,2,7.2,EC301,Microprocessors,ECE,4,Fall2024,81
+552,Shalini Bose,ECE,2,7.2,HU101,Communication Skills,HUM,2,Fall2024,82
+553,Radha Bhatt,EEE,2,8.6,EE101,Circuit Analysis,EEE,4,Fall2023,82
+553,Radha Bhatt,EEE,2,8.6,EE301,Control Systems,EEE,3,Spring2024,80
+553,Radha Bhatt,EEE,2,8.6,MA101,Linear Algebra,MATH,4,Fall2023,74
+554,Shalini Mukherjee,CSE,2,7.1,CS402,Software Engineering,CSE,3,Fall2023,95
+555,Lalit Kelly,ECE,1,8.3,EC301,Microprocessors,ECE,4,Spring2024,85
+555,Lalit Kelly,ECE,1,8.3,EC101,Digital Logic,ECE,3,Spring2024,63
+556,Jitendra Swaminathan,MECH,3,7.8,MA102,Probability & Statistics,MATH,4,Fall2023,83
+557,Vikram Bailey,ECE,3,8.1,HU102,Professional Ethics,HUM,2,Fall2024,96
+557,Vikram Bailey,ECE,3,8.1,EC201,Signals and Systems,ECE,4,Spring2024,82
+558,Alexander Krishnan,EEE,3,7.6,EE201,Power Systems,EEE,4,Fall2023,85
+558,Alexander Krishnan,EEE,3,7.6,EE101,Circuit Analysis,EEE,4,Spring2025,80
+559,Emma Rao,CIVIL,3,7.5,CE301,Geotechnical Engineering,CIVIL,4,Fall2023,92
+560,Lucas Bhatia,CSE,3,8.3,CS402,Software Engineering,CSE,3,Fall2023,94
+561,Penelope Kelly,ECE,1,8.7,EC401,VLSI Design,ECE,4,Fall2023,89
+561,Penelope Kelly,ECE,1,8.7,HU101,Communication Skills,HUM,2,Fall2023,86
+562,Komal Martin,EEE,4,8.5,,,,,,
+563,Olivia Martin,AI-DS,4,9.1,DS201,Deep Learning,AI-DS,4,Fall2023,83
+563,Olivia Martin,AI-DS,4,9.1,HU101,Communication Skills,HUM,2,Spring2025,87
+564,Anushka Martin,MECH,2,7.9,MA102,Probability & Statistics,MATH,4,Fall2024,72
+564,Anushka Martin,MECH,2,7.9,MA101,Linear Algebra,MATH,4,Fall2024,77
+565,Eleanor Cooper,CSE,2,7.7,HU102,Professional Ethics,HUM,2,Spring2024,72
+566,Harish Taylor,IT,4,7.6,IT301,Cybersecurity,IT,3,Spring2025,75
+566,Harish Taylor,IT,4,7.6,IT201,Cloud Computing,IT,4,Fall2023,72
+566,Harish Taylor,IT,4,7.6,IT101,Web Development,IT,3,Fall2023,85
+567,Abigail Singh,ECE,1,8.5,MA101,Linear Algebra,MATH,4,Spring2024,87
+567,Abigail Singh,ECE,1,8.5,EC101,Digital Logic,ECE,3,Fall2024,67
+568,Hemant Sanders,CSE,4,7.3,HU101,Communication Skills,HUM,2,Fall2024,72
+568,Hemant Sanders,CSE,4,7.3,HU102,Professional Ethics,HUM,2,Spring2024,80
+569,Madison Rivera,MECH,3,7.4,ME101,Thermodynamics,MECH,3,Fall2023,77
+570,Jackson Parker,EEE,2,7.8,EE201,Power Systems,EEE,4,Spring2025,81
+570,Jackson Parker,EEE,2,7.8,HU102,Professional Ethics,HUM,2,Spring2025,74
+571,Akash Richardson,CSE,2,8.5,HU101,Communication Skills,HUM,2,Fall2023,71
+572,Kavya Cook,ECE,2,7.6,HU101,Communication Skills,HUM,2,Spring2025,80
+572,Kavya Cook,ECE,2,7.6,HU102,Professional Ethics,HUM,2,Spring2025,89
+572,Kavya Cook,ECE,2,7.6,EC201,Signals and Systems,ECE,4,Spring2025,90
+573,William Watson,EEE,3,7.4,EE101,Circuit Analysis,EEE,4,Spring2025,69
+573,William Watson,EEE,3,7.4,EE401,Electrical Machines,EEE,4,Spring2025,73
+573,William Watson,EEE,3,7.4,EE301,Control Systems,EEE,3,Fall2024,74
+574,Theodore Nair,CSE,1,8.2,CS402,Software Engineering,CSE,3,Spring2025,72
+575,Lucas Morris,ECE,2,7.1,EC201,Signals and Systems,ECE,4,Fall2023,90
+575,Lucas Morris,ECE,2,7.1,HU102,Professional Ethics,HUM,2,Fall2024,84
+576,Manoj Carter,CSE,3,8.1,HU101,Communication Skills,HUM,2,Fall2023,76
+576,Manoj Carter,CSE,3,8.1,CS401,Computer Networks,CSE,3,Fall2024,68
+577,Meera Brooks,ECE,3,7.9,HU102,Professional Ethics,HUM,2,Spring2024,76
+578,Grayson Phillips,AI-DS,1,6.3,DS201,Deep Learning,AI-DS,4,Fall2023,61
+578,Grayson Phillips,AI-DS,1,6.3,DS301,Big Data Analytics,AI-DS,4,Fall2024,89
+578,Grayson Phillips,AI-DS,1,6.3,MA101,Linear Algebra,MATH,4,Spring2024,79
+579,Pankaj Perez,CSE,3,6.9,CS401,Computer Networks,CSE,3,Fall2024,78
+580,Preeti Perry,MECH,1,6.8,ME301,Heat Transfer,MECH,3,Spring2024,87
+580,Preeti Perry,MECH,1,6.8,ME101,Thermodynamics,MECH,3,Spring2025,85
+581,Sunil King,AI-DS,3,9.9,HU101,Communication Skills,HUM,2,Fall2023,71
+581,Sunil King,AI-DS,3,9.9,HU102,Professional Ethics,HUM,2,Spring2024,78
+582,Levi Garcia,CIVIL,4,8.3,MA101,Linear Algebra,MATH,4,Fall2024,72
+582,Levi Garcia,CIVIL,4,8.3,CE201,Surveying,CIVIL,3,Fall2024,75
+582,Levi Garcia,CIVIL,4,8.3,HU101,Communication Skills,HUM,2,Spring2024,74
+583,Manish Clark,CSE,1,7.8,HU101,Communication Skills,HUM,2,Fall2023,96
+583,Manish Clark,CSE,1,7.8,MA102,Probability & Statistics,MATH,4,Spring2024,82
+584,John Saxena,IT,3,8.2,MA101,Linear Algebra,MATH,4,Fall2023,82
+584,John Saxena,IT,3,8.2,HU101,Communication Skills,HUM,2,Fall2024,77
+584,John Saxena,IT,3,8.2,IT101,Web Development,IT,3,Fall2023,87
+585,Lincoln Powell,EEE,1,7.3,EE301,Control Systems,EEE,3,Fall2023,70
+585,Lincoln Powell,EEE,1,7.3,EE201,Power Systems,EEE,4,Fall2023,75
+586,Isha Powell,IT,4,8.4,IT101,Web Development,IT,3,Fall2024,77
+587,Gabriel Venkataraman,MECH,2,7.8,ME301,Heat Transfer,MECH,3,Spring2024,73
+588,Carter Reed,ECE,4,8.8,MA101,Linear Algebra,MATH,4,Spring2025,83
+589,Mateo Wright,IT,4,6.9,HU102,Professional Ethics,HUM,2,Fall2023,90
+590,Pooja Hughes,AI-DS,3,7.8,MA102,Probability & Statistics,MATH,4,Fall2023,88
+590,Pooja Hughes,AI-DS,3,7.8,MA101,Linear Algebra,MATH,4,Spring2024,85
+591,Tanvi Allen,ECE,4,7.1,EC301,Microprocessors,ECE,4,Spring2025,67
+592,Shreya Saxena,CSE,4,6.5,HU102,Professional Ethics,HUM,2,Spring2025,91
+592,Shreya Saxena,CSE,4,6.5,HU101,Communication Skills,HUM,2,Spring2024,68
+592,Shreya Saxena,CSE,4,6.5,CS402,Software Engineering,CSE,3,Fall2024,71
+593,Varsha Foster,IT,3,7.8,IT101,Web Development,IT,3,Spring2024,69
+594,Noah Sharma,ECE,3,6.7,EC301,Microprocessors,ECE,4,Spring2024,56
+595,Isabella Swaminathan,MECH,2,7.6,ME301,Heat Transfer,MECH,3,Spring2024,73
+595,Isabella Swaminathan,MECH,2,7.6,MA102,Probability & Statistics,MATH,4,Fall2024,64
+596,Ella Kumar,ECE,1,9.3,EC101,Digital Logic,ECE,3,Spring2024,64
+597,James Bell,CSE,3,8.2,CS201,Data Structures,CSE,4,Fall2024,87
+598,Abigail Watson,CSE,3,6.0,CS201,Data Structures,CSE,4,Spring2024,88
+598,Abigail Watson,CSE,3,6.0,CS302,Operating Systems,CSE,4,Spring2024,95
+599,Wyatt Scott,CIVIL,2,7.3,CE201,Surveying,CIVIL,3,Fall2024,79
+600,Elizabeth Stewart,CIVIL,1,7.3,HU101,Communication Skills,HUM,2,Spring2024,70
+601,Prashant Kumar,CSE,1,8.7,CS302,Operating Systems,CSE,4,Spring2025,79
+601,Prashant Kumar,CSE,1,8.7,HU101,Communication Skills,HUM,2,Fall2023,73
+602,Sachin Nair,CSE,4,7.0,MA102,Probability & Statistics,MATH,4,Fall2023,81
+602,Sachin Nair,CSE,4,7.0,CS101,Intro to Programming,CSE,4,Fall2024,71
+603,Abhishek Powell,ECE,4,7.8,HU101,Communication Skills,HUM,2,Spring2025,96
+603,Abhishek Powell,ECE,4,7.8,EC201,Signals and Systems,ECE,4,Spring2024,72
+604,James Nelson,EEE,2,7.8,HU101,Communication Skills,HUM,2,Fall2024,87
+604,James Nelson,EEE,2,7.8,HU102,Professional Ethics,HUM,2,Spring2025,76
+605,Grace Howard,ECE,4,9.5,EC301,Microprocessors,ECE,4,Spring2025,84
+605,Grace Howard,ECE,4,9.5,HU101,Communication Skills,HUM,2,Spring2024,81
+605,Grace Howard,ECE,4,9.5,HU102,Professional Ethics,HUM,2,Spring2024,86
+606,Sunil Rogers,CSE,4,7.9,MA101,Linear Algebra,MATH,4,Spring2025,62
+606,Sunil Rogers,CSE,4,7.9,HU102,Professional Ethics,HUM,2,Spring2024,80
+607,Mia Roberts,CSE,4,8.0,MA102,Probability & Statistics,MATH,4,Spring2024,84
+608,Kiran Sharma,MECH,3,7.5,HU102,Professional Ethics,HUM,2,Fall2024,81
+608,Kiran Sharma,MECH,3,7.5,ME101,Thermodynamics,MECH,3,Fall2023,70
+609,Emma Subramanian,ECE,1,8.5,MA102,Probability & Statistics,MATH,4,Fall2024,79
+609,Emma Subramanian,ECE,1,8.5,EC401,VLSI Design,ECE,4,Fall2023,79
+610,Venkatesh Carter,AI-DS,4,9.1,MA102,Probability & Statistics,MATH,4,Fall2024,71
+610,Venkatesh Carter,AI-DS,4,9.1,MA101,Linear Algebra,MATH,4,Fall2023,79
+610,Venkatesh Carter,AI-DS,4,9.1,DS301,Big Data Analytics,AI-DS,4,Spring2025,68
+611,Sophia Collins,CSE,1,7.9,,,,,,
+612,Owen Miller,ECE,2,6.9,EC301,Microprocessors,ECE,4,Spring2025,84
+612,Owen Miller,ECE,2,6.9,EC101,Digital Logic,ECE,3,Fall2024,66
+612,Owen Miller,ECE,2,6.9,MA102,Probability & Statistics,MATH,4,Spring2024,77
+613,Stella Cox,CSE,2,8.1,MA102,Probability & Statistics,MATH,4,Spring2025,87
+614,Stella Wood,CSE,3,8.3,HU102,Professional Ethics,HUM,2,Spring2024,89
+614,Stella Wood,CSE,3,8.3,CS302,Operating Systems,CSE,4,Fall2023,75
+615,Luke Bell,ECE,4,7.3,EC401,VLSI Design,ECE,4,Fall2024,80
+615,Luke Bell,ECE,4,7.3,HU101,Communication Skills,HUM,2,Fall2023,60
+615,Luke Bell,ECE,4,7.3,MA102,Probability & Statistics,MATH,4,Fall2023,73
+616,Farhan Morris,ECE,2,7.5,EC101,Digital Logic,ECE,3,Spring2025,63
+616,Farhan Morris,ECE,2,7.5,MA102,Probability & Statistics,MATH,4,Spring2024,83
+617,Divya Kumar,ECE,3,6.2,MA102,Probability & Statistics,MATH,4,Fall2024,69
+617,Divya Kumar,ECE,3,6.2,HU101,Communication Skills,HUM,2,Spring2024,96
+618,Sofia Anderson,CSE,4,7.7,HU101,Communication Skills,HUM,2,Fall2023,93
+619,Priya Davis,EEE,2,6.8,HU101,Communication Skills,HUM,2,Fall2024,87
+619,Priya Davis,EEE,2,6.8,MA102,Probability & Statistics,MATH,4,Spring2025,81
+620,Noah Patel,CSE,4,7.5,CS101,Intro to Programming,CSE,4,Spring2024,74
+621,Levi Rogers,IT,4,7.9,MA102,Probability & Statistics,MATH,4,Spring2025,85
+622,Ava Davis,AI-DS,3,8.5,DS101,Machine Learning,AI-DS,4,Spring2024,83
+622,Ava Davis,AI-DS,3,8.5,HU101,Communication Skills,HUM,2,Spring2025,91
+623,Pooja Mitchell,CSE,3,7.3,MA102,Probability & Statistics,MATH,4,Fall2024,55
+623,Pooja Mitchell,CSE,3,7.3,MA101,Linear Algebra,MATH,4,Fall2023,69
+624,Pankaj Simmons,EEE,3,7.9,EE101,Circuit Analysis,EEE,4,Fall2023,73
+624,Pankaj Simmons,EEE,3,7.9,HU101,Communication Skills,HUM,2,Fall2023,83
+625,Wyatt Coleman,ECE,2,6.0,EC101,Digital Logic,ECE,3,Fall2024,80
+625,Wyatt Coleman,ECE,2,6.0,EC201,Signals and Systems,ECE,4,Spring2024,70
+626,Eshwar Lee,MECH,3,8.0,MA102,Probability & Statistics,MATH,4,Spring2025,96
+626,Eshwar Lee,MECH,3,8.0,ME201,Fluid Mechanics,MECH,4,Fall2024,75
+626,Eshwar Lee,MECH,3,8.0,ME301,Heat Transfer,MECH,3,Spring2025,85
+627,Owen Scott,EEE,1,6.2,EE301,Control Systems,EEE,3,Spring2025,87
+628,Bhavna Baker,CSE,3,8.3,CS401,Computer Networks,CSE,3,Fall2024,77
+629,Disha Rao,IT,2,7.3,HU102,Professional Ethics,HUM,2,Spring2024,55
+630,Aubrey Chopra,CSE,4,8.0,MA101,Linear Algebra,MATH,4,Fall2023,74
+631,Deepika Kapoor,ECE,4,6.0,EC201,Signals and Systems,ECE,4,Fall2023,74
+632,Ethan Acharya,CSE,2,7.8,MA101,Linear Algebra,MATH,4,Fall2023,84
+632,Ethan Acharya,CSE,2,7.8,HU102,Professional Ethics,HUM,2,Spring2024,87
+633,Mia Swaminathan,CSE,4,7.8,CS401,Computer Networks,CSE,3,Spring2024,78
+633,Mia Swaminathan,CSE,4,7.8,MA101,Linear Algebra,MATH,4,Fall2023,78
+634,Nandini Phillips,EEE,1,9.1,EE401,Electrical Machines,EEE,4,Spring2025,72
+634,Nandini Phillips,EEE,1,9.1,EE201,Power Systems,EEE,4,Spring2025,84
+635,Himanshu Saxena,EEE,4,6.4,EE201,Power Systems,EEE,4,Fall2024,85
+635,Himanshu Saxena,EEE,4,6.4,EE101,Circuit Analysis,EEE,4,Fall2024,67
+636,Suresh Nair,ECE,1,8.6,EC101,Digital Logic,ECE,3,Fall2024,63
+637,Rashmi Acharya,ECE,3,8.7,HU101,Communication Skills,HUM,2,Spring2024,76
+638,Avery Peterson,EEE,3,6.9,MA101,Linear Algebra,MATH,4,Spring2024,82
+639,Siddharth Simmons,EEE,4,7.6,EE401,Electrical Machines,EEE,4,Fall2024,64
+639,Siddharth Simmons,EEE,4,7.6,EE101,Circuit Analysis,EEE,4,Spring2024,77
+640,Ananya Iyer,IT,3,7.7,HU102,Professional Ethics,HUM,2,Fall2023,96
+640,Ananya Iyer,IT,3,7.7,IT101,Web Development,IT,3,Fall2024,79
+641,Mia Reddy,CIVIL,4,8.8,CE101,Structural Analysis,CIVIL,4,Fall2024,96
+641,Mia Reddy,CIVIL,4,8.8,HU101,Communication Skills,HUM,2,Spring2024,78
+642,Leo Baker,ECE,4,7.5,EC401,VLSI Design,ECE,4,Fall2024,66
+642,Leo Baker,ECE,4,7.5,EC101,Digital Logic,ECE,3,Spring2024,83
+643,Olivia Jones,EEE,4,7.1,EE301,Control Systems,EEE,3,Spring2025,80
+644,Jitendra Collins,MECH,3,8.1,MA102,Probability & Statistics,MATH,4,Spring2025,93
+645,Akash Foster,AI-DS,4,7.8,MA101,Linear Algebra,MATH,4,Spring2025,89
+646,Komal Johnson,EEE,2,8.8,HU102,Professional Ethics,HUM,2,Fall2023,72
+647,Ethan Campbell,MECH,1,7.3,HU102,Professional Ethics,HUM,2,Fall2024,79
+648,Benjamin Jones,CIVIL,2,8.0,CE301,Geotechnical Engineering,CIVIL,4,Spring2024,86
+649,Aarav Johnson,MECH,1,9.1,HU101,Communication Skills,HUM,2,Spring2025,92
+649,Aarav Johnson,MECH,1,9.1,MA102,Probability & Statistics,MATH,4,Spring2025,70
+650,Isabella Banerjee,CSE,3,7.9,CS201,Data Structures,CSE,4,Spring2025,66
+650,Isabella Banerjee,CSE,3,7.9,HU101,Communication Skills,HUM,2,Spring2024,86
+651,Divya Powell,IT,3,7.3,MA101,Linear Algebra,MATH,4,Fall2024,75
+651,Divya Powell,IT,3,7.3,IT101,Web Development,IT,3,Fall2023,78
+651,Divya Powell,IT,3,7.3,HU102,Professional Ethics,HUM,2,Spring2024,90
+652,Pooja Watson,MECH,4,7.5,ME301,Heat Transfer,MECH,3,Fall2023,79
+653,Hemant Reed,CSE,3,8.4,HU102,Professional Ethics,HUM,2,Fall2024,71
+653,Hemant Reed,CSE,3,8.4,CS101,Intro to Programming,CSE,4,Fall2024,83
+654,Varun Allen,CSE,4,7.1,CS301,Databases,CSE,4,Spring2025,78
+654,Varun Allen,CSE,4,7.1,CS401,Computer Networks,CSE,3,Spring2024,98
+655,Elizabeth Iyer,EEE,2,8.6,HU102,Professional Ethics,HUM,2,Fall2024,68
+656,Ethan Reddy,CSE,4,8.9,MA101,Linear Algebra,MATH,4,Fall2023,79
+656,Ethan Reddy,CSE,4,8.9,HU101,Communication Skills,HUM,2,Spring2025,87
+657,David Bailey,CSE,3,7.9,CS201,Data Structures,CSE,4,Spring2024,79
+657,David Bailey,CSE,3,7.9,CS302,Operating Systems,CSE,4,Fall2024,71
+658,Disha Moore,CIVIL,1,7.4,CE201,Surveying,CIVIL,3,Spring2025,91
+659,Karthik Sharma,IT,4,7.5,IT201,Cloud Computing,IT,4,Fall2023,89
+659,Karthik Sharma,IT,4,7.5,IT101,Web Development,IT,3,Fall2024,75
+660,Varun Roberts,IT,1,8.2,IT101,Web Development,IT,3,Fall2023,73
+660,Varun Roberts,IT,1,8.2,IT301,Cybersecurity,IT,3,Spring2025,74
+661,Preeti Moore,EEE,4,6.3,HU102,Professional Ethics,HUM,2,Fall2024,94
+661,Preeti Moore,EEE,4,6.3,MA102,Probability & Statistics,MATH,4,Fall2024,78
+662,Victoria Perry,AI-DS,2,6.7,,,,,,
+663,Noah Coleman,AI-DS,3,8.1,,,,,,
+664,Rohan Long,CSE,3,7.5,CS201,Data Structures,CSE,4,Fall2023,70
+665,Rajesh Long,CSE,4,7.0,CS101,Intro to Programming,CSE,4,Spring2025,88
+665,Rajesh Long,CSE,4,7.0,CS201,Data Structures,CSE,4,Fall2024,88
+666,Camila Bose,CSE,2,7.4,CS201,Data Structures,CSE,4,Fall2024,82
+667,Bhavna Phillips,CSE,2,7.2,CS101,Intro to Programming,CSE,4,Spring2025,85
+667,Bhavna Phillips,CSE,2,7.2,CS302,Operating Systems,CSE,4,Spring2025,84
+668,Abigail Gray,CSE,3,7.3,CS201,Data Structures,CSE,4,Fall2024,69
+668,Abigail Gray,CSE,3,7.3,CS301,Databases,CSE,4,Spring2024,90
+669,Carter Taylor,IT,1,6.9,HU102,Professional Ethics,HUM,2,Spring2025,89
+669,Carter Taylor,IT,1,6.9,IT301,Cybersecurity,IT,3,Fall2023,80
+670,Theodore Rogers,IT,2,8.5,IT101,Web Development,IT,3,Spring2024,87
+670,Theodore Rogers,IT,2,8.5,MA101,Linear Algebra,MATH,4,Fall2023,78
+671,Sunita Nelson,CSE,1,8.7,CS101,Intro to Programming,CSE,4,Spring2025,98
+671,Sunita Nelson,CSE,1,8.7,CS302,Operating Systems,CSE,4,Spring2024,74
+672,Jacob Mitchell,ECE,3,8.6,HU102,Professional Ethics,HUM,2,Fall2024,85
+672,Jacob Mitchell,ECE,3,8.6,MA101,Linear Algebra,MATH,4,Spring2024,85
+673,Dylan Venkataraman,CSE,2,8.2,MA102,Probability & Statistics,MATH,4,Spring2025,76
+673,Dylan Venkataraman,CSE,2,8.2,HU102,Professional Ethics,HUM,2,Fall2023,78
+673,Dylan Venkataraman,CSE,2,8.2,CS201,Data Structures,CSE,4,Fall2023,66
+674,David Bhatia,CSE,4,9.0,HU101,Communication Skills,HUM,2,Fall2023,82
+675,Pooja Green,IT,2,8.0,MA102,Probability & Statistics,MATH,4,Fall2023,70
+675,Pooja Green,IT,2,8.0,HU102,Professional Ethics,HUM,2,Spring2025,82
+676,Olivia Perez,EEE,3,8.8,EE101,Circuit Analysis,EEE,4,Fall2023,81
+677,Pankaj Saxena,IT,4,8.5,HU102,Professional Ethics,HUM,2,Spring2024,87
+677,Pankaj Saxena,IT,4,8.5,HU101,Communication Skills,HUM,2,Spring2024,81
+678,Alexander Adams,MECH,3,8.0,ME301,Heat Transfer,MECH,3,Spring2024,67
+679,Luke Campbell,AI-DS,3,8.0,DS201,Deep Learning,AI-DS,4,Fall2023,74
+680,Aiden Henderson,AI-DS,4,8.1,MA101,Linear Algebra,MATH,4,Spring2025,73
+680,Aiden Henderson,AI-DS,4,8.1,MA102,Probability & Statistics,MATH,4,Fall2024,75
+681,Grayson Sanchez,ECE,1,9.1,EC401,VLSI Design,ECE,4,Spring2025,66
+681,Grayson Sanchez,ECE,1,9.1,HU102,Professional Ethics,HUM,2,Spring2024,81
+681,Grayson Sanchez,ECE,1,9.1,EC201,Signals and Systems,ECE,4,Fall2024,94
+682,Meera Moore,ECE,4,7.9,EC301,Microprocessors,ECE,4,Spring2025,80
+682,Meera Moore,ECE,4,7.9,MA102,Probability & Statistics,MATH,4,Spring2024,66
+683,Ellie Gupta,AI-DS,1,6.4,DS301,Big Data Analytics,AI-DS,4,Spring2024,73
+684,Jackson Thomas,CSE,4,8.7,CS301,Databases,CSE,4,Spring2025,69
+685,Lillian Moore,ECE,1,6.3,MA101,Linear Algebra,MATH,4,Fall2023,93
+685,Lillian Moore,ECE,1,6.3,HU102,Professional Ethics,HUM,2,Spring2024,92
+686,Lalit Parker,EEE,2,6.7,EE401,Electrical Machines,EEE,4,Fall2024,85
+686,Lalit Parker,EEE,2,6.7,MA101,Linear Algebra,MATH,4,Spring2024,78
+687,Penelope Acharya,CSE,3,8.0,CS201,Data Structures,CSE,4,Fall2023,84
+687,Penelope Acharya,CSE,3,8.0,HU102,Professional Ethics,HUM,2,Fall2024,87
+688,Chetan Howard,MECH,2,6.9,HU101,Communication Skills,HUM,2,Spring2025,89
+688,Chetan Howard,MECH,2,6.9,MA102,Probability & Statistics,MATH,4,Fall2023,85
+689,Venkatesh Pillai,CSE,1,9.5,CS301,Databases,CSE,4,Fall2024,79
+690,Jessica Green,ECE,2,8.2,HU102,Professional Ethics,HUM,2,Spring2025,70
+690,Jessica Green,ECE,2,8.2,EC401,VLSI Design,ECE,4,Spring2025,81
+691,Lily King,ECE,1,7.9,EC201,Signals and Systems,ECE,4,Fall2024,92
+692,Aria Joshi,CSE,2,7.1,CS401,Computer Networks,CSE,3,Spring2024,77
+693,Varsha Brown,AI-DS,4,7.7,,,,,,
+694,Grayson Scott,IT,4,6.0,HU102,Professional Ethics,HUM,2,Fall2023,69
+694,Grayson Scott,IT,4,6.0,MA101,Linear Algebra,MATH,4,Spring2024,81
+695,Abhishek White,CSE,3,6.8,HU102,Professional Ethics,HUM,2,Fall2023,81
+695,Abhishek White,CSE,3,6.8,CS402,Software Engineering,CSE,3,Fall2024,85
+696,Nandini Moore,ECE,4,7.1,EC301,Microprocessors,ECE,4,Fall2024,81
+697,Aubrey Perez,CSE,2,7.8,MA101,Linear Algebra,MATH,4,Fall2024,70
+697,Aubrey Perez,CSE,2,7.8,CS401,Computer Networks,CSE,3,Fall2023,73
+698,Charlotte Garcia,AI-DS,4,6.4,HU101,Communication Skills,HUM,2,Spring2024,73
+698,Charlotte Garcia,AI-DS,4,6.4,MA102,Probability & Statistics,MATH,4,Spring2025,88
+699,Alok Menon,ECE,4,8.1,EC301,Microprocessors,ECE,4,Fall2023,77
+700,Varsha Rivera,CSE,1,7.3,CS302,Operating Systems,CSE,4,Spring2024,77
+701,Gayatri Nair,ECE,1,8.8,MA101,Linear Algebra,MATH,4,Spring2024,70
+701,Gayatri Nair,ECE,1,8.8,EC201,Signals and Systems,ECE,4,Fall2023,77
+701,Gayatri Nair,ECE,1,8.8,EC101,Digital Logic,ECE,3,Spring2025,97
+702,Isabella Acharya,CSE,2,7.3,MA102,Probability & Statistics,MATH,4,Spring2024,66
+702,Isabella Acharya,CSE,2,7.3,CS401,Computer Networks,CSE,3,Fall2024,79
+703,Aiden Sharma,AI-DS,2,8.3,HU102,Professional Ethics,HUM,2,Spring2025,69
+704,Prashant Bell,MECH,3,7.4,HU101,Communication Skills,HUM,2,Spring2024,98
+704,Prashant Bell,MECH,3,7.4,ME401,Machine Design,MECH,4,Spring2025,80
+705,Preeti Morgan,ECE,3,9.6,EC101,Digital Logic,ECE,3,Spring2024,83
+706,Manoj Green,EEE,1,7.5,MA102,Probability & Statistics,MATH,4,Fall2023,83
+706,Manoj Green,EEE,1,7.5,EE401,Electrical Machines,EEE,4,Fall2023,79
+706,Manoj Green,EEE,1,7.5,HU101,Communication Skills,HUM,2,Fall2024,75
+707,Owen Richardson,CSE,1,8.1,HU102,Professional Ethics,HUM,2,Fall2024,79
+707,Owen Richardson,CSE,1,8.1,HU101,Communication Skills,HUM,2,Spring2025,62
+708,Sneha Patel,CSE,3,8.6,CS201,Data Structures,CSE,4,Spring2024,90
+708,Sneha Patel,CSE,3,8.6,MA101,Linear Algebra,MATH,4,Spring2025,90
+709,Evelyn Davis,IT,3,9.0,MA101,Linear Algebra,MATH,4,Spring2025,86
+710,Chloe Garcia,ECE,1,8.9,EC401,VLSI Design,ECE,4,Fall2023,88
+710,Chloe Garcia,ECE,1,8.9,MA102,Probability & Statistics,MATH,4,Fall2023,65
+710,Chloe Garcia,ECE,1,8.9,HU102,Professional Ethics,HUM,2,Spring2025,76
+711,Shalini Sharma,CSE,2,6.9,CS302,Operating Systems,CSE,4,Spring2024,87
+712,Priya Perez,IT,3,8.3,IT101,Web Development,IT,3,Spring2024,90
+712,Priya Perez,IT,3,8.3,MA101,Linear Algebra,MATH,4,Fall2024,82
+712,Priya Perez,IT,3,8.3,IT201,Cloud Computing,IT,4,Fall2024,74
+713,Owen Peterson,ECE,2,7.6,HU102,Professional Ethics,HUM,2,Spring2024,93
+714,Priya Evans,CSE,1,7.9,MA102,Probability & Statistics,MATH,4,Fall2024,98
+715,Deepak Baker,CIVIL,2,8.3,MA102,Probability & Statistics,MATH,4,Spring2024,79
+715,Deepak Baker,CIVIL,2,8.3,HU102,Professional Ethics,HUM,2,Fall2024,84
+716,Siddharth Long,AI-DS,4,8.2,MA102,Probability & Statistics,MATH,4,Spring2025,84
+716,Siddharth Long,AI-DS,4,8.2,MA101,Linear Algebra,MATH,4,Fall2023,73
+717,Kiran Cook,ECE,3,8.8,EC101,Digital Logic,ECE,3,Fall2023,65
+717,Kiran Cook,ECE,3,8.8,EC201,Signals and Systems,ECE,4,Fall2024,67
+718,Scarlett Gonzales,ECE,1,8.2,MA101,Linear Algebra,MATH,4,Spring2024,82
+719,Sneha Clark,AI-DS,3,9.1,MA101,Linear Algebra,MATH,4,Fall2023,75
+720,Isha Saxena,AI-DS,3,7.8,DS201,Deep Learning,AI-DS,4,Spring2024,81
+721,Nisha Reddy,AI-DS,3,7.8,HU101,Communication Skills,HUM,2,Fall2024,93
+721,Nisha Reddy,AI-DS,3,7.8,HU102,Professional Ethics,HUM,2,Spring2024,79
+722,Akash Singh,AI-DS,1,7.8,DS201,Deep Learning,AI-DS,4,Spring2024,80
+722,Akash Singh,AI-DS,1,7.8,DS101,Machine Learning,AI-DS,4,Spring2025,83
+722,Akash Singh,AI-DS,1,7.8,MA102,Probability & Statistics,MATH,4,Fall2024,83
+723,Anushka Wilson,EEE,2,8.3,EE401,Electrical Machines,EEE,4,Fall2023,88
+723,Anushka Wilson,EEE,2,8.3,EE301,Control Systems,EEE,3,Spring2025,77
+723,Anushka Wilson,EEE,2,8.3,MA102,Probability & Statistics,MATH,4,Spring2024,70
+724,Preeti Banerjee,CSE,4,8.0,HU101,Communication Skills,HUM,2,Fall2024,75
+724,Preeti Banerjee,CSE,4,8.0,CS201,Data Structures,CSE,4,Spring2024,77
+725,Luna Parker,MECH,2,7.0,MA102,Probability & Statistics,MATH,4,Spring2024,88
+726,Harper Taylor,CSE,4,7.7,HU101,Communication Skills,HUM,2,Spring2025,71
+726,Harper Taylor,CSE,4,7.7,CS402,Software Engineering,CSE,3,Spring2025,70
+727,Michael Stewart,IT,4,9.9,IT201,Cloud Computing,IT,4,Fall2024,82
+727,Michael Stewart,IT,4,9.9,MA102,Probability & Statistics,MATH,4,Fall2024,65
+727,Michael Stewart,IT,4,9.9,HU101,Communication Skills,HUM,2,Spring2025,74
+728,Amit Jenkins,ECE,2,7.2,HU102,Professional Ethics,HUM,2,Fall2023,75
+728,Amit Jenkins,ECE,2,7.2,MA102,Probability & Statistics,MATH,4,Fall2024,67
+729,Varsha Morgan,AI-DS,1,7.8,DS101,Machine Learning,AI-DS,4,Fall2023,91
+730,Kavya Edwards,EEE,4,9.4,MA101,Linear Algebra,MATH,4,Fall2024,89
+731,Zoey Richardson,AI-DS,3,7.3,MA101,Linear Algebra,MATH,4,Fall2024,85
+731,Zoey Richardson,AI-DS,3,7.3,DS101,Machine Learning,AI-DS,4,Spring2024,79
+731,Zoey Richardson,AI-DS,3,7.3,MA102,Probability & Statistics,MATH,4,Spring2025,86
+732,Isaac Sharma,AI-DS,4,8.1,MA101,Linear Algebra,MATH,4,Spring2025,80
+732,Isaac Sharma,AI-DS,4,8.1,DS301,Big Data Analytics,AI-DS,4,Spring2024,82
+733,Noah Thomas,MECH,3,8.3,ME401,Machine Design,MECH,4,Spring2024,85
+733,Noah Thomas,MECH,3,8.3,ME201,Fluid Mechanics,MECH,4,Spring2024,82
+734,John Acharya,ECE,3,6.6,MA101,Linear Algebra,MATH,4,Fall2023,67
+735,Carter Singh,ECE,3,6.5,EC101,Digital Logic,ECE,3,Fall2023,81
+736,Lucas Martin,MECH,1,6.0,MA102,Probability & Statistics,MATH,4,Spring2025,64
+736,Lucas Martin,MECH,1,6.0,MA101,Linear Algebra,MATH,4,Fall2024,66
+736,Lucas Martin,MECH,1,6.0,ME301,Heat Transfer,MECH,3,Fall2024,93
+737,Levi Phillips,EEE,2,8.5,MA102,Probability & Statistics,MATH,4,Spring2025,82
+738,Charlotte Iyer,EEE,4,7.6,MA102,Probability & Statistics,MATH,4,Spring2025,93
+739,Mila Sharma,AI-DS,4,7.9,MA102,Probability & Statistics,MATH,4,Fall2024,78
+740,Rajesh White,EEE,2,7.5,MA102,Probability & Statistics,MATH,4,Fall2023,77
+740,Rajesh White,EEE,2,7.5,HU102,Professional Ethics,HUM,2,Spring2025,78
+740,Rajesh White,EEE,2,7.5,MA101,Linear Algebra,MATH,4,Spring2024,85
+741,Isha Bhatt,MECH,4,7.4,MA102,Probability & Statistics,MATH,4,Spring2024,79
+742,Sunita Smith,MECH,3,7.8,ME201,Fluid Mechanics,MECH,4,Fall2023,85
+742,Sunita Smith,MECH,3,7.8,ME401,Machine Design,MECH,4,Spring2024,87
+743,Kavya Chopra,ECE,3,7.5,EC201,Signals and Systems,ECE,4,Spring2025,91
+743,Kavya Chopra,ECE,3,7.5,HU102,Professional Ethics,HUM,2,Spring2024,87
+743,Kavya Chopra,ECE,3,7.5,MA102,Probability & Statistics,MATH,4,Fall2023,74
+744,Varun Jenkins,EEE,3,7.1,EE401,Electrical Machines,EEE,4,Fall2023,78
+744,Varun Jenkins,EEE,3,7.1,EE301,Control Systems,EEE,3,Fall2024,84
+745,Pankaj Taylor,CIVIL,1,6.7,CE101,Structural Analysis,CIVIL,4,Fall2023,93
+745,Pankaj Taylor,CIVIL,1,6.7,CE301,Geotechnical Engineering,CIVIL,4,Spring2024,94
+746,Lily Chopra,ECE,3,6.0,EC401,VLSI Design,ECE,4,Spring2025,97
+746,Lily Chopra,ECE,3,6.0,EC101,Digital Logic,ECE,3,Fall2024,81
+747,Amelia Trivedi,AI-DS,4,6.9,MA101,Linear Algebra,MATH,4,Fall2023,80
+748,Shalini Nelson,ECE,4,9.9,EC401,VLSI Design,ECE,4,Fall2024,98
+748,Shalini Nelson,ECE,4,9.9,MA102,Probability & Statistics,MATH,4,Spring2025,95
+749,Harper Narayanan,EEE,4,8.4,EE101,Circuit Analysis,EEE,4,Spring2024,89
+750,Grayson Trivedi,EEE,4,6.7,HU102,Professional Ethics,HUM,2,Spring2025,95
+750,Grayson Trivedi,EEE,4,6.7,EE401,Electrical Machines,EEE,4,Spring2025,79
+751,Michael Ward,CIVIL,2,9.0,CE301,Geotechnical Engineering,CIVIL,4,Fall2023,73
+752,Zoey Morgan,EEE,3,6.9,EE401,Electrical Machines,EEE,4,Fall2023,83
+753,Ellie Simmons,IT,1,8.2,MA101,Linear Algebra,MATH,4,Fall2023,62
+753,Ellie Simmons,IT,1,8.2,IT201,Cloud Computing,IT,4,Fall2024,85
+753,Ellie Simmons,IT,1,8.2,IT101,Web Development,IT,3,Fall2023,79
+754,Ethan Cox,EEE,3,9.0,EE401,Electrical Machines,EEE,4,Spring2025,77
+755,Akash Baker,EEE,4,7.3,EE201,Power Systems,EEE,4,Spring2025,72
+755,Akash Baker,EEE,4,7.3,MA101,Linear Algebra,MATH,4,Spring2025,77
+756,Stella Patel,CSE,1,9.0,MA101,Linear Algebra,MATH,4,Fall2023,57
+756,Stella Patel,CSE,1,9.0,CS302,Operating Systems,CSE,4,Spring2025,66
+757,Carter Hughes,CIVIL,4,8.2,HU102,Professional Ethics,HUM,2,Fall2023,89
+757,Carter Hughes,CIVIL,4,8.2,CE201,Surveying,CIVIL,3,Fall2024,98
+758,Manish Trivedi,EEE,2,8.5,MA102,Probability & Statistics,MATH,4,Fall2023,80
+758,Manish Trivedi,EEE,2,8.5,EE101,Circuit Analysis,EEE,4,Fall2023,73
+759,Elizabeth Pillai,MECH,1,6.4,ME401,Machine Design,MECH,4,Spring2024,74
+760,James Ramirez,CSE,4,8.2,CS301,Databases,CSE,4,Spring2024,82
+760,James Ramirez,CSE,4,8.2,HU101,Communication Skills,HUM,2,Fall2024,98
+760,James Ramirez,CSE,4,8.2,CS101,Intro to Programming,CSE,4,Fall2024,86
+761,Lalit Reed,CSE,2,7.1,MA101,Linear Algebra,MATH,4,Fall2023,98
+761,Lalit Reed,CSE,2,7.1,CS302,Operating Systems,CSE,4,Fall2023,80
+762,Grayson Krishnan,IT,4,8.3,IT301,Cybersecurity,IT,3,Fall2024,88
+763,Emily Gray,CSE,2,8.7,CS201,Data Structures,CSE,4,Spring2025,84
+763,Emily Gray,CSE,2,8.7,CS401,Computer Networks,CSE,3,Spring2024,78
+764,Michael Ross,CIVIL,4,7.6,MA102,Probability & Statistics,MATH,4,Spring2024,74
+764,Michael Ross,CIVIL,4,7.6,HU102,Professional Ethics,HUM,2,Spring2025,83
+765,Suresh Parker,CSE,3,7.1,CS201,Data Structures,CSE,4,Spring2025,91
+766,Ellie Mitchell,CIVIL,1,8.3,CE101,Structural Analysis,CIVIL,4,Spring2025,86
+767,Liam Bhatia,AI-DS,1,7.7,MA102,Probability & Statistics,MATH,4,Spring2025,86
+768,Chitra Pillai,ECE,2,8.2,HU102,Professional Ethics,HUM,2,Spring2025,86
+769,Lalit Gray,MECH,4,9.2,ME101,Thermodynamics,MECH,3,Spring2024,77
+770,Bala Gonzales,CSE,4,7.4,CS302,Operating Systems,CSE,4,Spring2025,78
+771,Aubrey Kapoor,MECH,2,7.3,ME401,Machine Design,MECH,4,Fall2023,88
+771,Aubrey Kapoor,MECH,2,7.3,ME301,Heat Transfer,MECH,3,Fall2024,77
+772,Sophia Henderson,CSE,3,8.3,MA101,Linear Algebra,MATH,4,Fall2023,78
+772,Sophia Henderson,CSE,3,8.3,HU102,Professional Ethics,HUM,2,Spring2025,70
+773,Noah Bailey,MECH,3,6.0,ME201,Fluid Mechanics,MECH,4,Fall2023,65
+773,Noah Bailey,MECH,3,6.0,ME401,Machine Design,MECH,4,Fall2023,66
+774,Anushka Flores,MECH,2,9.0,ME101,Thermodynamics,MECH,3,Spring2024,79
+774,Anushka Flores,MECH,2,9.0,HU101,Communication Skills,HUM,2,Spring2024,83
+774,Anushka Flores,MECH,2,9.0,ME401,Machine Design,MECH,4,Spring2024,87
+775,Gita Turner,AI-DS,2,7.2,DS201,Deep Learning,AI-DS,4,Fall2024,85
+775,Gita Turner,AI-DS,2,7.2,HU102,Professional Ethics,HUM,2,Fall2024,72
+775,Gita Turner,AI-DS,2,7.2,DS101,Machine Learning,AI-DS,4,Fall2023,80
+776,Bala Edwards,CSE,2,8.9,HU102,Professional Ethics,HUM,2,Spring2025,74
+777,Amit Turner,CSE,2,7.7,HU101,Communication Skills,HUM,2,Fall2023,84
+777,Amit Turner,CSE,2,7.7,CS402,Software Engineering,CSE,3,Fall2023,74
+778,Komal Cox,IT,2,8.0,MA102,Probability & Statistics,MATH,4,Fall2024,81
+779,Harish Anderson,MECH,2,8.6,MA102,Probability & Statistics,MATH,4,Spring2024,74
+779,Harish Anderson,MECH,2,8.6,ME201,Fluid Mechanics,MECH,4,Fall2024,87
+780,Ella Smith,CSE,1,6.7,CS302,Operating Systems,CSE,4,Spring2025,89
+781,Wyatt Johnson,ECE,3,8.2,MA101,Linear Algebra,MATH,4,Spring2025,66
+781,Wyatt Johnson,ECE,3,8.2,HU101,Communication Skills,HUM,2,Spring2024,83
+782,Ananya Williams,CSE,3,8.1,CS402,Software Engineering,CSE,3,Spring2025,94
+783,Suresh Bailey,ECE,2,7.6,EC301,Microprocessors,ECE,4,Spring2024,80
+784,Grace Flores,CSE,4,9.3,CS201,Data Structures,CSE,4,Spring2024,86
+784,Grace Flores,CSE,4,9.3,MA101,Linear Algebra,MATH,4,Spring2024,96
+785,Aria Johnson,CSE,1,9.8,CS201,Data Structures,CSE,4,Spring2025,78
+785,Aria Johnson,CSE,1,9.8,CS101,Intro to Programming,CSE,4,Spring2025,66
+786,Joseph Lee,ECE,2,7.6,HU101,Communication Skills,HUM,2,Fall2024,65
+786,Joseph Lee,ECE,2,7.6,EC101,Digital Logic,ECE,3,Spring2025,96
+787,Mateo Nelson,IT,1,9.0,IT301,Cybersecurity,IT,3,Fall2023,80
+788,Preeti Anderson,CSE,2,7.6,CS301,Databases,CSE,4,Fall2024,83
+788,Preeti Anderson,CSE,2,7.6,CS402,Software Engineering,CSE,3,Fall2024,79
+789,Varsha Campbell,CSE,2,6.7,CS201,Data Structures,CSE,4,Spring2024,71
+790,Karthik Sanders,AI-DS,4,7.0,HU101,Communication Skills,HUM,2,Fall2023,90
+791,Dylan Baker,CIVIL,4,8.3,CE101,Structural Analysis,CIVIL,4,Spring2024,67
+791,Dylan Baker,CIVIL,4,8.3,CE201,Surveying,CIVIL,3,Fall2024,86
+792,Lincoln Cook,EEE,1,6.9,EE101,Circuit Analysis,EEE,4,Fall2024,84
+792,Lincoln Cook,EEE,1,6.9,EE201,Power Systems,EEE,4,Spring2024,74
+792,Lincoln Cook,EEE,1,6.9,HU101,Communication Skills,HUM,2,Fall2023,98
+793,Mila Gonzales,IT,2,6.8,HU102,Professional Ethics,HUM,2,Spring2025,77
+793,Mila Gonzales,IT,2,6.8,HU101,Communication Skills,HUM,2,Spring2025,75
+794,Aarav Miller,MECH,3,7.4,,,,,,
+795,Gita Morgan,MECH,3,7.7,ME201,Fluid Mechanics,MECH,4,Spring2024,97
+796,Matthew Gupta,MECH,2,6.5,ME101,Thermodynamics,MECH,3,Spring2024,63
+797,Owen Torres,CSE,3,6.3,MA101,Linear Algebra,MATH,4,Spring2025,62
+797,Owen Torres,CSE,3,6.3,CS401,Computer Networks,CSE,3,Fall2024,78
+797,Owen Torres,CSE,3,6.3,CS301,Databases,CSE,4,Fall2023,82
+798,Jaxon Lee,CIVIL,2,7.8,MA102,Probability & Statistics,MATH,4,Spring2025,81
+798,Jaxon Lee,CIVIL,2,7.8,HU102,Professional Ethics,HUM,2,Fall2024,88
+798,Jaxon Lee,CIVIL,2,7.8,CE101,Structural Analysis,CIVIL,4,Spring2024,70
+799,Rajesh Lee,ECE,1,6.6,MA101,Linear Algebra,MATH,4,Spring2024,67
+799,Rajesh Lee,ECE,1,6.6,EC301,Microprocessors,ECE,4,Spring2025,84
+800,Sebastian Trivedi,IT,1,8.1,MA101,Linear Algebra,MATH,4,Fall2023,73
+800,Sebastian Trivedi,IT,1,8.1,IT301,Cybersecurity,IT,3,Spring2025,97
+801,Mila Singh,CSE,2,6.6,CS301,Databases,CSE,4,Fall2023,83
+801,Mila Singh,CSE,2,6.6,CS101,Intro to Programming,CSE,4,Spring2025,76
+802,Priya Banerjee,IT,4,8.1,IT301,Cybersecurity,IT,3,Fall2023,80
+802,Priya Banerjee,IT,4,8.1,IT201,Cloud Computing,IT,4,Fall2023,78
+803,Nisha Gonzales,IT,4,8.2,MA102,Probability & Statistics,MATH,4,Fall2024,82
+803,Nisha Gonzales,IT,4,8.2,IT201,Cloud Computing,IT,4,Spring2025,81
+803,Nisha Gonzales,IT,4,8.2,IT301,Cybersecurity,IT,3,Fall2024,82
+804,Omkar Johnson,CSE,1,7.4,CS101,Intro to Programming,CSE,4,Fall2023,78
+804,Omkar Johnson,CSE,1,7.4,CS302,Operating Systems,CSE,4,Spring2024,75
+805,Layla Lee,AI-DS,3,8.0,DS101,Machine Learning,AI-DS,4,Spring2024,86
+805,Layla Lee,AI-DS,3,8.0,HU101,Communication Skills,HUM,2,Fall2024,79
+806,Jaxon Das,EEE,1,9.5,EE301,Control Systems,EEE,3,Fall2024,70
+806,Jaxon Das,EEE,1,9.5,EE401,Electrical Machines,EEE,4,Spring2024,77
+807,Zoey Barnes,IT,2,7.4,MA101,Linear Algebra,MATH,4,Fall2023,84
+807,Zoey Barnes,IT,2,7.4,IT301,Cybersecurity,IT,3,Spring2024,62
+807,Zoey Barnes,IT,2,7.4,MA102,Probability & Statistics,MATH,4,Spring2024,76
+808,Madhuri Trivedi,CSE,3,8.6,CS201,Data Structures,CSE,4,Fall2024,85
+809,Kavya Turner,ECE,2,7.8,HU102,Professional Ethics,HUM,2,Spring2024,71
+809,Kavya Turner,ECE,2,7.8,EC201,Signals and Systems,ECE,4,Spring2025,87
+810,Lalit Torres,IT,2,7.0,MA101,Linear Algebra,MATH,4,Fall2023,75
+810,Lalit Torres,IT,2,7.0,IT201,Cloud Computing,IT,4,Spring2024,76
+811,Vikram Phillips,MECH,4,8.2,HU102,Professional Ethics,HUM,2,Fall2024,90
+812,Charlotte Green,MECH,4,6.4,MA101,Linear Algebra,MATH,4,Spring2024,84
+812,Charlotte Green,MECH,4,6.4,ME201,Fluid Mechanics,MECH,4,Spring2024,81
+812,Charlotte Green,MECH,4,6.4,MA102,Probability & Statistics,MATH,4,Spring2025,78
+813,Anushka Campbell,CSE,1,6.5,MA102,Probability & Statistics,MATH,4,Fall2023,82
+813,Anushka Campbell,CSE,1,6.5,CS301,Databases,CSE,4,Spring2024,83
+814,Emily Patel,MECH,4,8.1,HU101,Communication Skills,HUM,2,Spring2025,84
+814,Emily Patel,MECH,4,8.1,ME401,Machine Design,MECH,4,Fall2024,67
+815,Priya Scott,CSE,1,8.2,CS301,Databases,CSE,4,Spring2024,96
+815,Priya Scott,CSE,1,8.2,MA101,Linear Algebra,MATH,4,Spring2025,81
+816,Rashmi Butler,IT,4,6.5,IT101,Web Development,IT,3,Spring2025,79
+817,Alexander Bose,CSE,3,7.9,CS201,Data Structures,CSE,4,Spring2025,85
+817,Alexander Bose,CSE,3,7.9,HU102,Professional Ethics,HUM,2,Fall2024,74
+818,Varun Davis,CSE,2,7.1,CS201,Data Structures,CSE,4,Fall2023,69
+819,Anthony Iyer,CSE,1,8.9,CS101,Intro to Programming,CSE,4,Fall2024,82
+820,Arjun Clark,CSE,4,8.3,HU102,Professional Ethics,HUM,2,Fall2023,71
+820,Arjun Clark,CSE,4,8.3,CS101,Intro to Programming,CSE,4,Fall2023,98
+821,Jaxon Mukherjee,ECE,2,8.3,EC201,Signals and Systems,ECE,4,Fall2023,94
+821,Jaxon Mukherjee,ECE,2,8.3,EC301,Microprocessors,ECE,4,Spring2024,95
+821,Jaxon Mukherjee,ECE,2,8.3,EC401,VLSI Design,ECE,4,Spring2025,82
+822,Madhav Acharya,IT,2,8.3,MA101,Linear Algebra,MATH,4,Spring2024,88
+823,Samuel Khanna,EEE,1,7.3,HU102,Professional Ethics,HUM,2,Fall2024,55
+823,Samuel Khanna,EEE,1,7.3,EE401,Electrical Machines,EEE,4,Fall2024,68
+823,Samuel Khanna,EEE,1,7.3,EE201,Power Systems,EEE,4,Spring2025,93
+824,Karthik Butler,CIVIL,2,8.1,MA101,Linear Algebra,MATH,4,Spring2025,91
+825,Lucas Khanna,CSE,4,7.2,HU102,Professional Ethics,HUM,2,Fall2024,96
+825,Lucas Khanna,CSE,4,7.2,CS201,Data Structures,CSE,4,Spring2024,84
+825,Lucas Khanna,CSE,4,7.2,MA102,Probability & Statistics,MATH,4,Fall2024,77
+826,Dinesh Phillips,ECE,1,7.6,MA102,Probability & Statistics,MATH,4,Fall2023,70
+826,Dinesh Phillips,ECE,1,7.6,HU102,Professional Ethics,HUM,2,Spring2025,97
+826,Dinesh Phillips,ECE,1,7.6,EC201,Signals and Systems,ECE,4,Spring2025,84
+827,Shreya Krishnan,EEE,3,6.9,EE201,Power Systems,EEE,4,Spring2025,83
+828,Eshwar Cook,CSE,4,7.3,CS302,Operating Systems,CSE,4,Fall2023,68
+828,Eshwar Cook,CSE,4,7.3,MA101,Linear Algebra,MATH,4,Spring2024,84
+829,Oliver Watson,ECE,1,7.2,EC201,Signals and Systems,ECE,4,Spring2025,69
+829,Oliver Watson,ECE,1,7.2,EC301,Microprocessors,ECE,4,Spring2025,82
+830,Emma Kumar,CSE,1,8.6,CS201,Data Structures,CSE,4,Fall2024,77
+830,Emma Kumar,CSE,1,8.6,CS402,Software Engineering,CSE,3,Spring2025,83
+831,Ava Wright,ECE,3,9.2,EC401,VLSI Design,ECE,4,Fall2024,55
+832,Varun Nair,AI-DS,2,6.8,DS101,Machine Learning,AI-DS,4,Fall2023,93
+832,Varun Nair,AI-DS,2,6.8,DS201,Deep Learning,AI-DS,4,Fall2024,75
+833,Madison Henderson,CSE,1,7.7,HU101,Communication Skills,HUM,2,Spring2024,83
+833,Madison Henderson,CSE,1,7.7,MA101,Linear Algebra,MATH,4,Fall2024,81
+834,Harish Perez,AI-DS,2,8.1,HU101,Communication Skills,HUM,2,Spring2024,89
+834,Harish Perez,AI-DS,2,8.1,MA102,Probability & Statistics,MATH,4,Spring2025,77
+834,Harish Perez,AI-DS,2,8.1,HU102,Professional Ethics,HUM,2,Fall2023,62
+835,Ella Das,CIVIL,3,7.1,MA102,Probability & Statistics,MATH,4,Fall2024,98
+835,Ella Das,CIVIL,3,7.1,MA101,Linear Algebra,MATH,4,Spring2024,81
+836,Chetan Pillai,ECE,4,7.5,EC301,Microprocessors,ECE,4,Fall2023,73
+836,Chetan Pillai,ECE,4,7.5,HU102,Professional Ethics,HUM,2,Fall2023,84
+836,Chetan Pillai,ECE,4,7.5,EC401,VLSI Design,ECE,4,Spring2025,98
+837,Omkar Malhotra,CSE,2,6.6,CS101,Intro to Programming,CSE,4,Fall2024,98
+837,Omkar Malhotra,CSE,2,6.6,CS402,Software Engineering,CSE,3,Fall2023,77
+838,Mia Flores,MECH,4,8.5,MA101,Linear Algebra,MATH,4,Fall2024,84
+839,Harish Campbell,CSE,3,8.1,HU101,Communication Skills,HUM,2,Fall2024,73
+840,Olivia Chatterjee,IT,1,6.0,HU101,Communication Skills,HUM,2,Spring2025,79
+840,Olivia Chatterjee,IT,1,6.0,IT101,Web Development,IT,3,Fall2023,67
+841,Rajesh Richardson,MECH,1,7.6,MA101,Linear Algebra,MATH,4,Spring2024,89
+841,Rajesh Richardson,MECH,1,7.6,ME101,Thermodynamics,MECH,3,Spring2025,87
+842,Radha Stewart,AI-DS,3,7.6,DS301,Big Data Analytics,AI-DS,4,Spring2024,72
+843,Grace Adams,IT,4,7.8,HU101,Communication Skills,HUM,2,Fall2023,85
+844,Naveen Subramanian,IT,4,7.8,HU102,Professional Ethics,HUM,2,Spring2025,81
+845,Jack Wood,EEE,4,9.9,EE301,Control Systems,EEE,3,Spring2025,85
+845,Jack Wood,EEE,4,9.9,HU102,Professional Ethics,HUM,2,Fall2024,79
+846,Himanshu Miller,ECE,1,8.1,HU101,Communication Skills,HUM,2,Spring2024,69
+846,Himanshu Miller,ECE,1,8.1,MA101,Linear Algebra,MATH,4,Fall2024,81
+847,Pankaj Garcia,CSE,3,8.2,HU101,Communication Skills,HUM,2,Fall2023,79
+848,Gayatri Henderson,EEE,2,7.4,HU101,Communication Skills,HUM,2,Spring2024,77
+848,Gayatri Henderson,EEE,2,7.4,EE201,Power Systems,EEE,4,Spring2025,63
+848,Gayatri Henderson,EEE,2,7.4,MA102,Probability & Statistics,MATH,4,Fall2024,76
+849,Benjamin Ross,CSE,4,7.2,MA102,Probability & Statistics,MATH,4,Fall2023,85
+850,Elizabeth Chatterjee,CSE,4,8.2,CS201,Data Structures,CSE,4,Spring2025,82
+851,Pallavi Ross,CSE,3,7.0,HU102,Professional Ethics,HUM,2,Spring2024,80
+852,Jackson Perry,MECH,3,7.9,HU102,Professional Ethics,HUM,2,Fall2023,88
+852,Jackson Perry,MECH,3,7.9,ME401,Machine Design,MECH,4,Fall2023,92
+852,Jackson Perry,MECH,3,7.9,HU101,Communication Skills,HUM,2,Spring2024,71
+853,Himanshu Cox,CIVIL,1,7.1,CE101,Structural Analysis,CIVIL,4,Spring2024,91
+853,Himanshu Cox,CIVIL,1,7.1,CE301,Geotechnical Engineering,CIVIL,4,Spring2024,86
+853,Himanshu Cox,CIVIL,1,7.1,CE201,Surveying,CIVIL,3,Fall2024,79
+854,Sophia Roberts,EEE,3,8.4,MA101,Linear Algebra,MATH,4,Spring2025,86
+854,Sophia Roberts,EEE,3,8.4,HU101,Communication Skills,HUM,2,Spring2024,76
+855,Penelope Edwards,CSE,4,7.4,HU101,Communication Skills,HUM,2,Spring2025,77
+855,Penelope Edwards,CSE,4,7.4,HU102,Professional Ethics,HUM,2,Fall2024,85
+856,Kavya Morris,CSE,2,6.7,HU102,Professional Ethics,HUM,2,Fall2023,86
+856,Kavya Morris,CSE,2,6.7,CS301,Databases,CSE,4,Spring2025,78
+857,Riley Bennett,IT,3,8.6,IT301,Cybersecurity,IT,3,Spring2025,78
+858,Sebastian Turner,CSE,1,7.5,CS101,Intro to Programming,CSE,4,Fall2024,83
+859,Sofia Bell,MECH,2,7.8,ME401,Machine Design,MECH,4,Fall2023,83
+860,Tanya Wright,EEE,4,8.2,MA101,Linear Algebra,MATH,4,Fall2024,67
+860,Tanya Wright,EEE,4,8.2,EE301,Control Systems,EEE,3,Spring2024,85
+861,Chetan Gupta,AI-DS,2,9.2,DS301,Big Data Analytics,AI-DS,4,Spring2025,80
+862,Vikram Coleman,CIVIL,3,8.0,,,,,,
+863,Radha Scott,CSE,4,8.8,CS101,Intro to Programming,CSE,4,Fall2023,82
+864,Vidya Joshi,IT,2,7.6,MA102,Probability & Statistics,MATH,4,Fall2024,87
+865,Bhavna Wood,CSE,2,8.8,CS402,Software Engineering,CSE,3,Spring2024,78
+865,Bhavna Wood,CSE,2,8.8,CS201,Data Structures,CSE,4,Fall2023,82
+865,Bhavna Wood,CSE,2,8.8,CS101,Intro to Programming,CSE,4,Fall2024,75
+866,Suresh Lee,CSE,1,8.5,CS101,Intro to Programming,CSE,4,Fall2023,75
+866,Suresh Lee,CSE,1,8.5,CS401,Computer Networks,CSE,3,Fall2023,83
+866,Suresh Lee,CSE,1,8.5,MA102,Probability & Statistics,MATH,4,Fall2024,78
+867,Varun King,EEE,4,7.4,MA101,Linear Algebra,MATH,4,Spring2025,77
+868,Mia Howard,MECH,3,6.6,ME401,Machine Design,MECH,4,Fall2024,59
+868,Mia Howard,MECH,3,6.6,ME101,Thermodynamics,MECH,3,Fall2024,77
+869,Avery Hughes,CSE,4,7.0,CS302,Operating Systems,CSE,4,Spring2025,82
+870,Liam Perez,CSE,3,7.3,CS401,Computer Networks,CSE,3,Fall2023,85
+870,Liam Perez,CSE,3,7.3,HU102,Professional Ethics,HUM,2,Fall2024,76
+870,Liam Perez,CSE,3,7.3,CS301,Databases,CSE,4,Spring2025,97
+871,Gita Thomas,CIVIL,1,7.5,CE301,Geotechnical Engineering,CIVIL,4,Fall2023,91
+872,William Clark,CSE,2,9.2,MA101,Linear Algebra,MATH,4,Fall2024,77
+872,William Clark,CSE,2,9.2,HU102,Professional Ethics,HUM,2,Fall2023,98
+873,Aubrey Rogers,CSE,2,7.1,CS101,Intro to Programming,CSE,4,Spring2025,83
+874,Anushka Taylor,ECE,2,6.9,EC101,Digital Logic,ECE,3,Spring2024,73
+874,Anushka Taylor,ECE,2,6.9,HU102,Professional Ethics,HUM,2,Fall2023,80
+875,Sneha Brooks,CSE,1,8.1,MA102,Probability & Statistics,MATH,4,Spring2025,76
+876,Wyatt Cooper,CSE,4,8.0,MA102,Probability & Statistics,MATH,4,Fall2024,79
+877,Disha Flores,EEE,3,7.4,EE301,Control Systems,EEE,3,Fall2023,84
+877,Disha Flores,EEE,3,7.4,MA102,Probability & Statistics,MATH,4,Spring2025,87
+878,Benjamin Patel,EEE,2,9.9,EE101,Circuit Analysis,EEE,4,Fall2024,83
+879,Alok Kelly,CSE,4,7.5,,,,,,
+880,Luke Venkataraman,CSE,3,7.8,CS201,Data Structures,CSE,4,Fall2024,65
+880,Luke Venkataraman,CSE,3,7.8,CS401,Computer Networks,CSE,3,Fall2024,84
+881,Pallavi Allen,ECE,1,7.0,MA102,Probability & Statistics,MATH,4,Fall2024,91
+881,Pallavi Allen,ECE,1,7.0,EC101,Digital Logic,ECE,3,Fall2023,85
+882,Camila Perry,AI-DS,2,8.5,MA101,Linear Algebra,MATH,4,Fall2024,81
+882,Camila Perry,AI-DS,2,8.5,HU101,Communication Skills,HUM,2,Spring2025,83
+883,Emma Wright,IT,3,8.5,IT301,Cybersecurity,IT,3,Fall2024,74
+883,Emma Wright,IT,3,8.5,MA101,Linear Algebra,MATH,4,Fall2024,72
+884,Carter Adams,CSE,3,8.4,CS201,Data Structures,CSE,4,Spring2025,65
+884,Carter Adams,CSE,3,8.4,HU101,Communication Skills,HUM,2,Fall2024,73
+885,Layla Smith,AI-DS,2,7.4,HU102,Professional Ethics,HUM,2,Fall2024,70
+885,Layla Smith,AI-DS,2,7.4,MA102,Probability & Statistics,MATH,4,Spring2025,76
+885,Layla Smith,AI-DS,2,7.4,DS201,Deep Learning,AI-DS,4,Fall2023,95
+886,Gayatri Gupta,CSE,4,8.5,,,,,,
+887,Aubrey Perry,IT,1,8.5,MA102,Probability & Statistics,MATH,4,Spring2024,93
+887,Aubrey Perry,IT,1,8.5,HU102,Professional Ethics,HUM,2,Spring2024,75
+887,Aubrey Perry,IT,1,8.5,MA101,Linear Algebra,MATH,4,Spring2024,61
+888,Luke Lee,CSE,4,8.6,HU101,Communication Skills,HUM,2,Spring2025,84
+888,Luke Lee,CSE,4,8.6,MA102,Probability & Statistics,MATH,4,Fall2024,79
+889,Zoey Price,ECE,3,7.5,EC401,VLSI Design,ECE,4,Spring2024,72
+889,Zoey Price,ECE,3,7.5,EC301,Microprocessors,ECE,4,Spring2025,72
+890,Jessica Baker,MECH,3,7.6,MA101,Linear Algebra,MATH,4,Fall2023,86
+891,Jayden Richardson,AI-DS,3,8.5,HU101,Communication Skills,HUM,2,Spring2025,91
+891,Jayden Richardson,AI-DS,3,8.5,MA102,Probability & Statistics,MATH,4,Spring2025,81
+892,James Mukherjee,CSE,4,8.1,MA102,Probability & Statistics,MATH,4,Fall2023,68
+892,James Mukherjee,CSE,4,8.1,CS401,Computer Networks,CSE,3,Spring2025,89
+893,Radha Khanna,CIVIL,3,8.7,CE301,Geotechnical Engineering,CIVIL,4,Fall2023,77
+894,Luke Watson,MECH,2,8.1,ME101,Thermodynamics,MECH,3,Spring2024,68
+894,Luke Watson,MECH,2,8.1,HU102,Professional Ethics,HUM,2,Spring2025,78
+895,Noah Lee,IT,3,8.5,MA102,Probability & Statistics,MATH,4,Spring2024,90
+895,Noah Lee,IT,3,8.5,HU101,Communication Skills,HUM,2,Fall2023,84
+895,Noah Lee,IT,3,8.5,HU102,Professional Ethics,HUM,2,Fall2023,82
+896,Isha Joshi,CSE,1,8.8,CS401,Computer Networks,CSE,3,Spring2024,81
+896,Isha Joshi,CSE,1,8.8,HU101,Communication Skills,HUM,2,Spring2024,86
+896,Isha Joshi,CSE,1,8.8,HU102,Professional Ethics,HUM,2,Spring2025,70
+897,Mia Rogers,CSE,1,8.7,MA101,Linear Algebra,MATH,4,Spring2025,91
+897,Mia Rogers,CSE,1,8.7,CS302,Operating Systems,CSE,4,Spring2025,76
+898,Madhav Cooper,ECE,2,9.0,MA102,Probability & Statistics,MATH,4,Spring2025,84
+898,Madhav Cooper,ECE,2,9.0,EC401,VLSI Design,ECE,4,Fall2023,85
+899,Umesh Evans,CSE,2,6.7,CS402,Software Engineering,CSE,3,Spring2024,64
+900,Sunil Bhatt,CIVIL,2,8.6,CE301,Geotechnical Engineering,CIVIL,4,Spring2025,79
+900,Sunil Bhatt,CIVIL,2,8.6,MA101,Linear Algebra,MATH,4,Fall2023,82
+901,Umesh Perez,ECE,4,8.2,HU101,Communication Skills,HUM,2,Fall2023,91
+901,Umesh Perez,ECE,4,8.2,EC401,VLSI Design,ECE,4,Spring2025,73
+902,Vidya Bennett,EEE,3,9.1,HU102,Professional Ethics,HUM,2,Fall2024,73
+903,Kiran Barnes,IT,1,9.2,HU101,Communication Skills,HUM,2,Spring2025,82
+903,Kiran Barnes,IT,1,9.2,MA101,Linear Algebra,MATH,4,Fall2024,81
+904,Scarlett Menon,IT,1,6.0,HU101,Communication Skills,HUM,2,Fall2023,76
+904,Scarlett Menon,IT,1,6.0,IT101,Web Development,IT,3,Fall2023,77
+905,Naveen Bennett,EEE,1,8.0,EE401,Electrical Machines,EEE,4,Spring2024,83
+906,Deepika Long,ECE,1,8.6,EC101,Digital Logic,ECE,3,Fall2023,94
+907,Avery Rao,IT,4,7.2,IT201,Cloud Computing,IT,4,Spring2025,87
+908,Mila Venkataraman,CSE,4,7.0,CS201,Data Structures,CSE,4,Spring2025,79
+908,Mila Venkataraman,CSE,4,7.0,HU102,Professional Ethics,HUM,2,Fall2023,75
+908,Mila Venkataraman,CSE,4,7.0,HU101,Communication Skills,HUM,2,Fall2024,78
+909,Olivia Johnson,MECH,1,7.6,HU101,Communication Skills,HUM,2,Spring2025,79
+910,Jaxon Singh,IT,1,7.6,HU102,Professional Ethics,HUM,2,Fall2024,90
+910,Jaxon Singh,IT,1,7.6,MA102,Probability & Statistics,MATH,4,Spring2025,71
+911,William Kelly,MECH,4,7.1,HU102,Professional Ethics,HUM,2,Spring2025,79
+912,Riya Brown,CSE,4,8.6,CS101,Intro to Programming,CSE,4,Spring2025,98
+912,Riya Brown,CSE,4,8.6,CS302,Operating Systems,CSE,4,Fall2023,89
+913,Addison Das,AI-DS,3,7.5,DS301,Big Data Analytics,AI-DS,4,Fall2023,77
+913,Addison Das,AI-DS,3,7.5,MA101,Linear Algebra,MATH,4,Fall2023,73
+913,Addison Das,AI-DS,3,7.5,DS101,Machine Learning,AI-DS,4,Fall2024,80
+914,Preeti Bailey,ECE,4,8.0,EC401,VLSI Design,ECE,4,Spring2025,79
+914,Preeti Bailey,ECE,4,8.0,HU101,Communication Skills,HUM,2,Fall2023,77
+915,Meera Flores,CSE,3,7.7,CS201,Data Structures,CSE,4,Fall2024,75
+916,Amit Clark,CSE,3,8.4,MA101,Linear Algebra,MATH,4,Fall2023,84
+916,Amit Clark,CSE,3,8.4,CS101,Intro to Programming,CSE,4,Fall2023,75
+917,Emily Nair,CSE,1,8.6,CS401,Computer Networks,CSE,3,Spring2024,82
+918,Abhishek Bailey,EEE,3,9.6,HU102,Professional Ethics,HUM,2,Spring2024,89
+918,Abhishek Bailey,EEE,3,9.6,MA101,Linear Algebra,MATH,4,Spring2025,75
+919,Rashmi Green,IT,1,6.0,HU102,Professional Ethics,HUM,2,Fall2023,98
+920,Pallavi Wright,CSE,4,8.4,CS401,Computer Networks,CSE,3,Spring2024,90
+920,Pallavi Wright,CSE,4,8.4,MA101,Linear Algebra,MATH,4,Spring2024,90
+921,Deepika Jenkins,CIVIL,4,9.4,CE301,Geotechnical Engineering,CIVIL,4,Fall2023,82
+921,Deepika Jenkins,CIVIL,4,9.4,CE101,Structural Analysis,CIVIL,4,Fall2024,85
+922,Vikram Pillai,ECE,2,7.1,MA101,Linear Algebra,MATH,4,Fall2023,78
+923,Leo Iyer,AI-DS,4,7.6,DS301,Big Data Analytics,AI-DS,4,Spring2024,80
+923,Leo Iyer,AI-DS,4,7.6,HU102,Professional Ethics,HUM,2,Spring2025,71
+924,Harish Bhatia,CIVIL,3,8.2,MA101,Linear Algebra,MATH,4,Spring2025,81
+924,Harish Bhatia,CIVIL,3,8.2,CE301,Geotechnical Engineering,CIVIL,4,Spring2025,69
+925,Himanshu Young,CSE,2,7.3,CS301,Databases,CSE,4,Fall2024,85
+925,Himanshu Young,CSE,2,7.3,CS101,Intro to Programming,CSE,4,Fall2024,83
+925,Himanshu Young,CSE,2,7.3,CS401,Computer Networks,CSE,3,Fall2024,77
+926,Carter Phillips,CSE,2,7.7,CS101,Intro to Programming,CSE,4,Fall2024,72
+926,Carter Phillips,CSE,2,7.7,CS201,Data Structures,CSE,4,Fall2024,76
+927,Jackson Reed,MECH,2,6.0,ME401,Machine Design,MECH,4,Fall2023,84
+927,Jackson Reed,MECH,2,6.0,MA102,Probability & Statistics,MATH,4,Fall2023,77
+928,Jayden Singh,ECE,2,9.0,MA102,Probability & Statistics,MATH,4,Spring2024,80
+929,Sanjay White,CSE,1,8.3,MA102,Probability & Statistics,MATH,4,Spring2024,93
+929,Sanjay White,CSE,1,8.3,CS402,Software Engineering,CSE,3,Fall2024,85
+929,Sanjay White,CSE,1,8.3,CS101,Intro to Programming,CSE,4,Fall2024,97
+930,Aubrey Peterson,EEE,3,8.0,MA102,Probability & Statistics,MATH,4,Fall2023,73
+931,Eleanor Brooks,ECE,4,7.8,HU101,Communication Skills,HUM,2,Fall2023,72
+931,Eleanor Brooks,ECE,4,7.8,EC201,Signals and Systems,ECE,4,Fall2024,94
+932,Shreya Jenkins,ECE,4,7.7,EC301,Microprocessors,ECE,4,Fall2023,82
+933,Emma Bennett,CSE,2,7.5,CS302,Operating Systems,CSE,4,Fall2023,65
+933,Emma Bennett,CSE,2,7.5,HU101,Communication Skills,HUM,2,Spring2024,56
+934,Daniel Das,AI-DS,4,9.8,MA101,Linear Algebra,MATH,4,Fall2023,86
+934,Daniel Das,AI-DS,4,9.8,HU102,Professional Ethics,HUM,2,Fall2023,70
+934,Daniel Das,AI-DS,4,9.8,HU101,Communication Skills,HUM,2,Spring2025,74
+935,Jack Subramanian,MECH,4,6.9,HU102,Professional Ethics,HUM,2,Spring2025,70
+935,Jack Subramanian,MECH,4,6.9,ME201,Fluid Mechanics,MECH,4,Spring2024,98
+936,Rajesh Foster,AI-DS,2,8.8,HU101,Communication Skills,HUM,2,Spring2024,85
+937,Gaurav White,MECH,4,8.5,ME301,Heat Transfer,MECH,3,Fall2024,87
+937,Gaurav White,MECH,4,8.5,HU101,Communication Skills,HUM,2,Fall2024,77
+938,Shreya Sanchez,MECH,1,8.2,ME401,Machine Design,MECH,4,Fall2023,84
+938,Shreya Sanchez,MECH,1,8.2,ME201,Fluid Mechanics,MECH,4,Spring2025,88
+938,Shreya Sanchez,MECH,1,8.2,MA102,Probability & Statistics,MATH,4,Fall2023,81
+939,Preeti Iyer,EEE,4,8.0,MA101,Linear Algebra,MATH,4,Spring2024,70
+939,Preeti Iyer,EEE,4,8.0,EE401,Electrical Machines,EEE,4,Fall2024,86
+939,Preeti Iyer,EEE,4,8.0,EE301,Control Systems,EEE,3,Fall2023,71
+940,Lillian Sanders,EEE,1,9.2,HU102,Professional Ethics,HUM,2,Spring2025,90
+941,Suresh Green,CIVIL,3,7.2,HU102,Professional Ethics,HUM,2,Fall2023,80
+941,Suresh Green,CIVIL,3,7.2,MA102,Probability & Statistics,MATH,4,Fall2024,80
+942,Gayatri Parker,ECE,1,7.7,MA102,Probability & Statistics,MATH,4,Fall2024,72
+943,Sanjay Watson,MECH,3,6.0,ME301,Heat Transfer,MECH,3,Spring2024,78
+944,Karthik Trivedi,AI-DS,4,7.7,DS301,Big Data Analytics,AI-DS,4,Fall2024,70
+944,Karthik Trivedi,AI-DS,4,7.7,DS101,Machine Learning,AI-DS,4,Spring2024,85
+944,Karthik Trivedi,AI-DS,4,7.7,MA102,Probability & Statistics,MATH,4,Spring2025,84
+945,Matthew Davis,ECE,4,9.2,EC301,Microprocessors,ECE,4,Spring2024,78
+945,Matthew Davis,ECE,4,9.2,EC101,Digital Logic,ECE,3,Spring2024,98
+946,Nisha Torres,CIVIL,1,8.1,CE201,Surveying,CIVIL,3,Fall2024,90
+947,Rajesh Howard,CSE,2,7.4,CS201,Data Structures,CSE,4,Spring2025,76
+947,Rajesh Howard,CSE,2,7.4,HU102,Professional Ethics,HUM,2,Spring2024,80
+948,Penelope Foster,EEE,4,8.3,EE301,Control Systems,EEE,3,Fall2024,65
+949,Carter Morgan,EEE,3,8.0,MA101,Linear Algebra,MATH,4,Fall2024,66
+949,Carter Morgan,EEE,3,8.0,EE101,Circuit Analysis,EEE,4,Spring2024,87
+949,Carter Morgan,EEE,3,8.0,HU102,Professional Ethics,HUM,2,Fall2023,68
+950,Rohan Hall,CSE,2,9.0,CS301,Databases,CSE,4,Spring2025,75
+951,Julian Williams,CSE,4,9.4,CS201,Data Structures,CSE,4,Spring2025,74
+952,Owen Washington,CSE,2,7.7,HU102,Professional Ethics,HUM,2,Spring2024,88
+952,Owen Washington,CSE,2,7.7,MA101,Linear Algebra,MATH,4,Fall2024,89
+953,Pallavi Rivera,CIVIL,2,6.3,CE101,Structural Analysis,CIVIL,4,Fall2023,98
+953,Pallavi Rivera,CIVIL,2,6.3,CE201,Surveying,CIVIL,3,Fall2024,75
+954,Gaurav Cook,ECE,3,8.5,MA101,Linear Algebra,MATH,4,Spring2024,86
+955,Tarun Subramanian,IT,2,7.3,MA102,Probability & Statistics,MATH,4,Fall2023,83
+955,Tarun Subramanian,IT,2,7.3,HU101,Communication Skills,HUM,2,Fall2024,79
+956,Tanvi Khanna,ECE,2,8.5,EC401,VLSI Design,ECE,4,Fall2024,78
+957,Sunita Stewart,CSE,4,7.6,CS201,Data Structures,CSE,4,Spring2024,78
+957,Sunita Stewart,CSE,4,7.6,CS402,Software Engineering,CSE,3,Fall2023,78
+958,Varun Chatterjee,CIVIL,2,6.9,CE201,Surveying,CIVIL,3,Fall2024,92
+959,Oliver Subramanian,MECH,4,8.0,ME401,Machine Design,MECH,4,Spring2024,96
+960,Priya Rao,IT,4,6.8,IT301,Cybersecurity,IT,3,Fall2024,78
+961,Rahul White,EEE,3,9.2,MA101,Linear Algebra,MATH,4,Spring2024,83
+962,Chloe Pillai,CSE,1,7.5,MA101,Linear Algebra,MATH,4,Spring2024,64
+963,Lucas Gonzales,MECH,2,8.6,ME101,Thermodynamics,MECH,3,Fall2024,64
+963,Lucas Gonzales,MECH,2,8.6,ME301,Heat Transfer,MECH,3,Spring2025,82
+964,Dinesh Murphy,ECE,2,8.4,HU101,Communication Skills,HUM,2,Fall2024,89
+964,Dinesh Murphy,ECE,2,8.4,EC401,VLSI Design,ECE,4,Spring2024,73
+965,Varun Verma,AI-DS,3,9.2,HU102,Professional Ethics,HUM,2,Spring2025,75
+965,Varun Verma,AI-DS,3,9.2,DS101,Machine Learning,AI-DS,4,Spring2024,70
+966,Emma Coleman,ECE,1,8.1,EC301,Microprocessors,ECE,4,Spring2024,86
+967,Mateo Kumar,CSE,3,7.1,MA102,Probability & Statistics,MATH,4,Fall2023,80
+967,Mateo Kumar,CSE,3,7.1,CS302,Operating Systems,CSE,4,Fall2024,73
+968,Lillian Venkataraman,CSE,2,7.0,,,,,,
+969,Owen Mukherjee,MECH,2,7.5,ME401,Machine Design,MECH,4,Spring2025,62
+969,Owen Mukherjee,MECH,2,7.5,ME301,Heat Transfer,MECH,3,Fall2023,78
+969,Owen Mukherjee,MECH,2,7.5,MA102,Probability & Statistics,MATH,4,Fall2023,76
+970,Alexander Mukherjee,CSE,3,8.0,CS201,Data Structures,CSE,4,Fall2023,87
+971,Jitendra Rivera,CSE,4,7.1,CS201,Data Structures,CSE,4,Spring2025,94
+972,Chloe Howard,ECE,4,7.8,HU101,Communication Skills,HUM,2,Spring2024,87
+973,Naveen Howard,EEE,2,6.0,EE301,Control Systems,EEE,3,Spring2024,63
+974,Rohan Nelson,ECE,1,7.6,HU101,Communication Skills,HUM,2,Spring2024,76
+974,Rohan Nelson,ECE,1,7.6,HU102,Professional Ethics,HUM,2,Fall2024,69
+974,Rohan Nelson,ECE,1,7.6,EC201,Signals and Systems,ECE,4,Fall2023,89
+975,Oliver Singh,ECE,3,8.2,EC401,VLSI Design,ECE,4,Fall2024,87
+975,Oliver Singh,ECE,3,8.2,EC301,Microprocessors,ECE,4,Fall2024,63
+976,Stella Barnes,CIVIL,4,6.7,CE101,Structural Analysis,CIVIL,4,Spring2024,75
+976,Stella Barnes,CIVIL,4,6.7,MA101,Linear Algebra,MATH,4,Fall2024,85
+977,Alexander Kapoor,MECH,3,8.8,HU101,Communication Skills,HUM,2,Spring2025,80
+977,Alexander Kapoor,MECH,3,8.8,MA101,Linear Algebra,MATH,4,Spring2024,80
+978,Samuel Chatterjee,AI-DS,3,8.4,,,,,,
+979,Emily Reddy,CSE,4,8.6,CS401,Computer Networks,CSE,3,Fall2023,80
+979,Emily Reddy,CSE,4,8.6,MA101,Linear Algebra,MATH,4,Spring2025,88
+980,Alok Turner,ECE,3,6.1,HU101,Communication Skills,HUM,2,Spring2025,76
+980,Alok Turner,ECE,3,6.1,HU102,Professional Ethics,HUM,2,Spring2025,64
+980,Alok Turner,ECE,3,6.1,EC201,Signals and Systems,ECE,4,Fall2023,80
+981,Sachin Rogers,EEE,1,8.9,MA101,Linear Algebra,MATH,4,Spring2024,66
+982,Tanya Bhatt,AI-DS,4,7.4,HU101,Communication Skills,HUM,2,Fall2024,83
+983,Jitendra Taylor,CSE,2,8.5,MA102,Probability & Statistics,MATH,4,Fall2024,84
+983,Jitendra Taylor,CSE,2,8.5,CS401,Computer Networks,CSE,3,Spring2025,56
+983,Jitendra Taylor,CSE,2,8.5,CS101,Intro to Programming,CSE,4,Fall2024,97
+984,Carter Ross,CSE,3,9.1,HU102,Professional Ethics,HUM,2,Spring2024,82
+984,Carter Ross,CSE,3,9.1,MA102,Probability & Statistics,MATH,4,Spring2025,79
+985,Omkar Khanna,CSE,2,6.6,CS301,Databases,CSE,4,Fall2023,64
+985,Omkar Khanna,CSE,2,6.6,MA102,Probability & Statistics,MATH,4,Fall2023,88
+986,Rajesh Henderson,EEE,2,8.2,EE101,Circuit Analysis,EEE,4,Fall2024,74
+986,Rajesh Henderson,EEE,2,8.2,EE301,Control Systems,EEE,3,Spring2024,89
+987,Lincoln Howard,CSE,3,7.2,CS101,Intro to Programming,CSE,4,Spring2024,84
+987,Lincoln Howard,CSE,3,7.2,CS201,Data Structures,CSE,4,Fall2024,70
+988,Jessica Wilson,ECE,2,8.1,EC101,Digital Logic,ECE,3,Fall2024,90
+988,Jessica Wilson,ECE,2,8.1,EC301,Microprocessors,ECE,4,Fall2024,87
+989,James Watson,AI-DS,1,8.4,DS101,Machine Learning,AI-DS,4,Spring2024,74
+990,Ananya Chopra,CSE,1,8.9,CS302,Operating Systems,CSE,4,Spring2024,79
+990,Ananya Chopra,CSE,1,8.9,CS401,Computer Networks,CSE,3,Fall2024,65
+991,Pooja Parker,EEE,1,8.3,EE401,Electrical Machines,EEE,4,Spring2024,86
+992,Riley Young,EEE,2,6.7,MA102,Probability & Statistics,MATH,4,Spring2024,80
+992,Riley Young,EEE,2,6.7,MA101,Linear Algebra,MATH,4,Fall2023,91
+993,Bala Moore,AI-DS,2,7.4,DS301,Big Data Analytics,AI-DS,4,Fall2024,76
+993,Bala Moore,AI-DS,2,7.4,DS201,Deep Learning,AI-DS,4,Fall2024,69
+994,Sophia Cox,CIVIL,2,7.6,CE201,Surveying,CIVIL,3,Spring2024,80
+994,Sophia Cox,CIVIL,2,7.6,HU101,Communication Skills,HUM,2,Spring2025,72
+995,Madhav Rao,ECE,1,7.4,EC301,Microprocessors,ECE,4,Fall2024,69
+995,Madhav Rao,ECE,1,7.4,EC401,VLSI Design,ECE,4,Spring2024,96
+995,Madhav Rao,ECE,1,7.4,MA101,Linear Algebra,MATH,4,Fall2024,76
+996,Sebastian Mukherjee,CSE,4,8.7,HU101,Communication Skills,HUM,2,Spring2025,83
+996,Sebastian Mukherjee,CSE,4,8.7,MA102,Probability & Statistics,MATH,4,Fall2024,74
+997,Shalini Perez,MECH,2,9.7,ME201,Fluid Mechanics,MECH,4,Fall2024,85
+997,Shalini Perez,MECH,2,9.7,ME401,Machine Design,MECH,4,Spring2025,75
+997,Shalini Perez,MECH,2,9.7,MA101,Linear Algebra,MATH,4,Spring2024,77
+998,Grayson Price,AI-DS,4,8.5,DS301,Big Data Analytics,AI-DS,4,Fall2023,98
+999,Sophia Adams,CIVIL,1,7.3,CE201,Surveying,CIVIL,3,Fall2024,87
+999,Sophia Adams,CIVIL,1,7.3,MA102,Probability & Statistics,MATH,4,Fall2024,85
+1000,Avery Rogers,CSE,1,8.1,CS402,Software Engineering,CSE,3,Spring2025,82
+1000,Avery Rogers,CSE,1,8.1,CS101,Intro to Programming,CSE,4,Spring2025,83
