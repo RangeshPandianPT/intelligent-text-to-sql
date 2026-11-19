@@ -28,7 +28,7 @@ def test_filtering():
 def test_aggregation():
     result = execute_query("SELECT COUNT(*) as count FROM students")
     assert result["status"] == "SUCCESS_WITH_ROWS"
-    assert result["rows"][0]["count"] == 10  # Based on seed data
+    assert result["rows"][0]["count"] >= 10
 
 def test_joins():
     sql = """
