@@ -6,6 +6,7 @@ from app.exploration.exploration_manager import ExplorationManager
 from app.exploration.probe_generator import ProbeGenerator
 from app.database.executor import execute_query
 from app.database.schema import get_database_schema
+from app.database.safety import validate_input_prompt_safety, SQLSafetyError
 from app.refinement.engine import RefinementEngine
 from app.refinement.target_checker import TargetChecker
 
@@ -14,6 +15,19 @@ def run_baseline_pipeline(question: str, llm_client=None) -> dict:
     Runs the baseline Text-to-SQL pipeline.
     Question -> Schema -> LLM -> SQL -> Validator -> Database -> Result
     """
+    # 0. Pre-Flight Input Safety Scan
+    try:
+        validate_input_prompt_safety(question)
+    except SQLSafetyError as e:
+        return {
+            "status": "SAFETY_REJECTION",
+            "sql": "",
+            "rows": [],
+            "row_count": 0,
+            "error": str(e),
+            "threat_type": getattr(e, "threat_type", "PROMPT_INJECTION")
+        }
+
     if llm_client is None:
         llm_client = OllamaClient()
         
@@ -274,6 +288,28 @@ def run_pipeline(
     exploration_data = None
     probes_list = []
 
+    # 0. Pre-Flight Input Safety Scan
+    try:
+        validate_input_prompt_safety(question)
+    except SQLSafetyError as e:
+        return {
+            "question": question,
+            "status": "SAFETY_REJECTION",
+            "sql": "",
+            "rows": [],
+            "row_count": 0,
+            "execution_time_ms": 0,
+            "error": str(e),
+            "threat_type": getattr(e, "threat_type", "PROMPT_INJECTION"),
+            "trace": {
+                "safety_shield": {
+                    "layer": "Input Threat Guard",
+                    "threat_type": getattr(e, "threat_type", "PROMPT_INJECTION"),
+                    "action": "BLOCKED_BEFORE_LLM"
+                }
+            }
+        }
+
     # 1. Schema Linking (uses fast rule-based linker — zero LLM calls)
     if enable_schema_linking:
         try:
@@ -366,7 +402,7 @@ def run_pipeline(
         current_sql = candidate_result.get("sql", initial_sql)
 
     # 5. Target Checking
-    if enable_target_checking:
+    if enable_target_checking and candidate_result.get("status") != "SAFETY_REJECTION":
         final_result = target_checker.check_and_refine_target(question, current_sql)
     else:
         final_result = candidate_result
