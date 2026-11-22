@@ -4,6 +4,7 @@ import logging
 from typing import Dict, Any
 from app.database.connection import get_connection
 from app.database.validator import validate_sql, SQLSafetyError, SQLSchemaError, SQLSyntaxError
+from app.database.safety import enforce_query_limits
 from app.config import settings
 
 logger = logging.getLogger(__name__)
@@ -27,12 +28,14 @@ def execute_query(sql: str, params: tuple = ()) -> Dict[str, Any]:
     try:
         # Step 1: Validation (Syntax, Safety, Schema)
         validate_sql(sql)
+        safe_sql = enforce_query_limits(sql, default_limit=settings.max_rows)
+        result["sql"] = safe_sql
         
         # Step 2: Execution (read-only)
         with get_connection(read_only=True) as conn:
             cursor = conn.cursor()
             
-            cursor.execute(sql, params)
+            cursor.execute(safe_sql, params)
             
             columns = [description[0] for description in cursor.description] if cursor.description else []
             result["columns"] = columns
@@ -57,6 +60,7 @@ def execute_query(sql: str, params: tuple = ()) -> Dict[str, Any]:
     except SQLSafetyError as e:
         result["status"] = "SAFETY_REJECTION"
         result["error"] = str(e)
+        result["threat_type"] = getattr(e, "threat_type", "GENERIC_UNSAFE")
     except sqlite3.Error as e:
         result["status"] = "EXECUTION_ERROR"
         result["error"] = str(e)
