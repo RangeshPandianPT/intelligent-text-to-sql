@@ -37,3 +37,10 @@ htmlcov/
 
 # Logs
 *.log
+
+# Generated documents and media
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.docx
