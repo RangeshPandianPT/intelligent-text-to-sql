@@ -2,6 +2,12 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from app.pipeline.orchestrator import run_baseline_pipeline, run_phase3_pipeline, run_phase5_pipeline, run_phase7_pipeline, run_pipeline
 from app.database.schema import get_database_schema
+from app.database.safety import (
+    safety_logger,
+    validate_input_prompt_safety,
+    validate_sql_safety,
+    SQLSafetyError
+)
 
 router = APIRouter()
 
@@ -86,4 +92,44 @@ async def get_schema():
         return get_database_schema()
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+# ──────────────────────────────────────────────────────────────────────
+# Safe SDE Security & Audit Telemetry Endpoints
+# ──────────────────────────────────────────────────────────────────────
+@router.get("/api/safety/metrics", tags=["Safety"])
+async def get_safety_metrics():
+    """
+    Returns real-time safety telemetry: total queries scanned, threats blocked, and threat breakdown.
+    """
+    return safety_logger.get_metrics()
+
+@router.get("/api/safety/events", tags=["Safety"])
+async def get_safety_events(limit: int = 15):
+    """
+    Returns recent security audit events and blocked attacks.
+    """
+    return safety_logger.get_recent_events(limit=limit)
+
+class SafetyCheckRequest(BaseModel):
+    text: str
+    is_sql: bool = False
+
+@router.post("/api/safety/check", tags=["Safety"])
+async def check_safety(request: SafetyCheckRequest):
+    """
+    Directly tests a natural language question or SQL query against the Safe SDE security engine.
+    """
+    try:
+        if request.is_sql:
+            validate_sql_safety(request.text)
+        else:
+            validate_input_prompt_safety(request.text)
+        return {"status": "PASSED", "message": "Query passed all security checks."}
+    except SQLSafetyError as e:
+        return {
+            "status": "BLOCKED",
+            "threat_type": getattr(e, "threat_type", "GENERIC_UNSAFE"),
+            "error": str(e)
+        }
+
 
