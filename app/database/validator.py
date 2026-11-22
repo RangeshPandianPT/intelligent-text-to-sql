@@ -2,11 +2,13 @@ import sqlglot
 from sqlglot import exp
 from sqlglot.optimizer.qualify import qualify
 from app.database.schema import get_database_schema
+from app.database.safety import (
+    SQLSafetyError,
+    validate_sql_safety,
+    enforce_query_limits
+)
 
 class SQLValidationError(Exception):
-    pass
-
-class SQLSafetyError(SQLValidationError):
     pass
 
 class SQLSchemaError(SQLValidationError):
@@ -17,58 +19,28 @@ class SQLSyntaxError(SQLValidationError):
 
 def validate_sql(sql: str) -> None:
     """
-    Validates a SQL query for safety and schema correctness.
-    Raises specific subclasses of SQLValidationError if invalid.
+    Validates a SQL query for multi-layer safety and schema correctness.
+    Raises SQLSafetyError, SQLSyntaxError, or SQLSchemaError if invalid.
     """
     if not sql or not sql.strip():
         raise SQLSyntaxError("SQL query is empty.")
 
+    # 1. Multi-layer AST safety checks (SELECT-only, DDL/DML, exploits, tautologies)
+    validate_sql_safety(sql)
+
+    # 2. Schema Validation via SQLGlot qualify
     try:
-        statements = sqlglot.parse(sql, read="sqlite")
-    except sqlglot.errors.ParseError as e:
+        statement = sqlglot.parse_one(sql, read="sqlite")
+    except Exception as e:
         raise SQLSyntaxError(f"SQL syntax error: {e}")
 
-    if not statements:
-        raise SQLSyntaxError("Could not parse SQL query.")
-        
-    if len(statements) > 1:
-        raise SQLSafetyError("Multiple SQL statements are not allowed.")
-        
-    statement = statements[0]
-    
-    if not statement:
-        raise SQLSyntaxError("Parsed statement is None.")
-
-    # Ensure the root statement is a SELECT
-    if not isinstance(statement, exp.Select):
-        raise SQLSafetyError("Only SELECT queries are permitted.")
-        
-    # Check for dangerous nodes
-    disallowed_types = (
-        exp.Insert,
-        exp.Update,
-        exp.Delete,
-        exp.Drop,
-        exp.Create,
-        exp.Alter,
-        exp.Pragma,
-        exp.Command 
-    )
-    
-    for d_type in disallowed_types:
-        if statement.find(d_type):
-            raise SQLSafetyError(f"Dangerous SQL operation detected: {d_type.__name__}")
-
-    # Schema Validation
     schema_info = get_database_schema()
     schema_dict = {
         table["name"].lower(): {
             col["name"].lower(): col["type"] for col in table["columns"]
         } for table in schema_info["tables"]
     }
-    
-    # We must operate on a copy if we want to avoid modifying the AST we parsed, 
-    # but since we just throw it away, it's fine to modify `statement` in place.
+
     try:
         qualify(statement, schema=schema_dict, dialect="sqlite")
     except sqlglot.errors.OptimizeError as e:
